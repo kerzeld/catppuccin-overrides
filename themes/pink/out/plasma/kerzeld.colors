@@ -14,7 +14,7 @@ ColorAmount=0.5
 ColorEffect=3
 ContrastAmount=0
 ContrastEffect=0
-Enable=true
+Enable=false
 IntensityAmount=0
 IntensityEffect=0
 

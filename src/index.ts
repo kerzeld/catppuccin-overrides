@@ -13,7 +13,8 @@ const templatePath = path.join(rootPath, "templates")
 const configPath = path.join(rootPath, "config")
 
 const themes = [
-    "pink"
+    "pink",
+    "yellow"
 ]
 
 function recurseDirRead(dir: string) {
@@ -73,7 +74,6 @@ function main() {
         };
 
         const templates = recurseDirRead(templatePath)
-        console.log(templates)
 
         // Read and write templates
         for (const template of templates) {
@@ -84,6 +84,8 @@ function main() {
             ensureDirectoryExistence(outFilePath)
             fs.writeFileSync(outFilePath, out)
         }
+
+        console.log("Created themes for " + theme)
     }
 
 }

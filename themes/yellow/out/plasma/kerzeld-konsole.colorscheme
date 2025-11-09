@@ -1,0 +1,100 @@
+[Background]
+Color=56, 55, 50
+
+[BackgroundFaint]
+Color=56, 55, 50
+
+[BackgroundIntense]
+Color=56, 55, 50
+
+[Color0]
+Color=153, 150, 138
+
+[Color0Faint]
+Color=153, 150, 138
+
+[Color0Intense]
+Color=153, 150, 138
+
+[Color1]
+Color=245, 194, 231
+
+[Color1Faint]
+Color=245, 194, 231
+
+[Color1Intense]
+Color=245, 194, 231
+
+[Color2]
+Color=166, 227, 161
+
+[Color2Faint]
+Color=166, 227, 161
+
+[Color2Intense]
+Color=166, 227, 161
+
+[Color3]
+Color=250, 179, 135
+
+[Color3Faint]
+Color=250, 179, 135
+
+[Color3Intense]
+Color=250, 179, 135
+
+[Color4]
+Color=116, 199, 236
+
+[Color4Faint]
+Color=116, 199, 236
+
+[Color4Intense]
+Color=116, 199, 236
+
+[Color5]
+Color=203, 166, 247
+
+[Color5Faint]
+Color=203, 166, 247
+
+[Color5Intense]
+Color=203, 166, 247
+
+[Color6]
+Color=137, 220, 235
+
+[Color6Faint]
+Color=137, 220, 235
+
+[Color6Intense]
+Color=137, 220, 235
+
+[Color7]
+Color=230, 217, 156
+
+[Color7Faint]
+Color=230, 217, 156
+
+[Color7Intense]
+Color=230, 217, 156
+
+[Foreground]
+Color=242, 238, 218
+
+[ForegroundFaint]
+Color=242, 238, 218
+
+[ForegroundIntense]
+Color=242, 238, 218
+
+[General]
+Anchor=0.5,0.5
+Blur=true
+ColorRandomization=false
+Description=catppuccin-kerzeld-yellow
+FillStyle=Tile
+Opacity=0.8
+Wallpaper=
+WallpaperFlipType=NoFlip
+WallpaperOpacity=1
