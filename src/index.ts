@@ -18,10 +18,8 @@ const themes = [
 
 function recurseDirRead(dir: string) {
     const files: string[] = []
-    for (const file of fs.readdirSync(dir)) {
-        const abs = path.join(dir, file);
-        if (fs.statSync(abs).isDirectory()) return recurseDirRead(abs);
-        else files.push(abs);
+    for (const file of fs.readdirSync(dir, { recursive: true, "withFileTypes": true })) {
+        if (file.isFile()) files.push(path.join(file.parentPath, file.name))
     }
     return files
 }
@@ -75,6 +73,7 @@ function main() {
         };
 
         const templates = recurseDirRead(templatePath)
+        console.log(templates)
 
         // Read and write templates
         for (const template of templates) {

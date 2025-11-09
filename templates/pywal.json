@@ -1,25 +1,25 @@
 {
     "special": {
-        "background": "#{{ colors.base.rgb }}",
-        "foreground": "#{{ colors.text.rgb }}",
-        "cursor": "#{{ colors.rosewater.rgb }}"
+        "background": "#{{ colors.base.hex }}",
+        "foreground": "#{{ colors.text.hex }}",
+        "cursor": "#{{ colors.rosewater.hex }}"
     },
     "colors": {
-        "color0": "#{{ colors.surface1.rgb }}",
-        "color1": "#{{ colors.red.rgb }}",
-        "color2": "#{{ colors.green.rgb }}",
-        "color3": "#{{ colors.peacyellowh.rgb }}",
-        "color4": "#{{ colors.blue.rgb }}",
-        "color5": "#{{ colors.pink.rgb }}",
-        "color6": "#{{ colors.teal.rgb }}",
-        "color7": "#{{ colors.subtext1.rgb }}",
-        "color8": "#{{ colors.surface2.rgb }}",
-        "color9": "#{{ colors.red.rgb }}",
-        "color10": "#{{ colors.green.rgb }}",
-        "color11": "#{{ colors.yellow.rgb }}",
-        "color12": "#{{ colors.blue.rgb }}",
-        "color13": "#{{ colors.pink.rgb }}",
-        "color14": "#{{ colors.teal.rgb }}",
-        "color15": "#{{ colors.subtext0.rgb }}"
+        "color0": "#{{ colors.surface1.hex }}",
+        "color1": "#{{ colors.red.hex }}",
+        "color2": "#{{ colors.green.hex }}",
+        "color3": "#{{ colors.peacyellowh.hex }}",
+        "color4": "#{{ colors.blue.hex }}",
+        "color5": "#{{ colors.pink.hex }}",
+        "color6": "#{{ colors.teal.hex }}",
+        "color7": "#{{ colors.subtext1.hex }}",
+        "color8": "#{{ colors.surface2.hex }}",
+        "color9": "#{{ colors.red.hex }}",
+        "color10": "#{{ colors.green.hex }}",
+        "color11": "#{{ colors.yellow.hex }}",
+        "color12": "#{{ colors.blue.hex }}",
+        "color13": "#{{ colors.pink.hex }}",
+        "color14": "#{{ colors.teal.hex }}",
+        "color15": "#{{ colors.subtext0.hex }}"
     }
 }
