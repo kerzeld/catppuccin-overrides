@@ -44,7 +44,7 @@ function main() {
         const outPath = path.join(themePath, "out")
 
         try {
-            fs.rmdirSync(outPath)
+            fs.rm(outPath, { recursive: true }, () => { })
         } catch (error) {
             // dir already deleted
         }
