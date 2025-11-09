@@ -1,98 +1,98 @@
 [Background]
-Color=
+Color=56, 50, 52
 
 [BackgroundFaint]
-Color=
+Color=56, 50, 52
 
 [BackgroundIntense]
-Color=
+Color=56, 50, 52
 
 [Color0]
-Color=
+Color=153, 138, 143
 
 [Color0Faint]
-Color=
+Color=153, 138, 143
 
 [Color0Intense]
-Color=
+Color=153, 138, 143
 
 [Color1]
-Color=
+Color=242, 133, 170
 
 [Color1Faint]
-Color=
+Color=242, 133, 170
 
 [Color1Intense]
-Color=
+Color=242, 133, 170
 
 [Color2]
-Color=
+Color=166, 227, 161
 
 [Color2Faint]
-Color=
+Color=166, 227, 161
 
 [Color2Intense]
-Color=
+Color=166, 227, 161
 
 [Color3]
-Color=
+Color=250, 179, 135
 
 [Color3Faint]
-Color=
+Color=250, 179, 135
 
 [Color3Intense]
-Color=
+Color=250, 179, 135
 
 [Color4]
-Color=
+Color=116, 199, 236
 
 [Color4Faint]
-Color=
+Color=116, 199, 236
 
 [Color4Intense]
-Color=
+Color=116, 199, 236
 
 [Color5]
-Color=
+Color=203, 166, 247
 
 [Color5Faint]
-Color=
+Color=203, 166, 247
 
 [Color5Intense]
-Color=
+Color=203, 166, 247
 
 [Color6]
-Color=
+Color=137, 220, 235
 
 [Color6Faint]
-Color=
+Color=137, 220, 235
 
 [Color6Intense]
-Color=
+Color=137, 220, 235
 
 [Color7]
-Color=
+Color=242, 133, 170
 
 [Color7Faint]
-Color=
+Color=242, 133, 170
 
 [Color7Intense]
-Color=
+Color=242, 133, 170
 
 [Foreground]
-Color=
+Color=242, 218, 226
 
 [ForegroundFaint]
-Color=
+Color=242, 218, 226
 
 [ForegroundIntense]
-Color=
+Color=242, 218, 226
 
 [General]
 Anchor=0.5,0.5
 Blur=true
 ColorRandomization=false
-Description=catppuccin-kerzeld-pink
+Description=
 FillStyle=Tile
 Opacity=0.8
 Wallpaper=

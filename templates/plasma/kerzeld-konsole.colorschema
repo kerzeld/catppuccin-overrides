@@ -1,98 +1,98 @@
 [Background]
-Color={{ base.rgb }}
+Color={{ colors.base.rgb }}
 
 [BackgroundFaint]
-Color={{ base.rgb }}
+Color={{ colors.base.rgb }}
 
 [BackgroundIntense]
-Color={{ base.rgb }}
+Color={{ colors.base.rgb }}
 
 [Color0]
-Color={{ overlay0.rgb }}
+Color={{ colors.overlay0.rgb }}
 
 [Color0Faint]
-Color={{ overlay0.rgb }}
+Color={{ colors.overlay0.rgb }}
 
 [Color0Intense]
-Color={{ overlay0.rgb }}
+Color={{ colors.overlay0.rgb }}
 
 [Color1]
-Color={{ pink.rgb }}
+Color={{ colors.pink.rgb }}
 
 [Color1Faint]
-Color={{ pink.rgb }}
+Color={{ colors.pink.rgb }}
 
 [Color1Intense]
-Color={{ pink.rgb }}
+Color={{ colors.pink.rgb }}
 
 [Color2]
-Color={{ green.rgb }}
+Color={{ colors.green.rgb }}
 
 [Color2Faint]
-Color={{ green.rgb }}
+Color={{ colors.green.rgb }}
 
 [Color2Intense]
-Color={{ green.rgb }}
+Color={{ colors.green.rgb }}
 
 [Color3]
-Color={{ peach.rgb }}
+Color={{ colors.peach.rgb }}
 
 [Color3Faint]
-Color={{ peach.rgb }}
+Color={{ colors.peach.rgb }}
 
 [Color3Intense]
-Color={{ peach.rgb }}
+Color={{ colors.peach.rgb }}
 
 [Color4]
-Color={{ sapphire.rgb }}
+Color={{ colors.sapphire.rgb }}
 
 [Color4Faint]
-Color={{ sapphire.rgb }}
+Color={{ colors.sapphire.rgb }}
 
 [Color4Intense]
-Color={{ sapphire.rgb }}
+Color={{ colors.sapphire.rgb }}
 
 [Color5]
-Color={{ mauve.rgb }}
+Color={{ colors.mauve.rgb }}
 
 [Color5Faint]
-Color={{ mauve.rgb }}
+Color={{ colors.mauve.rgb }}
 
 [Color5Intense]
-Color={{ mauve.rgb }}
+Color={{ colors.mauve.rgb }}
 
 [Color6]
-Color={{ sky.rgb }}
+Color={{ colors.sky.rgb }}
 
 [Color6Faint]
-Color={{ sky.rgb }}
+Color={{ colors.sky.rgb }}
 
 [Color6Intense]
-Color={{ sky.rgb }}
+Color={{ colors.sky.rgb }}
 
 [Color7]
-Color={{ accent.rgb }}
+Color={{ colors.accent.rgb }}
 
 [Color7Faint]
-Color={{ accent.rgb }}
+Color={{ colors.accent.rgb }}
 
 [Color7Intense]
-Color={{ accent.rgb }}
+Color={{ colors.accent.rgb }}
 
 [Foreground]
-Color={{ text.rgb }}
+Color={{ colors.text.rgb }}
 
 [ForegroundFaint]
-Color={{ text.rgb }}
+Color={{ colors.text.rgb }}
 
 [ForegroundIntense]
-Color={{ text.rgb }}
+Color={{ colors.text.rgb }}
 
 [General]
 Anchor=0.5,0.5
 Blur=true
 ColorRandomization=false
-Description={{ name }}
+Description={{ colors.name }}
 FillStyle=Tile
 Opacity=0.8
 Wallpaper=
