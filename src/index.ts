@@ -37,8 +37,8 @@ function ensureDirectoryExistence(filePath: string) {
 
 
 function main() {
-    // Read base catppuccin frape colors
-    const baseColors = JSON.parse(fs.readFileSync(path.join(configPath, "base.json")).toString());
+    // Read base catppuccin mocha colors
+    const baseColors = JSON.parse(fs.readFileSync(path.join(configPath, "mocha.json")).toString());
     for (const theme of themes) {
         const themePath = path.join(themesPath, theme)
         const outPath = path.join(themePath, "out")
