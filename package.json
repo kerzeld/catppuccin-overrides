@@ -1,0 +1,22 @@
+{
+  "name": "catppuccin-overrides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.20.0",
+  "dependencies": {
+    "color": "5.0.2",
+    "mustache": "4.2.0"
+  },
+  "devDependencies": {
+    "@types/mustache": "4.2.6",
+    "@types/node": "24.10.0"
+  }
+}

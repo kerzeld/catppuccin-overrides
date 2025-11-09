@@ -1,0 +1,1 @@
+export const THEME_JSON_FILE_NAME = "theme.json"

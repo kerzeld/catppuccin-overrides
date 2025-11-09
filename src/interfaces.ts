@@ -1,0 +1,1 @@
+export interface ITemplateObject { colors: Record<string, { rgb: string, hex: string }>, name: string }

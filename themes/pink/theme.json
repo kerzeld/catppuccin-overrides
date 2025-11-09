@@ -1,0 +1,34 @@
+{
+    "hsv": {
+        "pink": "HSV(340, 35, 95)",
+        "text": "HSV(340, 10, 95)",
+        "subtext1": "HSV(340, 10, 90)",
+        "subtext0": "HSV(340, 10, 85)",
+        "overlay2": "HSV(340, 10, 70)",
+        "overlay1": "HSV(340, 10, 65)",
+        "overlay0": "HSV(340, 10, 60)",
+        "surface2": "HSV(340, 10, 50)",
+        "surface1": "HSV(340, 10, 45)",
+        "surface0": "HSV(340, 10, 40)",
+        "base": "HSV(340, 10, 22)",
+        "mantle": "HSV(340, 10, 19)",
+        "crust": "HSV(340, 10, 16)"
+    },
+    "name": "catppuccin-kerzeld-pink",
+    "accent": "pink",
+    "overrides": {
+        "pink": "#f285aa",
+        "text": "#f2dae2",
+        "subtext1": "#e6cfd6",
+        "subtext0": "#d9c3ca",
+        "overlay2": "#b3a1a7",
+        "overlay1": "#a6959b",
+        "overlay0": "#998a8f",
+        "surface2": "#807377",
+        "surface1": "#73676b",
+        "surface0": "#665c5f",
+        "base": "#383234",
+        "mantle": "#302c2d",
+        "crust": "#292526"
+    }
+}

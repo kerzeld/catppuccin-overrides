@@ -1,0 +1,144 @@
+[ColorEffects:Disabled]
+Color={{ colors.base.rgb }}
+ColorAmount=0.30000000000000004
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=0
+IntensityAmount=-1
+IntensityEffect=0
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color={{ colors.base.rgb }}
+ColorAmount=0.5
+ColorEffect=3
+ContrastAmount=0
+ContrastEffect=0
+Enable=true
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate={{ colors.accent.rgb }}
+BackgroundNormal={{ colors.surface0.rgb }}
+DecorationFocus={{ colors.accent.rgb }}
+DecorationHover={{ colors.surface0.rgb }}
+ForegroundActive={{ colors.peach.rgb }}
+ForegroundInactive={{ colors.subtext0.rgb }}
+ForegroundLink={{ colors.accent.rgb }}
+ForegroundNegative={{ colors.red.rgb }}
+ForegroundNeutral={{ colors.yellow.rgb }}
+ForegroundNormal={{ colors.text.rgb }}
+ForegroundPositive={{ colors.green.rgb }}
+ForegroundVisited={{ colors.mauve.rgb }}
+
+
+[Colors:Complementary]
+BackgroundAlternate={{ colors.crust.rgb }}
+BackgroundNormal={{ colors.mantle.rgb }}
+DecorationFocus={{ colors.accent.rgb }}
+DecorationHover={{ colors.surface0.rgb }}
+ForegroundActive={{ colors.peach.rgb }}
+ForegroundInactive={{ colors.subtext0.rgb }}
+ForegroundLink={{ colors.accent.rgb }}
+ForegroundNegative={{ colors.red.rgb }}
+ForegroundNeutral={{ colors.yellow.rgb }}
+ForegroundNormal={{ colors.text.rgb }}
+ForegroundPositive={{ colors.green.rgb }}
+ForegroundVisited={{ colors.mauve.rgb }}
+
+
+[Colors:Header]
+BackgroundAlternate={{ colors.crust.rgb }}
+BackgroundNormal={{ colors.mantle.rgb }}
+DecorationFocus={{ colors.accent.rgb }}
+DecorationHover={{ colors.surface0.rgb }}
+ForegroundActive={{ colors.peach.rgb }}
+ForegroundInactive={{ colors.subtext0.rgb }}
+ForegroundLink={{ colors.accent.rgb }}
+ForegroundNegative={{ colors.red.rgb }}
+ForegroundNeutral={{ colors.yellow.rgb }}
+ForegroundNormal={{ colors.text.rgb }}
+ForegroundPositive={{ colors.green.rgb }}
+ForegroundVisited={{ colors.mauve.rgb }}
+
+
+[Colors:Selection]
+BackgroundAlternate={{ colors.accent.rgb }}
+BackgroundNormal={{ colors.accent.rgb }}
+DecorationFocus={{ colors.accent.rgb }}
+DecorationHover={{ colors.surface0.rgb }}
+ForegroundLink={{ colors.accent.rgb }}
+ForegroundInactive={{ colors.mantle.rgb }}
+ForegroundActive={{ colors.peach.rgb }}
+ForegroundLink={{ colors.accent.rgb }}
+ForegroundNegative={{ colors.red.rgb }}
+ForegroundNeutral={{ colors.yellow.rgb }}
+ForegroundNormal={{ colors.crust.rgb }}
+ForegroundPositive={{ colors.green.rgb }}
+ForegroundVisited={{ colors.mauve.rgb }}
+
+
+[Colors:Tooltip]
+BackgroundAlternate=27,25,35
+BackgroundNormal={{ colors.base.rgb }}
+DecorationFocus={{ colors.accent.rgb }}
+DecorationHover={{ colors.surface0.rgb }}
+ForegroundActive={{ colors.peach.rgb }}
+ForegroundInactive={{ colors.subtext0.rgb }}
+ForegroundLink={{ colors.accent.rgb }}
+ForegroundNegative={{ colors.red.rgb }}
+ForegroundNeutral={{ colors.yellow.rgb }}
+ForegroundNormal={{ colors.text.rgb }}
+ForegroundPositive={{ colors.green.rgb }}
+ForegroundVisited={{ colors.mauve.rgb }}
+
+
+[Colors:View]
+BackgroundAlternate={{ colors.mantle.rgb }}
+BackgroundNormal={{ colors.base.rgb }}
+DecorationFocus={{ colors.accent.rgb }}
+DecorationHover={{ colors.surface0.rgb }}
+ForegroundActive={{ colors.peach.rgb }}
+ForegroundInactive={{ colors.subtext0.rgb }}
+ForegroundLink={{ colors.accent.rgb }}
+ForegroundNegative={{ colors.red.rgb }}
+ForegroundNeutral={{ colors.yellow.rgb }}
+ForegroundNormal={{ colors.text.rgb }}
+ForegroundPositive={{ colors.green.rgb }}
+ForegroundVisited={{ colors.mauve.rgb }}
+
+
+[Colors:Window]
+BackgroundAlternate={{ colors.crust.rgb }}
+BackgroundNormal={{ colors.mantle.rgb }}
+DecorationFocus={{ colors.accent.rgb }}
+DecorationHover={{ colors.surface0.rgb }}
+ForegroundActive={{ colors.peach.rgb }}
+ForegroundInactive={{ colors.subtext0.rgb }}
+ForegroundLink={{ colors.accent.rgb }}
+ForegroundNegative={{ colors.red.rgb }}
+ForegroundNeutral={{ colors.yellow.rgb }}
+ForegroundNormal={{ colors.text.rgb }}
+ForegroundPositive={{ colors.green.rgb }}
+ForegroundVisited={{ colors.mauve.rgb }}
+
+
+[General]
+ColorScheme={{ name }}
+Name={{ name }}
+accentActiveTitlebar=false
+shadeSortColumn=true
+
+
+[KDE]
+contrast=4
+
+
+[WM]
+activeBackground={{ colors.base.rgb }}
+activeBlend={{ colors.text.rgb }}
+activeForeground={{ colors.text.rgb }}
+inactiveBackground={{ colors.crust.rgb }}
+inactiveBlend={{ colors.subtext0.rgb }}
+inactiveForeground={{ colors.subtext0.rgb }}
