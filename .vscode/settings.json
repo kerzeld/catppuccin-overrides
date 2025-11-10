@@ -1,0 +1,5 @@
+{
+  "dprint.path": "./node_modules/.bin/dprint",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dprint.dprint"
+}

@@ -1,0 +1,175 @@
+[
+     {
+        "settings": {
+            "updateInterval": 24,
+            "updateOnlyEnabled": true,
+            "patchCsp": true,
+            "editor.linter": ""
+        }
+    },
+    {
+        "enabled": true,
+        "name": "Have I Been Pwned Catppuccin",
+        "description": "Soothing pastel theme for Have I Been Pwned",
+        "author": "Catppuccin",
+        "updateUrl": "https://github.com/catppuccin/userstyles/raw/main/styles/have-i-been-pwned/catppuccin.user.less",
+        "usercssData": {
+            "name": "Have I Been Pwned Catppuccin",
+            "namespace": "github.com/catppuccin/userstyles/styles/have-i-been-pwned",
+            "homepageURL": "https://github.com/catppuccin/userstyles/tree/main/styles/have-i-been-pwned",
+            "version": "2025.09.06",
+            "updateURL": "https://github.com/catppuccin/userstyles/raw/main/styles/have-i-been-pwned/catppuccin.user.less",
+            "supportURL": "https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Ahave-i-been-pwned",
+            "description": "Soothing pastel theme for Have I Been Pwned",
+            "author": "Catppuccin",
+            "license": "MIT",
+            "preprocessor": "less",
+            "vars": {
+                "lightFlavor": {
+                    "type": "select",
+                    "label": "Light Flavor",
+                    "name": "lightFlavor",
+                    "value": null,
+                    "default": "latte",
+                    "options": [
+                        {
+                            "name": "latte",
+                            "label": "Latte",
+                            "value": "latte"
+                        },
+                        {
+                            "name": "frappe",
+                            "label": "Frappé",
+                            "value": "frappe"
+                        },
+                        {
+                            "name": "macchiato",
+                            "label": "Macchiato",
+                            "value": "macchiato"
+                        },
+                        {
+                            "name": "mocha",
+                            "label": "Mocha",
+                            "value": "mocha"
+                        }
+                    ]
+                },
+                "darkFlavor": {
+                    "type": "select",
+                    "label": "Dark Flavor",
+                    "name": "darkFlavor",
+                    "value": null,
+                    "default": "mocha",
+                    "options": [
+                        {
+                            "name": "latte",
+                            "label": "Latte",
+                            "value": "latte"
+                        },
+                        {
+                            "name": "frappe",
+                            "label": "Frappé",
+                            "value": "frappe"
+                        },
+                        {
+                            "name": "macchiato",
+                            "label": "Macchiato",
+                            "value": "macchiato"
+                        },
+                        {
+                            "name": "mocha",
+                            "label": "Mocha",
+                            "value": "mocha"
+                        }
+                    ]
+                },
+                "accentColor": {
+                    "type": "select",
+                    "label": "Accent",
+                    "name": "accentColor",
+                    "value": "yellow",
+                    "default": "mauve",
+                    "options": [
+                        {
+                            "name": "rosewater",
+                            "label": "Rosewater",
+                            "value": "rosewater"
+                        },
+                        {
+                            "name": "flamingo",
+                            "label": "Flamingo",
+                            "value": "flamingo"
+                        },
+                        {
+                            "name": "pink",
+                            "label": "Pink",
+                            "value": "pink"
+                        },
+                        {
+                            "name": "mauve",
+                            "label": "Mauve",
+                            "value": "mauve"
+                        },
+                        {
+                            "name": "red",
+                            "label": "Red",
+                            "value": "red"
+                        },
+                        {
+                            "name": "maroon",
+                            "label": "Maroon",
+                            "value": "maroon"
+                        },
+                        {
+                            "name": "peach",
+                            "label": "Peach",
+                            "value": "peach"
+                        },
+                        {
+                            "name": "yellow",
+                            "label": "Yellow",
+                            "value": "yellow"
+                        },
+                        {
+                            "name": "green",
+                            "label": "Green",
+                            "value": "green"
+                        },
+                        {
+                            "name": "teal",
+                            "label": "Teal",
+                            "value": "teal"
+                        },
+                        {
+                            "name": "blue",
+                            "label": "Blue",
+                            "value": "blue"
+                        },
+                        {
+                            "name": "sapphire",
+                            "label": "Sapphire",
+                            "value": "sapphire"
+                        },
+                        {
+                            "name": "sky",
+                            "label": "Sky",
+                            "value": "sky"
+                        },
+                        {
+                            "name": "lavender",
+                            "label": "Lavender",
+                            "value": "lavender"
+                        },
+                        {
+                            "name": "subtext0",
+                            "label": "Gray",
+                            "value": "subtext0"
+                        }
+                    ]
+                }
+            }
+        },
+        "sourceCode": "/* ==UserStyle==\n@name Have I Been Pwned Catppuccin\n@namespace github.com/catppuccin/userstyles/styles/have-i-been-pwned\n@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/have-i-been-pwned\n@version 2025.09.06\n@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/have-i-been-pwned/catppuccin.user.less\n@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Ahave-i-been-pwned\n@description Soothing pastel theme for Have I Been Pwned\n@author Catppuccin\n@license MIT\n\n@preprocessor less\n@var select lightFlavor \"Light Flavor\" [\"latte:Latte*\", \"frappe:Frappé\", \"macchiato:Macchiato\", \"mocha:Mocha\"]\n@var select darkFlavor \"Dark Flavor\" [\"latte:Latte\", \"frappe:Frappé\", \"macchiato:Macchiato\", \"mocha:Mocha*\"]\n@var select accentColor \"Accent\" [\"rosewater:Rosewater\", \"flamingo:Flamingo\", \"pink:Pink\", \"mauve:Mauve*\", \"red:Red\", \"maroon:Maroon\", \"peach:Peach\", \"yellow:Yellow\", \"green:Green\", \"teal:Teal\", \"blue:Blue\", \"sapphire:Sapphire\", \"sky:Sky\", \"lavender:Lavender\", \"subtext0:Gray\"]\n==/UserStyle== */\n\n@colors: {\n  @rosewater: #f5e0dc;\n  @flamingo: #f2cdcd;\n  @pink: #f5c2e7;\n  @mauve: #cba6f7;\n  @red: #f38ba8;\n  @maroon: #eba0ac;\n  @peach: #fab387;\n  @yellow: #e6d99c;\n  @green: #a6e3a1;\n  @teal: #a6e3a1;\n  @sky: #89dceb;\n  @sapphire: #74c7ec;\n  @blue: #89b4fa;\n  @lavender: #b4befe;\n  @text: #f2eeda;\n  @subtext1: #e6e2cf;\n  @subtext0: #d9d5c3;\n  @overlay2: #b3b0a1;\n  @overlay1: #a6a395;\n  @overlay0: #99968a;\n  @surface2: #807d73;\n  @surface1: #737167;\n  @surface0: #66645c;\n  @base: #383732;\n  @mantle: #30302c;\n  @crust: #292825;\n};\n\n@catppuccin: {\n  @latte: @mocha;\n  @frappe: @mocha;\n  @macchiato: @mocha;\n  @mocha: @colors;\n};\n\n@custom-filter: {\n  @rosewater: brightness(0) saturate(100%) invert(92%) sepia(5%) saturate(704%) hue-rotate(320deg) brightness(99%) contrast(93%);\n  @flamingo: brightness(0) saturate(100%) invert(81%) sepia(5%) saturate(987%) hue-rotate(315deg) brightness(107%) contrast(90%);\n  @pink: brightness(0) saturate(100%) invert(86%) sepia(11%) saturate(1177%) hue-rotate(283deg) brightness(101%) contrast(92%);\n  @mauve: brightness(0) saturate(100%) invert(65%) sepia(58%) saturate(255%) hue-rotate(224deg) brightness(96%) contrast(102%);\n  @red: brightness(0) saturate(100%) invert(61%) sepia(19%) saturate(997%) hue-rotate(294deg) brightness(104%) contrast(91%);\n  @maroon: brightness(0) saturate(100%) invert(66%) sepia(16%) saturate(1301%) hue-rotate(306deg) brightness(116%) contrast(84%);\n  @peach: brightness(0) saturate(100%) invert(68%) sepia(57%) saturate(278%) hue-rotate(338deg) brightness(98%) contrast(101%);\n  @yellow: brightness(0) saturate(100%) invert(90%) sepia(70%) saturate(380%) hue-rotate(313deg) brightness(102%) contrast(95%);\n  @green: brightness(0) saturate(100%) invert(88%) sepia(6%) saturate(2015%) hue-rotate(63deg) brightness(104%) contrast(78%);\n  @teal: brightness(0) saturate(100%) invert(92%) sepia(12%) saturate(991%) hue-rotate(108deg) brightness(93%) contrast(90%);\n  @sky: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(1302%) hue-rotate(164deg) brightness(106%) contrast(84%);\n  @sapphire: brightness(0) saturate(100%) invert(74%) sepia(20%) saturate(876%) hue-rotate(156deg) brightness(96%) contrast(93%);\n  @blue: brightness(0) saturate(100%) invert(68%) sepia(18%) saturate(951%) hue-rotate(180deg) brightness(98%) contrast(100%);\n  @lavender: brightness(0) saturate(100%) invert(73%) sepia(7%) saturate(1670%) hue-rotate(195deg) brightness(102%) contrast(99%);\n  @text: brightness(0) saturate(100%) invert(86%) sepia(6%) saturate(879%) hue-rotate(190deg) brightness(100%) contrast(93%);\n  @subtext1: brightness(0) saturate(100%) invert(84%) sepia(19%) saturate(381%) hue-rotate(193deg) brightness(91%) contrast(89%);\n  @subtext0: brightness(0) saturate(100%) invert(84%) sepia(9%) saturate(767%) hue-rotate(192deg) brightness(84%) contrast(84%);\n  @overlay2: brightness(0) saturate(100%) invert(63%) sepia(15%) saturate(428%) hue-rotate(191deg) brightness(96%) contrast(84%);\n  @overlay1: brightness(0) saturate(100%) invert(56%) sepia(15%) saturate(455%) hue-rotate(192deg) brightness(90%) contrast(88%);\n  @overlay0: brightness(0) saturate(100%) invert(44%) sepia(6%) saturate(1275%) hue-rotate(194deg) brightness(97%) contrast(88%);\n  @surface2: brightness(0) saturate(100%) invert(34%) sepia(8%) saturate(1015%) hue-rotate(195deg) brightness(99%) contrast(89%);\n  @surface1: brightness(0) saturate(100%) invert(25%) sepia(6%) saturate(1950%) hue-rotate(197deg) brightness(99%) contrast(86%);\n  @surface0: brightness(0) saturate(100%) invert(19%) sepia(5%) saturate(2844%) hue-rotate(199deg) brightness(91%) contrast(93%);\n  @base: brightness(0) saturate(100%) invert(7%) sepia(4%) saturate(7496%) hue-rotate(202deg) brightness(93%) contrast(87%);\n  @mantle: brightness(0) saturate(100%) invert(6%) sepia(4%) saturate(7465%) hue-rotate(202deg) brightness(95%) contrast(90%);\n  @crust: brightness(0) saturate(100%) invert(3%) sepia(13%) saturate(6863%) hue-rotate(220deg) brightness(95%) contrast(91%);\n};\n\n@catppuccin-filters: {\n  @latte: @custom-filter;\n  @frappe: @custom-filter;\n  @macchiato: @custom-filter;\n  @mocha: @custom-filter;\n};\n\n#lib {\n  .palette() {\n    @rosewater: @catppuccin[@@flavor][@rosewater];\n    @flamingo: @catppuccin[@@flavor][@flamingo];\n    @pink: @catppuccin[@@flavor][@pink];\n    @mauve: @catppuccin[@@flavor][@mauve];\n    @red: @catppuccin[@@flavor][@red];\n    @maroon: @catppuccin[@@flavor][@maroon];\n    @peach: @catppuccin[@@flavor][@peach];\n    @yellow: @catppuccin[@@flavor][@yellow];\n    @green: @catppuccin[@@flavor][@green];\n    @teal: @catppuccin[@@flavor][@teal];\n    @sky: @catppuccin[@@flavor][@sky];\n    @sapphire: @catppuccin[@@flavor][@sapphire];\n    @blue: @catppuccin[@@flavor][@blue];\n    @lavender: @catppuccin[@@flavor][@lavender];\n    @text: @catppuccin[@@flavor][@text];\n    @subtext1: @catppuccin[@@flavor][@subtext1];\n    @subtext0: @catppuccin[@@flavor][@subtext0];\n    @overlay2: @catppuccin[@@flavor][@overlay2];\n    @overlay1: @catppuccin[@@flavor][@overlay1];\n    @overlay0: @catppuccin[@@flavor][@overlay0];\n    @surface2: @catppuccin[@@flavor][@surface2];\n    @surface1: @catppuccin[@@flavor][@surface1];\n    @surface0: @catppuccin[@@flavor][@surface0];\n    @base: @catppuccin[@@flavor][@base];\n    @mantle: @catppuccin[@@flavor][@mantle];\n    @crust: @catppuccin[@@flavor][@crust];\n    @accent: @catppuccin[@@flavor][@@accentColor];\n\n    @rosewater-filter: @catppuccin-filters[@@flavor][@rosewater];\n    @flamingo-filter: @catppuccin-filters[@@flavor][@flamingo];\n    @pink-filter: @catppuccin-filters[@@flavor][@pink];\n    @mauve-filter: @catppuccin-filters[@@flavor][@mauve];\n    @red-filter: @catppuccin-filters[@@flavor][@red];\n    @maroon-filter: @catppuccin-filters[@@flavor][@maroon];\n    @peach-filter: @catppuccin-filters[@@flavor][@peach];\n    @yellow-filter: @catppuccin-filters[@@flavor][@yellow];\n    @green-filter: @catppuccin-filters[@@flavor][@green];\n    @teal-filter: @catppuccin-filters[@@flavor][@teal];\n    @sky-filter: @catppuccin-filters[@@flavor][@sky];\n    @sapphire-filter: @catppuccin-filters[@@flavor][@sapphire];\n    @blue-filter: @catppuccin-filters[@@flavor][@blue];\n    @lavender-filter: @catppuccin-filters[@@flavor][@lavender];\n    @text-filter: @catppuccin-filters[@@flavor][@text];\n    @subtext1-filter: @catppuccin-filters[@@flavor][@subtext1];\n    @subtext0-filter: @catppuccin-filters[@@flavor][@subtext0];\n    @overlay2-filter: @catppuccin-filters[@@flavor][@overlay2];\n    @overlay1-filter: @catppuccin-filters[@@flavor][@overlay1];\n    @overlay0-filter: @catppuccin-filters[@@flavor][@overlay0];\n    @surface2-filter: @catppuccin-filters[@@flavor][@surface2];\n    @surface1-filter: @catppuccin-filters[@@flavor][@surface1];\n    @surface0-filter: @catppuccin-filters[@@flavor][@surface0];\n    @base-filter: @catppuccin-filters[@@flavor][@base];\n    @mantle-filter: @catppuccin-filters[@@flavor][@mantle];\n    @crust-filter: @catppuccin-filters[@@flavor][@crust];\n    @accent-filter: @catppuccin-filters[@@flavor][@@accentColor];\n  }\n\n  .defaults() {\n    color-scheme: if(@flavor = latte, light, dark);\n\n    ::selection {\n      background-color: fade(@accent, 30%);\n    }\n\n    input,\n    textarea {\n      &::placeholder {\n        color: @subtext0 !important;\n      }\n    }\n  }\n\n  .rgbify(@color) {\n    @rgb: red(@color), green(@color), blue(@color);\n  }\n\n  .hslify(@color) {\n    @raw: e(%(\"%s, %s%, %s%\", hue(@color), saturation(@color), lightness(@color)));\n  }\n\n  .css-variables() {\n    --ctp-rosewater: @rosewater;\n    --ctp-flamingo: @flamingo;\n    --ctp-pink: @pink;\n    --ctp-mauve: @mauve;\n    --ctp-red: @red;\n    --ctp-maroon: @maroon;\n    --ctp-peach: @peach;\n    --ctp-yellow: @yellow;\n    --ctp-green: @green;\n    --ctp-teal: @teal;\n    --ctp-sky: @sky;\n    --ctp-sapphire: @sapphire;\n    --ctp-blue: @blue;\n    --ctp-lavender: @lavender;\n    --ctp-text: @text;\n    --ctp-subtext1: @subtext1;\n    --ctp-subtext0: @subtext0;\n    --ctp-overlay2: @overlay2;\n    --ctp-overlay1: @overlay1;\n    --ctp-overlay0: @overlay0;\n    --ctp-surface2: @surface2;\n    --ctp-surface1: @surface1;\n    --ctp-surface0: @surface0;\n    --ctp-base: @base;\n    --ctp-mantle: @mantle;\n    --ctp-crust: @crust;\n  }\n}\n\n\n@-moz-document domain(\"haveibeenpwned.com\") {\n  :root {\n    @media (prefers-color-scheme: light) {\n      #catppuccin(@lightFlavor);\n    }\n    @media (prefers-color-scheme: dark) {\n      #catppuccin(@darkFlavor);\n    }\n  }\n\n  #catppuccin(@flavor) {\n    #lib.palette();\n    #lib.defaults();\n\n    body {\n      background-color: @base;\n      color: @text;\n    }\n\n    hr {\n      border-color: @surface0;\n    }\n\n    a {\n      &,\n      &:hover,\n      &:focus {\n        color: @text;\n        border-bottom-color: @surface2;\n      }\n\n      &:hover {\n        background-color: fade(@accent, 30%);\n      }\n    }\n\n    img.pwnLogo.large.modalLogo {\n      filter: @text-filter;\n    }\n\n    .bodyGradient {\n      color: @text;\n    }\n\n    .modal-header {\n      background: @crust;\n\n      .close {\n        color: @text;\n      }\n    }\n\n    .fa-loader,\n    .loaderText {\n      color: @text;\n    }\n\n    #postNotificationCallsToAction {\n      .btn {\n        background-color: @crust;\n        color: @text;\n      }\n\n      a.socialLink {\n        &,\n        &:link,\n        &:visited {\n          color: @text;\n        }\n      }\n    }\n\n    .modal-content {\n      background-color: @base;\n      border-color: @surface0;\n    }\n\n    .main {\n      background-color: @mantle;\n      color: @text;\n    }\n\n    .main-logo .logo {\n      border-color: @accent;\n      background-color: fade(@accent, 30%);\n    }\n\n    .pwnedCompanyList {\n      a,\n      a:hover {\n        color: @text;\n        border-bottom-color: @surface2;\n      }\n\n      td {\n        color: @subtext0;\n      }\n    }\n\n    footer {\n      a,\n      p {\n        color: @subtext0;\n      }\n    }\n\n    .unverified {\n      &,\n      a {\n        color: darken(@red, 50%) !important;\n        border-bottom-color: darken(@red, 50%) !important;\n      }\n    }\n\n    .navbar-inverse {\n      border-color: @surface0;\n      background-color: @crust;\n\n      .navbar-toggle {\n        border-color: @surface0;\n\n        &:hover,\n        &:focus {\n          background-color: @surface0;\n        }\n\n        .icon-bar {\n          background-color: @text;\n        }\n      }\n\n      .navbar-brand {\n        color: @text;\n        border-color: @text !important;\n      }\n\n      li.active > a {\n        &,\n        &:hover,\n        &:focus {\n          color: @text;\n          background-color: @crust;\n        }\n      }\n\n      li > a {\n        color: @subtext0;\n\n        &:hover,\n        &:focus {\n          color: @text;\n        }\n      }\n    }\n\n    img.pwnLogo {\n      &[src$=\"/List.png\"],\n      &[src$=\"/Email.png\"] {\n        filter: @text-filter;\n      }\n    }\n\n    .form-control {\n      background-color: @crust;\n      color: @text;\n      border-color: @surface0 !important;\n\n      &:focus {\n        box-shadow: 0 0 8px fade(@accent, 30%);\n      }\n    }\n\n    .btn-primary {\n      color: @text;\n      background-color: @crust;\n      border-color: @surface0 !important;\n\n      &:hover {\n        background-color: fade(@accent, 30%);\n      }\n    }\n\n    .btn-success {\n      background-color: @green;\n      color: @base;\n      border-color: @surface0;\n    }\n\n    .progress-bar {\n      background-color: @accent;\n    }\n\n    .form-group .termsOfUse {\n      background-color: @base;\n    }\n\n    .termsOfUse {\n      background-color: @mantle;\n\n      &,\n      a {\n        color: @subtext0;\n        border-bottom-color: @surface2;\n      }\n    }\n\n    .secondaryHeader {\n      background-color: @mantle;\n    }\n\n    .sensitive {\n      color: @yellow;\n    }\n\n    .sensitive-fade {\n      color: @subtext0;\n    }\n\n    .panel-primary {\n      border-color: @surface0;\n\n      > .panel-heading,\n      > .panel-footer {\n        color: @text;\n        border-color: @surface0;\n        background-color: @mantle;\n      }\n    }\n\n    #noPwnage {\n      background: @green;\n\n      a.socialLink {\n        color: @base !important;\n      }\n    }\n\n    #invalidAccount {\n      background: @yellow;\n    }\n\n    #pwnedWebsitesContainer {\n      hr {\n        border-color: @surface0;\n      }\n\n      > .pwnedRow {\n        background: @red;\n\n        .pwnedWebsite {\n          color: @base;\n\n          a {\n            color: @base;\n            border-bottom-color: @base;\n\n            &:hover {\n              background-color: transparent !important;\n            }\n          }\n        }\n      }\n\n      a.socialLink {\n        color: @base !important;\n      }\n    }\n\n    .pwnResultBanner {\n      color: @base;\n\n      a {\n        color: @base;\n        border-bottom-color: @base !important;\n\n        &:hover {\n          background-color: transparent !important;\n        }\n      }\n    }\n\n    #Cloudflare img {\n      @svg: escape(\n        '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1239.3 310.1\"><path d=\"M1158.5 187.7c-3.4 0-6.1-2.7-6.1-6.1 0-3.3 2.7-6.1 6.1-6.1 3.3 0 6.1 2.7 6.1 6.1s-2.8 6.1-6.1 6.1m0-11c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9m3.1 8.1h-1.4l-1.2-2.3h-1.6v2.3h-1.3v-6.7h3.2c1.4 0 2.3.9 2.3 2.2 0 1-.6 1.7-1.4 2zm-2.4-3.5c.5 0 1-.3 1-1 0-.8-.4-1-1-1h-2v2zM523 174.9h15.6v42.5h27.1V231H523zm58.8 28.2v-.1c0-16.1 13-29.2 30.3-29.2s30.1 12.9 30.1 29v.2c0 16.1-13 29.2-30.3 29.2-17.2-.1-30.1-13-30.1-29.1m44.6 0v-.1c0-8.1-5.8-15.1-14.4-15.1-8.5 0-14.2 6.9-14.2 15v.2c0 8.1 5.8 15.1 14.3 15.1 8.6-.1 14.3-7 14.3-15.1m34.9 3.3v-31.5h15.8v31.2c0 8.1 4.1 11.9 10.3 11.9s10.3-3.7 10.3-11.5v-31.6h15.8V206c0 18.1-10.3 26-26.3 26-15.9.1-25.9-8-25.9-25.6m76-31.5H759c20 0 31.7 11.5 31.7 27.7v.2c0 16.2-11.8 28.2-32 28.2h-21.3zm21.9 42.3c9.3 0 15.5-5.1 15.5-14.2v-.2c0-9-6.2-14.2-15.5-14.2h-6.3v28.5zm54-42.3h44.9v13.7h-29.4v9.5h26.6V211h-26.6v20h-15.5zm66.5 0h15.5v42.5h27.2V231h-42.7zm83.3-.4h15l23.9 56.5h-16.7l-4.1-10h-21.6l-4 10h-16.3zm13.7 34.4-6.2-15.9-6.3 15.9zm45.2-34h26.5c8.6 0 14.5 2.2 18.3 6.1 3.3 3.2 5 7.5 5 13.1v.2c0 8.6-4.6 14.3-11.5 17.2l13.4 19.6h-18l-11.3-17h-6.8v17H1022zm25.8 27c5.3 0 8.3-2.6 8.3-6.6v-.3c0-4.4-3.2-6.6-8.4-6.6h-10.2v13.5zm46.4-27h45.1v13.3h-29.7v8.4h26.9v12.3h-26.9v8.9h30.1V231h-45.5zM489 209.7c-2.2 4.9-6.8 8.4-12.8 8.4-8.5 0-14.3-7.1-14.3-15.1v-.2c0-8.1 5.7-15 14.2-15 6.4 0 11.3 3.9 13.3 9.3h16.4c-2.6-13.4-14.4-23.3-29.6-23.3-17.3 0-30.3 13.1-30.3 29.2v.2c0 16.1 12.8 29 30.1 29 14.8 0 26.4-9.6 29.4-22.4zm-97.9-40.1L348.2 145l-7.4-3.2-175.5 1.3v89l225.8.1z\" fill=\"@{text}\"/><path d=\"M313 224c2.1-7.2 1.3-13.8-2.2-18.7-3.2-4.5-8.6-7.1-15.1-7.4l-123.1-1.6c-.8 0-1.5-.4-1.9-1s-.5-1.4-.3-2.2c.4-1.2 1.6-2.1 2.9-2.2l124.2-1.6c14.7-.7 30.7-12.6 36.3-27.2l7.1-18.5c.3-.8.4-1.6.2-2.4-8-36.2-40.3-63.2-78.9-63.2-35.6 0-65.8 23-76.6 54.9-7-5.2-15.9-8-25.5-7.1-17.1 1.7-30.8 15.4-32.5 32.5-.4 4.4-.1 8.7.9 12.7-27.9.8-50.2 23.6-50.2 51.7 0 2.5.2 5 .5 7.5.2 1.2 1.2 2.1 2.4 2.1h227.2c1.3 0 2.5-.9 2.9-2.2zm39.2-79.1c-1.1 0-2.3 0-3.4.1-.8 0-1.5.6-1.8 1.4l-4.8 16.7c-2.1 7.2-1.3 13.8 2.2 18.7 3.2 4.5 8.6 7.1 15.1 7.4l26.2 1.6c.8 0 1.5.4 1.9 1s.5 1.5.3 2.2c-.4 1.2-1.6 2.1-2.9 2.2l-27.3 1.6c-14.8.7-30.7 12.6-36.3 27.2l-2 5.1c-.4 1 .3 2 1.4 2h93.8c1.1 0 2.1-.7 2.4-1.8 1.6-5.8 2.5-11.9 2.5-18.2 0-37.1-30.1-67.2-67.3-67.2\" fill=\"@{peach}\"/></svg>'\n      );\n      content: url(\"data:image/svg+xml,@{svg}\");\n    }\n\n    pre,\n    code {\n      background-color: @mantle;\n      color: @text;\n      border-color: @surface0;\n    }\n\n    thead tr {\n      border-color: @surface0;\n    }\n\n    .bitcoinAddress {\n      background-color: @mantle;\n      color: @text;\n    }\n\n    .bg-info {\n      background-color: @mantle;\n      color: @text;\n    }\n\n    .subscriptions {\n      .rpm10 {\n        border-color: @teal;\n\n        h4,\n        h5,\n        .price {\n          background-color: @teal;\n          color: @base;\n        }\n      }\n\n      .rpm50 {\n        border-color: @green;\n\n        h4,\n        h5,\n        .price {\n          background-color: @green;\n          color: @base;\n        }\n      }\n\n      .rpm100 {\n        border-color: @yellow;\n\n        h4,\n        h5,\n        .price {\n          background-color: @yellow;\n          color: @base;\n        }\n      }\n\n      .rpm500 {\n        border-color: @peach;\n\n        h4,\n        h5,\n        .price {\n          background-color: @peach;\n          color: @base;\n        }\n      }\n\n      .description {\n        color: @text;\n      }\n    }\n\n    .finePrint {\n      color: @text;\n    }\n\n    .table-bordered {\n      &,\n      th,\n      td {\n        border-color: @surface0;\n      }\n    }\n\n    .dropdown-menu {\n      background-color: @base;\n\n      > li > a {\n        &:hover,\n        &:focus {\n          background-color: @mantle;\n        }\n      }\n    }\n\n    @media (min-width: 768px) {\n      ul.nav li.dropdown:hover {\n        background-color: @base;\n      }\n    }\n\n    @media (max-width: 480px) {\n      #searchContainer {\n        background-color: @mantle;\n      }\n    }\n  }\n}\n",
+        "originalDigest": "a80bde9c654f05c2cbd67131baa9be02fd06ad25"
+    }
+]
