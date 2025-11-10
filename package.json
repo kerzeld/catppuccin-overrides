@@ -13,9 +13,13 @@
   "packageManager": "pnpm@10.20.0",
   "dependencies": {
     "color": "5.0.2",
-    "mustache": "4.2.0"
+    "fast-average-color-node": "^3.1.0",
+    "minimist": "1.2.8",
+    "mustache": "4.2.0",
+    "node-vibrant": "^4.0.3"
   },
   "devDependencies": {
+    "@types/minimist": "1.2.5",
     "@types/mustache": "4.2.6",
     "@types/node": "24.10.0",
     "dprint": "^0.50.2"

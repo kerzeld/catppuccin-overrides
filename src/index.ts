@@ -6,6 +6,7 @@ import { MochaColors } from "./colors.ts";
 import { PATH_TEMPLATES, PATH_THEMES, THEME_JSON_FILE_NAME } from "./const.ts";
 import { getUserStyles } from "./userstyles.ts";
 import type { IThemeObject } from "./interfaces.ts";
+import { fetchImage } from "./picture.ts";
 
 const themes = ["pink", "yellow"];
 
@@ -72,6 +73,7 @@ async function main() {
 			fs.writeFileSync(outFilePath, out);
 		}
 
+		//await fetchImage();
 		fs.writeFileSync(path.join(outPath, "userstyles.json"), JSON.stringify(await getUserStyles(themeObject)));
 
 		console.log("Created themes for " + theme);
