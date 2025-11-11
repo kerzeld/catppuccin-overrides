@@ -12,16 +12,16 @@
   "license": "ISC",
   "packageManager": "pnpm@10.20.0",
   "dependencies": {
+    "adm-zip": "^0.5.16",
     "color": "5.0.2",
-    "fast-average-color-node": "^3.1.0",
     "minimist": "1.2.8",
-    "mustache": "4.2.0",
-    "node-vibrant": "^4.0.3"
+    "mustache": "4.2.0"
   },
   "devDependencies": {
     "@types/minimist": "1.2.5",
     "@types/mustache": "4.2.6",
     "@types/node": "24.10.0",
-    "dprint": "^0.50.2"
+    "dprint": "^0.50.2",
+    "oxlint": "^1.28.0"
   }
 }

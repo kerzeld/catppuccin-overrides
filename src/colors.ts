@@ -26,7 +26,7 @@ export const MochaShades = {
 	surface1: "#45475a",
 	surface0: "#313244",
 	base: "#1e1e2e",
-	mantel: "#181825",
+	mantle: "#181825",
 	crust: "#11111b",
 };
 
@@ -60,7 +60,7 @@ export const FrapeShades = {
 	surface1: "#51576d",
 	surface0: "#414559",
 	base: "#303446",
-	mantel: "#292c3c",
+	mantle: "#292c3c",
 	crust: "#232634",
 };
 

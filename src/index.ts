@@ -1,83 +1,68 @@
-import Color from "color";
 import mustache from "mustache";
 import fs from "node:fs";
 import path from "node:path";
-import { MochaColors } from "./colors.ts";
-import { PATH_TEMPLATES, PATH_THEMES, THEME_JSON_FILE_NAME } from "./const.ts";
-import { getUserStyles } from "./userstyles.ts";
-import type { IThemeObject } from "./interfaces.ts";
-import { fetchImage } from "./picture.ts";
-
-const themes = ["pink", "yellow"];
-
-function recurseDirRead(dir: string) {
-	const files: string[] = [];
-	for (const file of fs.readdirSync(dir, { recursive: true, withFileTypes: true })) {
-		if (file.isFile()) files.push(path.join(file.parentPath, file.name));
-	}
-	return files;
-}
-
-function ensureDirectoryExistence(filePath: string) {
-	var dirname = path.dirname(filePath);
-	if (fs.existsSync(dirname)) {
-		return true;
-	}
-	ensureDirectoryExistence(dirname);
-	fs.mkdirSync(dirname);
-}
+import { PATH_OUT, PATH_TEMPLATES } from "./const.ts";
+import type { ITheme, IThemeView } from "./interfaces.ts";
+import { themes } from "./themes.ts";
+import { buildHexFromHSV, buildThemeView, ensureDirectoryExistence, recurseDirRead } from "./utils.ts";
+import { getUserStyles } from "./userStyles.ts";
+import minimist from "minimist";
+import { generateFirefoxThemeManifest } from "./firefox.ts";
 
 async function main() {
-	for (const theme of themes) {
-		const themePath = path.join(PATH_THEMES, theme);
-		const outPath = path.join(themePath, "out");
+	const args = minimist(process.argv.slice(2));
 
-		try {
-			fs.rmSync(outPath, { recursive: true });
-		} catch (error) {
-			// dir already deleted
-		}
+	const themeName = args._[0];
 
-		// Read theme and override base colors
-		const themeJSON = JSON.parse(fs.readFileSync(path.join(themePath, THEME_JSON_FILE_NAME)).toString());
-		const colors = { ...MochaColors, ...themeJSON.overrides };
-
-		// init template object
-		const themeObject: IThemeObject = { colors: {}, name: themeJSON.name, accent: themeJSON.accent };
-
-		// Generate color formats
-		for (const name of Object.keys(colors)) {
-			const color = new Color(colors[name]);
-			themeObject.colors[name] = {
-				rgb: color.rgb().toString().replace("rgb(", "").replace(")", ""),
-				hex: colors[name].replace("#", ""),
-			};
-		}
-
-		// Add accent color
-		const color = new Color(colors[themeJSON.accent]);
-		themeObject.colors["accent"] = {
-			rgb: color.rgb().toString().replace("rgb(", "").replace(")", ""),
-			hex: colors[themeJSON.accent].replace("#", ""),
-		};
-
-		const templates = recurseDirRead(PATH_TEMPLATES);
-
-		// Read and write templates
-		for (const template of templates) {
-			const out = mustache.render(fs.readFileSync(template).toString(), themeObject);
-			const templateRelativePath = template.replace(PATH_TEMPLATES + "/", "");
-			const outFilePath = path.join(outPath, templateRelativePath);
-
-			ensureDirectoryExistence(outFilePath);
-			fs.writeFileSync(outFilePath, out);
-		}
-
-		//await fetchImage();
-		fs.writeFileSync(path.join(outPath, "userstyles.json"), JSON.stringify(await getUserStyles(themeObject)));
-
-		console.log("Created themes for " + theme);
+	if (!themeName) {
+		console.log("No theme specified");
+		process.exit(1);
 	}
+
+	let theme: ITheme | undefined = undefined;
+	for (const key in themes) {
+		const name = key as keyof typeof themes;
+		theme = themes[name];
+	}
+
+	if (!theme) {
+		console.log("Theme does not exist");
+		process.exit(1);
+	}
+
+	try {
+		fs.rmSync(PATH_OUT, { recursive: true });
+		// oxlint-disable-next-line no-unused-vars
+	} catch (error) {
+		// dir already deleted
+	}
+
+	// init template object
+	const view: IThemeView = buildThemeView(theme);
+
+	const templates = recurseDirRead(PATH_TEMPLATES);
+
+	// Read and write templates
+	for (const template of templates) {
+		const out = mustache.render(fs.readFileSync(template).toString(), view);
+		const templateRelativePath = template.replace(PATH_TEMPLATES + "/", "");
+		const outFilePath = path.join(PATH_OUT, templateRelativePath);
+
+		ensureDirectoryExistence(outFilePath);
+		fs.writeFileSync(outFilePath, out);
+	}
+
+	// Write userStyles
+	fs.writeFileSync(path.join(PATH_OUT, "userStyles.json"), JSON.stringify(await getUserStyles(view)));
+
+	// Write firefox color theme
+	const manifestPath = path.join(PATH_OUT, "firefox", "manifest.json");
+	ensureDirectoryExistence(manifestPath);
+	fs.writeFileSync(manifestPath, JSON.stringify(await generateFirefoxThemeManifest(view)));
+
+	buildHexFromHSV(theme.overrides.hsv![0]!);
+
+	console.log("Theme successfully applied");
 }
 
 main();

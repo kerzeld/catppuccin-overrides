@@ -1,7 +1,7 @@
 import mustache from "mustache";
 import type { MochaColors } from "./colors.ts";
 import { PATH_CONFIG } from "./const.ts";
-import type { IThemeObject } from "./interfaces.ts";
+import type { IThemeView } from "./interfaces.ts";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -29,7 +29,7 @@ async function donwloadStyles(): Promise<IUserStyle[]> {
 	return userstyleData!;
 }
 
-export async function getUserStyles(theme: IThemeObject) {
+export async function getUserStyles(theme: IThemeView) {
 	const importObject = await donwloadStyles();
 	const themeLessFile = fs.readFileSync(path.join(PATH_CONFIG, "templates/stylus.less")).toString();
 
@@ -40,7 +40,7 @@ export async function getUserStyles(theme: IThemeObject) {
 		if (style.sourceCode && style.usercssData) {
 			style.usercssData.vars.accentColor.value = theme.accent;
 			style.sourceCode = style.sourceCode.replaceAll(
-				'@import \"https://userstyles.catppuccin.com/lib/lib.less\";',
+				'@import "https://userstyles.catppuccin.com/lib/lib.less";',
 				renderedLessFile,
 			);
 		}
