@@ -7,3 +7,7 @@ ln -s $SCRIPT_PATH/out/plasma/kerzeld-konsole.colorscheme /home/dom/.local/share
 
 rm ~/.local/share/color-schemes/kerzeld.colors
 ln -s $SCRIPT_PATH/out/plasma/kerzeld.colors ~/.local/share/color-schemes/kerzeld.colors
+
+# Reload plasma colors
+plasma-apply-colorscheme BreezeDark
+plasma-apply-colorscheme kerzeld

@@ -35,6 +35,7 @@ export function buildThemeView(theme: ITheme): IThemeView {
 		view.colors[name] = {
 			rgb: color.rgb().toString().replace("rgb(", "").replace(")", ""),
 			hex: colors[name].replace("#", ""),
+			color,
 		};
 	}
 
@@ -43,6 +44,7 @@ export function buildThemeView(theme: ITheme): IThemeView {
 	view.colors["accent"] = {
 		rgb: color.rgb().toString().replace("rgb(", "").replace(")", ""),
 		hex: colors[theme.accent].replace("#", ""),
+		color,
 	};
 
 	return view;

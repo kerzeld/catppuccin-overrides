@@ -7,28 +7,25 @@ import { themes } from "./themes.ts";
 import { buildHexFromHSV, buildThemeView, ensureDirectoryExistence, recurseDirRead } from "./utils.ts";
 import { getUserStyles } from "./userStyles.ts";
 import minimist from "minimist";
-import { generateFirefoxThemeManifest } from "./firefox.ts";
+import { generateFirefoxColorLink, generateFirefoxThemeManifest } from "./firefox.ts";
+import { styleText } from "node:util";
 
 async function main() {
 	const args = minimist(process.argv.slice(2));
 
-	const themeName = args._[0];
+	const themeName = args._[0] as keyof typeof themes;
 
 	if (!themeName) {
 		console.log("No theme specified");
 		process.exit(1);
 	}
 
-	let theme: ITheme | undefined = undefined;
-	for (const key in themes) {
-		const name = key as keyof typeof themes;
-		theme = themes[name];
-	}
-
-	if (!theme) {
+	if (!(themeName in themes)) {
 		console.log("Theme does not exist");
 		process.exit(1);
 	}
+
+	let theme: ITheme = themes[themeName];
 
 	try {
 		fs.rmSync(PATH_OUT, { recursive: true });
@@ -55,14 +52,20 @@ async function main() {
 	// Write userStyles
 	fs.writeFileSync(path.join(PATH_OUT, "userStyles.json"), JSON.stringify(await getUserStyles(view)));
 
-	// Write firefox color theme
-	const manifestPath = path.join(PATH_OUT, "firefox", "manifest.json");
-	ensureDirectoryExistence(manifestPath);
-	fs.writeFileSync(manifestPath, JSON.stringify(await generateFirefoxThemeManifest(view)));
+	if (args.firefoxTheme) {
+		// Write firefox color theme
+		const manifestPath = path.join(PATH_OUT, "firefox", "manifest.json");
+		ensureDirectoryExistence(manifestPath);
+		fs.writeFileSync(manifestPath, JSON.stringify(await generateFirefoxThemeManifest(view)));
+	}
+
+	// Generate firefox color link
+	generateFirefoxColorLink(view);
 
 	buildHexFromHSV(theme.overrides.hsv![0]!);
 
-	console.log("Theme successfully applied");
+	console.log("");
+	console.log(styleText("green", "Theme successfully generated!"));
 }
 
 main();

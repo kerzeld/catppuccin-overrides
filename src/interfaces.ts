@@ -1,4 +1,5 @@
 import type { MochaColors, MochaTheme } from "./colors";
+import type { ColorInstance } from "color";
 
 export type TColorNames = keyof typeof MochaTheme;
 
@@ -14,7 +15,7 @@ export interface IHSVOverride {
 }
 
 export interface IThemeView {
-	colors: Record<string, { rgb: string; hex: string }>;
+	colors: Record<string, { rgb: string; hex: string; color: ColorInstance }>;
 	name: string;
 	accent: keyof typeof MochaColors;
 }

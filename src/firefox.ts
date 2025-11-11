@@ -1,4 +1,7 @@
 import type { IThemeView, TColorNames } from "./interfaces.ts";
+import lzma from "lzma";
+import { encode } from "@msgpack/msgpack";
+import { styleText } from "node:util";
 
 const colors: Record<string, TColorNames | "accent"> = {
 	toolbar: "mantle",
@@ -54,4 +57,29 @@ export function generateFirefoxThemeManifest(view: IThemeView) {
 			colors: finishedColors,
 		},
 	};
+}
+
+export function generateFirefoxColorLink(view: IThemeView) {
+	const finishedColors: Record<string, { r: number; g: number; b: number }> = {};
+
+	for (const key in colors) {
+		const value = colors[key];
+		finishedColors[key] = {
+			r: view.colors[value].color.red(),
+			g: view.colors[value].color.green(),
+			b: view.colors[value].color.blue(),
+		};
+	}
+
+	const theme = {
+		name: view.name,
+		colors: finishedColors,
+	};
+
+	const encoded = encode(theme);
+	const compressed = lzma.compress(encoded);
+	console.log("Firefox Colors Link:");
+	console.log(styleText("blackBright", "#########################################"));
+	console.log(styleText("blue", "https://color.firefox.com/?theme=" + Buffer.from(compressed).toString("base64url")));
+	console.log(styleText("blackBright", "#########################################"));
 }
