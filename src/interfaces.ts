@@ -1,4 +1,4 @@
-import type { MochaColors, MochaTheme } from "./colors";
+import type { MochaColors, MochaTheme } from "./colors.ts";
 import type { ColorInstance } from "color";
 
 export type TColorNames = keyof typeof MochaTheme;

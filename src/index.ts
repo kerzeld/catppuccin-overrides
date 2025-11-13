@@ -9,6 +9,7 @@ import { getUserStyles } from "./userStyles.ts";
 import minimist from "minimist";
 import { generateFirefoxColorLink, generateFirefoxThemeManifest } from "./firefox.ts";
 import { styleText } from "node:util";
+import { generateWhiskersThemes } from "./whiskers.ts";
 
 async function main() {
 	const args = minimist(process.argv.slice(2));
@@ -56,11 +57,12 @@ async function main() {
 		// Write firefox color theme
 		const manifestPath = path.join(PATH_OUT, "firefox", "manifest.json");
 		ensureDirectoryExistence(manifestPath);
-		fs.writeFileSync(manifestPath, JSON.stringify(await generateFirefoxThemeManifest(view)));
+		fs.writeFileSync(manifestPath, JSON.stringify(generateFirefoxThemeManifest(view)));
 	}
 
 	// Generate firefox color link
 	generateFirefoxColorLink(view);
+	generateWhiskersThemes(view);
 
 	buildHexFromHSV(theme.overrides.hsv![0]!);
 

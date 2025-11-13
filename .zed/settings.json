@@ -1,0 +1,46 @@
+{
+	"lsp": {
+		"dprint": {
+			"binary": {
+				"path": "./node_modules/.bin/dprint",
+				"arguments": ["lsp"]
+			}
+		},
+		"eslint": {
+			"enable_lsp_tasks": false
+		}
+	},
+	"language_servers": [
+		"oxc",
+		"dprint",
+		"package-version-server",
+		"tailwindcss-language-server",
+		"vtsls",
+		// "typescript-language-server",
+		"json-language-server",
+		"tera"
+	],
+	"languages": {
+		"JavaScript": {
+			"formatter": {
+				"language_server": {
+					"name": "dprint"
+				}
+			}
+		},
+		"TypeScript": {
+			"formatter": {
+				"language_server": {
+					"name": "dprint"
+				}
+			}
+		},
+		"JSON": {
+			"formatter": {
+				"language_server": {
+					"name": "dprint"
+				}
+			}
+		}
+	}
+}

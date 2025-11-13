@@ -65,3 +65,5 @@ export const FrapeShades = {
 };
 
 export const FrapeTheme = { ...MochaColors, ...MochaShades };
+
+export const ThemeKeys = Object.keys(MochaTheme);

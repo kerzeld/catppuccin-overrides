@@ -16,6 +16,7 @@
         packages = [
           pkgs.nodejs-slim_24
           pkgs.pnpm
+          pkgs.catppuccin-whiskers
         ];
       };
     };

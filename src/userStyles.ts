@@ -22,9 +22,7 @@ let userstyleData: undefined | IUserStyle[] = undefined;
 
 async function donwloadStyles(): Promise<IUserStyle[]> {
 	if (userstyleData) return userstyleData;
-	const resp = await fetch(
-		"https://github.com/catppuccin/userstyles/releases/download/all-userstyles-export/import.json",
-	);
+	const resp = await fetch("https://github.com/catppuccin/userstyles/releases/download/all-userstyles-export/import.json");
 	userstyleData = await resp.json();
 	return userstyleData!;
 }
@@ -39,10 +37,7 @@ export async function getUserStyles(theme: IThemeView) {
 	for (const style of importObject) {
 		if (style.sourceCode && style.usercssData) {
 			style.usercssData.vars.accentColor.value = theme.accent;
-			style.sourceCode = style.sourceCode.replaceAll(
-				'@import "https://userstyles.catppuccin.com/lib/lib.less";',
-				renderedLessFile,
-			);
+			style.sourceCode = style.sourceCode.replaceAll('@import "https://userstyles.catppuccin.com/lib/lib.less";', renderedLessFile);
 		}
 	}
 

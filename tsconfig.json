@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "nodenext",
+		"module": "NodeNext",
+		"allowImportingTsExtensions": true,
+		"emitDeclarationOnly": true,
+		"composite": true
+	},
+	"include": ["./src/**/*.ts"]
+}
