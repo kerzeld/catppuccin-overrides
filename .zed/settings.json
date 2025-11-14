@@ -16,6 +16,8 @@
 		"package-version-server",
 		"tailwindcss-language-server",
 		"vtsls",
+		"color-lsp",
+		"codebook",
 		// "typescript-language-server",
 		"json-language-server",
 		"tera"
@@ -42,5 +44,6 @@
 				}
 			}
 		}
-	}
+	},
+	"lsp_document_colors": "inlay"
 }

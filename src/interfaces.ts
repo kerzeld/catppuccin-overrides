@@ -17,6 +17,11 @@ export interface IHSVOverride {
 export interface IThemeView {
 	colors: Record<string, { rgb: string; hex: string; color: ColorInstance }>;
 	name: string;
+	opacity: {
+		float: string;
+		value: number;
+		num: string;
+	};
 	accent: keyof typeof MochaColors;
 }
 

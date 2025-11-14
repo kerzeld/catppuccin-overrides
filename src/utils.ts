@@ -3,6 +3,7 @@ import type { IHSVOverride, ITheme, IThemeView, TColorNames } from "./interfaces
 import { MochaColors } from "./colors.ts";
 import fs from "node:fs";
 import path from "node:path";
+import { DEFAULT_OPACITY } from "./const.ts";
 
 export function buildHexFromHSV(overrides: IHSVOverride) {
 	const colorObj: Partial<Record<TColorNames, string>> = {};
@@ -25,7 +26,16 @@ export function buildThemeView(theme: ITheme): IThemeView {
 	const colors: Record<string, string> = { ...MochaColors, ...hsvOverriedes, ...theme.overrides.hex };
 
 	// Create view object
-	const view: IThemeView = { name: "catppuccin-kerzeld-" + theme.name, accent: theme.accent, colors: {} };
+	const view: IThemeView = {
+		name: "catppuccin-kerzeld-" + theme.name,
+		accent: theme.accent,
+		colors: {},
+		opacity: {
+			value: DEFAULT_OPACITY,
+			num: Math.floor(255 * DEFAULT_OPACITY).toString(),
+			float: DEFAULT_OPACITY.toString(),
+		},
+	};
 
 	// Generate color formats
 	for (const name of Object.keys(colors)) {

@@ -21,8 +21,8 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate={{ colors.accent.rgb }}
-BackgroundNormal={{ colors.surface0.rgb }}
+BackgroundAlternate={{ colors.accent.rgb }}, {{ opacity.num }}
+BackgroundNormal={{ colors.surface0.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
 ForegroundActive={{ colors.peach.rgb }}
@@ -36,8 +36,8 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:Complementary]
-BackgroundAlternate={{ colors.crust.rgb }}
-BackgroundNormal={{ colors.mantle.rgb }}
+BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
 ForegroundActive={{ colors.peach.rgb }}
@@ -51,8 +51,8 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:Header]
-BackgroundAlternate={{ colors.crust.rgb }}
-BackgroundNormal={{ colors.mantle.rgb }}
+BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
 ForegroundActive={{ colors.peach.rgb }}
@@ -66,12 +66,12 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:Selection]
-BackgroundAlternate={{ colors.accent.rgb }}
-BackgroundNormal={{ colors.accent.rgb }}
+BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
 ForegroundLink={{ colors.accent.rgb }}
-ForegroundInactive={{ colors.mantle.rgb }}
+ForegroundInactive={{ colors.base.rgb }}
 ForegroundActive={{ colors.peach.rgb }}
 ForegroundLink={{ colors.accent.rgb }}
 ForegroundNegative={{ colors.red.rgb }}
@@ -82,8 +82,8 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:Tooltip]
-BackgroundAlternate={{ colors.mantle.rgb }}
-BackgroundNormal={{ colors.base.rgb }}
+BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
 ForegroundActive={{ colors.peach.rgb }}
@@ -97,8 +97,8 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:View]
-BackgroundAlternate={{ colors.mantle.rgb }}
-BackgroundNormal={{ colors.base.rgb }}
+BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
 ForegroundActive={{ colors.peach.rgb }}
@@ -112,8 +112,8 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:Window]
-BackgroundAlternate={{ colors.crust.rgb }}
-BackgroundNormal={{ colors.mantle.rgb }}
+BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
 ForegroundActive={{ colors.peach.rgb }}
@@ -127,8 +127,8 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [General]
-ColorScheme={{ name }}
-Name={{ name }}
+ColorScheme={{ name }}-glassy
+Name={{ name }}-glassy
 accentActiveTitlebar=false
 shadeSortColumn=true
 
@@ -138,9 +138,9 @@ contrast=4
 
 
 [WM]
-activeBackground={{ colors.base.rgb }}
+activeBackground={{ colors.base.rgb }}, {{ opacity.num }}
 activeBlend={{ colors.text.rgb }}
 activeForeground={{ colors.text.rgb }}
-inactiveBackground={{ colors.crust.rgb }}
+inactiveBackground={{ colors.crust.rgb }}, {{ opacity.num }}
 inactiveBlend={{ colors.subtext0.rgb }}
 inactiveForeground={{ colors.subtext0.rgb }}

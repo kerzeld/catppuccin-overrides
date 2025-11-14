@@ -1,5 +1,5 @@
 import path from "node:path";
-import { PATH_CONFIG, PATH_OUT } from "./const.ts";
+import { DEFAULT_OPACITY, PATH_CONFIG, PATH_OUT } from "./const.ts";
 import type { IThemeView } from "./interfaces.ts";
 import { ensureDirectoryExistence, recurseDirRead } from "./utils.ts";
 import fs from "node:fs";
@@ -23,8 +23,8 @@ export function generateWhiskersThemes(view: IThemeView) {
 	for (const template of templates) {
 		const str = fs.readFileSync(template).toString();
 		const parts = str.split("---");
-		const configPart = parts[1].replace("%accent%", view.accent);
-		const templatePart = parts[2];
+		const configPart = parts[1].replaceAll("%accent%", view.accent);
+		const templatePart = parts[2].replaceAll("opacity.float", DEFAULT_OPACITY.toString());
 		const templateRelativePath = template.replace(PATH_CONFIG + "/", "");
 		const outFilePath = path.join(PATH_OUT, templateRelativePath);
 
