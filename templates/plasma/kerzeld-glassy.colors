@@ -36,7 +36,7 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:Complementary]
-BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundAlternate={{ colors.mantel.rgb }}, {{ opacity.num }}
 BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
@@ -51,7 +51,7 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:Header]
-BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundAlternate={{ colors.mantel.rgb }}, {{ opacity.num }}
 BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
@@ -66,8 +66,8 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:Selection]
-BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
-BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundAlternate={{ colors.accent.rgb }}, {{ opacity.num }}
+BackgroundNormal={{ colors.accent.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
 ForegroundLink={{ colors.accent.rgb }}
@@ -82,7 +82,7 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:Tooltip]
-BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundAlternate={{ colors.mantel.rgb }}, {{ opacity.num }}
 BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
@@ -97,7 +97,7 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:View]
-BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundAlternate={{ colors.mantel.rgb }}, {{ opacity.num }}
 BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
@@ -112,7 +112,7 @@ ForegroundVisited={{ colors.mauve.rgb }}
 
 
 [Colors:Window]
-BackgroundAlternate={{ colors.crust.rgb }}, {{ opacity.num }}
+BackgroundAlternate={{ colors.mantel.rgb }}, {{ opacity.num }}
 BackgroundNormal={{ colors.crust.rgb }}, {{ opacity.num }}
 DecorationFocus={{ colors.accent.rgb }}
 DecorationHover={{ colors.surface0.rgb }}
