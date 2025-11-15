@@ -32,7 +32,7 @@ export function generateWhiskersThemes(view: IThemeView) {
 		fs.writeFileSync(outFilePath, "---" + configPart + "---" + templatePart);
 
 		exec(
-			"whiskers --color-overrides ./overrides.json zed.tera -f mocha",
+			"whiskers --color-overrides ./overrides.json " + path.basename(template) + " -f mocha",
 			{
 				cwd: path.join(PATH_OUT, FOLDER_NAME),
 			},

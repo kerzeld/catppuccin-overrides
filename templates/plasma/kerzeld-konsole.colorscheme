@@ -1,11 +1,11 @@
 [Background]
-Color={{ colors.base.rgb }}
+Color={{ colors.crust.rgb }}
 
 [BackgroundFaint]
-Color={{ colors.base.rgb }}
+Color={{ colors.crust.rgb }}
 
 [BackgroundIntense]
-Color={{ colors.base.rgb }}
+Color={{ colors.crust.rgb }}
 
 [Color0]
 Color={{ colors.overlay0.rgb }}

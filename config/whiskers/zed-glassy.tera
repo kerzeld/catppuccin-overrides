@@ -4,28 +4,28 @@ whiskers:
     matrix:
     - variant: ["", "-no-italics"]
     - accent: ["%accent%"]
-    filename: "zed/catppuccin-kerzeld{{ variant }}.json"
+    filename: "zed-glassy/catppuccin-kerzeld{{ variant }}.json"
     hex_format: "#{{r}}{{g}}{{b}}{{z}}"
 ---
 {
     "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
-    "name": "Catppuccin kerzeld",
+    "name": "Catppuccin",
     "author": "kerzeld, Catppuccin <releases@catppuccin.com>",
     "themes": [
         {%- for _, flavor in flavors -%}
         {%- set c = flavor.colors -%}
         {% set rainbow = [
-            c.red       | mix(color=c.text, amount=0.8),
-            c.peach     | mix(color=c.text, amount=0.8),
-            c.yellow    | mix(color=c.text, amount=0.8),
-            c.green     | mix(color=c.text, amount=0.8),
-            c.sapphire  | mix(color=c.text, amount=0.8),
-            c.lavender  | mix(color=c.text, amount=0.8),
-            c.mauve     | mix(color=c.text, amount=0.8),
+            c.red       | mix(color=c.text, amount=opacity.float),
+            c.peach     | mix(color=c.text, amount=opacity.float),
+            c.yellow    | mix(color=c.text, amount=opacity.float),
+            c.green     | mix(color=c.text, amount=opacity.float),
+            c.sapphire  | mix(color=c.text, amount=opacity.float),
+            c.lavender  | mix(color=c.text, amount=opacity.float),
+            c.mauve     | mix(color=c.text, amount=opacity.float),
         ] -%}
         {%- set italics = if(cond=variant == "-no-italics", t="null", f='"italic"') %}
         {
-            "name": "Catppuccin {{ flavor.name }} {%- if accent != 'mauve' %} ({{ accent }}) {%- endif -%} {%- if variant == "-no-italics" %} - No Italics {%- endif -%}",
+            "name": "Catppuccin kerzeld glassy {%- if variant == "-no-italics" %} - No Italics {%- endif -%}",
             "appearance": {% if flavor.dark %}"dark"{% else %}"light"{% endif %},
             "style": {
                 "accents": [
@@ -44,16 +44,16 @@ whiskers:
                 "vim.visual_line.background": "{{ c.lavender.hex }}",
                 "vim.visual_block.background": "{{ c.mauve.hex }}",
                 "vim.replace.background": "{{ c.maroon.hex }}",
-                "background.appearance": "opaque", {#- all others remove app window shadow-backdrop on macOS #}
+                "background.appearance": "blurred", {#- all others remove app window shadow-backdrop on macOS #}
                 "border": "{{ c.surface0.hex }}",
-                "border.variant": "{{ c[accent] | mix(color=c.surface0, amount=0.8) | get(key="hex") }}",
+                "border.variant": "{{ c[accent] | mix(color=c.surface0, amount=opacity.float) | get(key="hex") }}",
                 "border.focused": "{{ c.lavender.hex }}",
                 "border.selected": "{{ c[accent].hex }}",
                 "border.transparent": "{{ c.green.hex }}",
                 "border.disabled": "{{ c.overlay0.hex }}",
-                "elevated_surface.background": "{{ c.mantle.hex }}",
-                "surface.background": "{{ c.mantle.hex }}",
-                "background": {% if flavor.dark %}"{{ c.mantle | add(lightness=7) | get(key="hex") }}"{% else %}"{{ c.mantle | sub(lightness=5) | get(key="hex") }}"{% endif %}, {#- despite the name, the only place I could see the `background` color used were elevated buttons. #}
+                "elevated_surface.background": "{{ c.mantle | get(key="hex") }}",
+                "surface.background": "{{ c.mantle | mod(opacity=opacity.float) | get(key="hex") }}",
+                "background": {% if flavor.dark %}"{{ c.crust | mod(opacity=opacity.float) | get(key="hex") }}"{% else %}"{{ c.crust | mod(opacity=opacity.float) | get(key="hex") }}"{% endif %}, {#- despite the name, the only place I could see the `background` color used were elevated buttons. #}
                 "element.background": "{{ c.crust.hex }}",
                 "element.hover": "{{ c.surface0.hex }}",
                 "element.active": "{{ c.surface2 | mod(opacity=0.3) | get(key="hex") }}",
@@ -75,36 +75,36 @@ whiskers:
                 "icon.disabled": "{{ c.overlay0.hex }}",
                 "icon.placeholder": "{{ c.surface2.hex }}",
                 "icon.accent": "{{ c[accent].hex }}",
-                "status_bar.background": "{{ c.crust.hex }}",
-                "title_bar.background": "{{ c.crust.hex }}",
-                "title_bar.inactive_background": "{{ c.crust | add(lightness=3) | get(key="hex") }}",
-                "toolbar.background": "{{ c.base.hex }}",
-                "tab_bar.background": "{{ c.crust.hex }}",
-                "tab.inactive_background": "{{ c.crust | sub(lightness=3) | get(key="hex") }}",
-                "tab.active_background": "{{ c.base.hex }}",
-                "search.match_background": "{{ c.teal | mod(opacity=0.2) | get(key="hex") }}",
-                "panel.background": "{{ c.mantle.hex }}",
+                "status_bar.background": "{{ c.crust | mod(opacity=opacity.float) | get(key="hex") }}",
+                "title_bar.background": "{{ c.crust | mod(opacity=opacity.float) | get(key="hex") }}",
+                "title_bar.inactive_background": "{{ c.crust | mod(opacity=opacity.float) | get(key="hex") }}",
+                "toolbar.background": "{{ c.base | mod(opacity=0.4) | get(key="hex") }}",
+                "tab_bar.background": "#00000000",
+                "tab.inactive_background": "#00000000",
+                "tab.active_background": "{{ c.base | mod(opacity=0.4) | get(key="hex")  }}",
+                "search.match_background": "{{ c.surface2 | sub(lightness=8) | mod(opacity=0.9) | get(key="hex") }}",
+                "panel.background": "#00000000",
                 "panel.focused_border": "{{ c.text.hex }}",
                 "panel.indent_guide": "{{ c.surface0 | mod(opacity=0.60) | get(key="hex") }}",
                 "panel.indent_guide_active": "{{ c.surface2.hex }}",
                 "panel.indent_guide_hover": "{{ c[accent].hex }}",
-                "panel.overlay_background": "{{ c.crust.hex }}",
+                "panel.overlay_background": "{{ c.base | add(lightness=8) | get(key="hex") }}",
                 "pane.focused_border": "{{ c.text.hex }}",
                 "pane_group.border": "{{ c.surface0.hex }}",
                 "scrollbar.thumb.background": "{{ c.surface2 | mod(opacity=0.5) | get(key="hex") }}",
                 "scrollbar.thumb.hover_background": "{{ c.overlay0.hex }}",
                 "scrollbar.thumb.active_background": null,
                 "scrollbar.thumb.border": null,
-                "scrollbar.track.background": "{{ c.crust.hex }}",
+                "scrollbar.track.background": "#00000000",
                 "scrollbar.track.border": "{{ c.text | mod(opacity=0.07) | get(key="hex") }}",
                 "minimap.thumb.background": "{{ c[accent] | mod(opacity=0.2) | get(key="hex") }}",
                 "minimap.thumb.hover_background": "{{ c[accent] | mod(opacity=0.4) | get(key="hex") }}",
                 "minimap.thumb.active_background": "{{ c[accent] | mod(opacity=0.6) | get(key="hex") }}",
                 "minimap.thumb.border": null,
                 "editor.foreground": "{{ c.text.hex }}",
-                "editor.background": "{{ c.base.hex }}",
-                "editor.gutter.background": "{{ c.base.hex }}",
-                "editor.subheader.background": "{{ c.mantle.hex }}",
+                "editor.background": "#00000000",
+                "editor.gutter.background": "#00000000",
+                "editor.subheader.background": "#00000000",
                 "editor.active_line.background": "{{ c.text | mod(opacity=0.07) | get(key="hex") }}",
                 "editor.highlighted_line.background": null,
                 "editor.line_number": "{{ c.overlay1.hex }}",
@@ -113,7 +113,7 @@ whiskers:
                 "editor.invisible": "{{ c.overlay2 | mod(opacity=0.4) | get(key="hex") }}",
                 "editor.wrap_guide": "{{ c.surface2.hex }}",
                 "editor.active_wrap_guide": "{{ c.surface2.hex }}",
-                "editor.document_highlight.bracket_background": "{{ c[accent] | mod(opacity=0.09) | get(key="hex") }}",
+                "editor.document_highlight.bracket_background": "{{ c[accent] | sub(lightness=4) | mod(opacity=0.3) | get(key="hex") }}",
                 "editor.document_highlight.read_background": "{{ c.subtext0 | mod(opacity=0.16) | get(key="hex") }}",
                 "editor.document_highlight.write_background": "{{ c.subtext0 | mod(opacity=0.16) | get(key="hex") }}",
                 "editor.indent_guide": "{{ c.surface0 | mod(opacity=0.60) | get(key="hex") }}",
@@ -122,7 +122,7 @@ whiskers:
                 {#- ref: https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md#1-ansi-color-generation #}
                 {#- TODO simplify when https://github.com/catppuccin/whiskers/pull/66 merges #}
                 {#- colors.primary #}
-                "terminal.background": "{{ c.base.hex }}",
+                "terminal.background": "#00000000",
                 "terminal.ansi.background": "{{ c.base.hex }}",
                 "terminal.foreground": "{{ c.text.hex }}",
                 "terminal.dim_foreground": "{{ c.overlay1.hex }}",
@@ -234,13 +234,13 @@ whiskers:
                 "players": [
                     {
                         "cursor": "{{ c.rosewater.hex }}",
-                        "selection": {% if flavor.dark %}"{{ c.overlay2 | mod(opacity=0.25) | get(key="hex") }}"{% else %}"{{ c.overlay2 | mod(opacity=0.3) | get(key="hex") }}"{% endif -%},
+                        "selection": {% if flavor.dark %}"{{ c.surface2 | sub(lightness=8) | mod(opacity=0.9) | get(key="hex") }}"{% else %}"{{ c.surface2 | sub(lightness=8) | mod(opacity=0.9) | get(key="hex") }}"{% endif -%},
                         "background": "{{ c.rosewater.hex }}"
                     },
                     {%- for color in rainbow | reverse %}
                     {
                         "cursor": "{{ color.hex }}",
-                        "selection": {% if flavor.dark %}"{{ color | mod(opacity=0.25) | get(key="hex") }}"{% else %}"{{ color | mod(opacity=0.3) | get(key="hex") }}"{% endif -%},
+                        "selection": {% if flavor.dark %}"{{ color | mod(opacity=0.3) | get(key="hex") }}"{% else %}"{{ color | mod(opacity=0.3) | get(key="hex") }}"{% endif -%},
                         "background": "{{ color.hex }}"
                     }{% if not loop.last %},{% endif -%}
                     {% endfor %}

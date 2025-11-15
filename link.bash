@@ -23,9 +23,14 @@ ln -s $SCRIPT_PATH/out/template.omp.json ~/.config/oh-my-posh/template.omp.json
 
 # Zed themes
 rm ~/.config/zed/themes/catppuccin-kerzeld.json || true
-ln -s $SCRIPT_PATH/out/whiskers/themes/catppuccin-kerzeld.json ~/.config/zed/themes/catppuccin-kerzeld.json
+ln -s $SCRIPT_PATH/out/whiskers/zed/catppuccin-kerzeld.json ~/.config/zed/themes/catppuccin-kerzeld.json
 rm ~/.config/zed/themes/catppuccin-kerzeld-no-italics.json || true
-ln -s $SCRIPT_PATH/out/whiskers/themes/catppuccin-kerzeld-no-italics.json ~/.config/zed/themes/catppuccin-kerzeld-no-italics.json
+ln -s $SCRIPT_PATH/out/whiskers/zed/catppuccin-kerzeld-no-italics.json ~/.config/zed/themes/catppuccin-kerzeld-no-italics.json
+
+rm ~/.config/zed/themes/catppuccin-glassy-kerzeld.json || true
+ln -s $SCRIPT_PATH/out/whiskers/zed-glassy/catppuccin-kerzeld.json ~/.config/zed/themes/catppuccin-glassy-kerzeld.json
+rm ~/.config/zed/themes/catppuccin-glassy-kerzeld-no-italics.json || true
+ln -s $SCRIPT_PATH/out/whiskers/zed-glassy/catppuccin-kerzeld-no-italics.json ~/.config/zed/themes/catppuccin-kerzeld-glassy-no-italics.json
 
 # Reload plasma colors
 # plasma-apply-colorscheme BreezeDark
