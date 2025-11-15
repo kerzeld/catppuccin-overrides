@@ -82,7 +82,7 @@ whiskers:
                 "tab_bar.background": "#00000000",
                 "tab.inactive_background": "#00000000",
                 "tab.active_background": "{{ c.crust | mix(color=c[accent], amount=0.8) | mod(opacity=0.4) | get(key="hex")  }}",
-                "search.match_background": "{{ c.surface2 | sub(lightness=8) | mod(opacity=0.9) | get(key="hex") }}",
+                "search.match_background": "{{ c.surface2 | sub(lightness=16) | mod(opacity=0.8) | get(key="hex") }}",
                 "panel.background": "#00000000",
                 "panel.focused_border": "{{ c.text.hex }}",
                 "panel.indent_guide": "{{ c.surface0 | mod(opacity=0.60) | get(key="hex") }}",
@@ -234,7 +234,7 @@ whiskers:
                 "players": [
                     {
                         "cursor": "{{ c.rosewater.hex }}",
-                        "selection": {% if flavor.dark %}"{{ c.surface2 | sub(lightness=8) | mod(opacity=0.9) | get(key="hex") }}"{% else %}"{{ c.surface2 | sub(lightness=8) | mod(opacity=0.9) | get(key="hex") }}"{% endif -%},
+                        "selection": {% if flavor.dark %}"{{ c.surface2 | sub(lightness=16) | mod(opacity=0.8) | get(key="hex") }}"{% else %}"{{ c.surface2 | sub(lightness=16) | mod(opacity=0.8) | get(key="hex") }}"{% endif -%},
                         "background": "{{ c.rosewater.hex }}"
                     },
                     {%- for color in rainbow | reverse %}
