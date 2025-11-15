@@ -25,7 +25,7 @@ whiskers:
         ] -%}
         {%- set italics = if(cond=variant == "-no-italics", t="null", f='"italic"') %}
         {
-            "name": "Catppuccin {{ flavor.name }} {%- if accent != 'mauve' %} ({{ accent }}) {%- endif -%} {%- if variant == "-no-italics" %} - No Italics {%- endif -%}",
+        	"name": "Catppuccin kerzeld {%- if variant == "-no-italics" %} - No Italics {%- endif -%}",
             "appearance": {% if flavor.dark %}"dark"{% else %}"light"{% endif %},
             "style": {
                 "accents": [
