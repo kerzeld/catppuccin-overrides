@@ -1,5 +1,56 @@
 import type { ITheme } from "./interfaces.ts";
 
+const baseHSVOverrides = {
+	text: {
+		s: 10,
+		v: 95,
+	},
+	subtext1: {
+		s: 10,
+		v: 90,
+	},
+	subtext0: {
+		s: 10,
+		v: 85,
+	},
+	overlay2: {
+		s: 10,
+		v: 70,
+	},
+	overlay1: {
+		s: 10,
+		v: 65,
+	},
+	overlay0: {
+		s: 10,
+		v: 60,
+	},
+	surface2: {
+		s: 10,
+		v: 50,
+	},
+	surface1: {
+		s: 10,
+		v: 45,
+	},
+	surface0: {
+		s: 10,
+		v: 40,
+	},
+	base: {
+		s: 10,
+		v: 22,
+	},
+	mantle: {
+		s: 10,
+		v: 19,
+	},
+	crust: {
+		s: 10,
+		v: 16,
+	},
+};
+
 const pinkTheme: ITheme = {
 	name: "pink",
 	accent: "pink",
@@ -27,54 +78,7 @@ const pinkTheme: ITheme = {
 					v: 95,
 				},
 				overrides: {
-					text: {
-						s: 10,
-						v: 95,
-					},
-					subtext1: {
-						s: 10,
-						v: 90,
-					},
-					subtext0: {
-						s: 10,
-						v: 85,
-					},
-					overlay2: {
-						s: 10,
-						v: 70,
-					},
-					overlay1: {
-						s: 10,
-						v: 65,
-					},
-					overlay0: {
-						s: 10,
-						v: 60,
-					},
-					surface2: {
-						s: 10,
-						v: 50,
-					},
-					surface1: {
-						s: 10,
-						v: 45,
-					},
-					surface0: {
-						s: 10,
-						v: 40,
-					},
-					base: {
-						s: 10,
-						v: 22,
-					},
-					mantle: {
-						s: 10,
-						v: 19,
-					},
-					crust: {
-						s: 10,
-						v: 16,
-					},
+					...baseHSVOverrides,
 				},
 			},
 		],
@@ -108,54 +112,27 @@ const yellowTheme: ITheme = {
 					v: 90,
 				},
 				overrides: {
-					text: {
-						s: 10,
-						v: 95,
-					},
-					subtext1: {
-						s: 10,
-						v: 90,
-					},
-					subtext0: {
-						s: 10,
-						v: 85,
-					},
-					overlay2: {
-						s: 10,
-						v: 70,
-					},
-					overlay1: {
-						s: 10,
-						v: 65,
-					},
-					overlay0: {
-						s: 10,
-						v: 60,
-					},
-					surface2: {
-						s: 10,
-						v: 50,
-					},
-					surface1: {
-						s: 10,
-						v: 45,
-					},
-					surface0: {
-						s: 10,
-						v: 40,
-					},
-					base: {
-						s: 10,
-						v: 22,
-					},
-					mantle: {
-						s: 10,
-						v: 19,
-					},
-					crust: {
-						s: 10,
-						v: 16,
-					},
+					...baseHSVOverrides,
+				},
+			},
+		],
+	},
+};
+
+const orangeTheme: ITheme = {
+	name: "orange",
+	accent: "peach",
+	overrides: {
+		hsv: [
+			{
+				base: {
+					h: 13,
+					s: 45,
+					v: 95,
+				},
+				overrides: {
+					...baseHSVOverrides,
+					peach: {},
 				},
 			},
 		],
@@ -165,4 +142,5 @@ const yellowTheme: ITheme = {
 export const themes = {
 	pink: pinkTheme,
 	yellow: yellowTheme,
+	orange: orangeTheme,
 };

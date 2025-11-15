@@ -15,13 +15,13 @@ whiskers:
         {%- for _, flavor in flavors -%}
         {%- set c = flavor.colors -%}
         {% set rainbow = [
-            c.red       | mix(color=c.text, amount=opacity.float),
-            c.peach     | mix(color=c.text, amount=opacity.float),
-            c.yellow    | mix(color=c.text, amount=opacity.float),
-            c.green     | mix(color=c.text, amount=opacity.float),
-            c.sapphire  | mix(color=c.text, amount=opacity.float),
-            c.lavender  | mix(color=c.text, amount=opacity.float),
-            c.mauve     | mix(color=c.text, amount=opacity.float),
+            c.red       | mix(color=c.text, amount=0.8),
+            c.peach     | mix(color=c.text, amount=0.8),
+            c.yellow    | mix(color=c.text, amount=0.8),
+            c.green     | mix(color=c.text, amount=0.8),
+            c.sapphire  | mix(color=c.text, amount=0.8),
+            c.lavender  | mix(color=c.text, amount=0.8),
+            c.mauve     | mix(color=c.text, amount=0.8),
         ] -%}
         {%- set italics = if(cond=variant == "-no-italics", t="null", f='"italic"') %}
         {
@@ -45,8 +45,8 @@ whiskers:
                 "vim.visual_block.background": "{{ c.mauve.hex }}",
                 "vim.replace.background": "{{ c.maroon.hex }}",
                 "background.appearance": "blurred", {#- all others remove app window shadow-backdrop on macOS #}
-                "border": "{{ c.surface0.hex }}",
-                "border.variant": "{{ c[accent] | mix(color=c.surface0, amount=opacity.float) | get(key="hex") }}",
+                "border": "{{ c.surface0 | mix(color=c[accent], amount=0.8) | get(key="hex") }}",
+                "border.variant": "{{ c[accent] | mix(color=c.surface0, amount=0.8) | get(key="hex") }}",
                 "border.focused": "{{ c.lavender.hex }}",
                 "border.selected": "{{ c[accent].hex }}",
                 "border.transparent": "{{ c.green.hex }}",
@@ -78,17 +78,17 @@ whiskers:
                 "status_bar.background": "{{ c.crust | mod(opacity=opacity.float) | get(key="hex") }}",
                 "title_bar.background": "{{ c.crust | mod(opacity=opacity.float) | get(key="hex") }}",
                 "title_bar.inactive_background": "{{ c.crust | mod(opacity=opacity.float) | get(key="hex") }}",
-                "toolbar.background": "{{ c.base | mod(opacity=0.4) | get(key="hex") }}",
+                "toolbar.background": "{{ c.crust | mix(color=c[accent], amount=0.8) | mod(opacity=0.4) | get(key="hex") }}",
                 "tab_bar.background": "#00000000",
                 "tab.inactive_background": "#00000000",
-                "tab.active_background": "{{ c.base | mod(opacity=0.4) | get(key="hex")  }}",
+                "tab.active_background": "{{ c.crust | mix(color=c[accent], amount=0.8) | mod(opacity=0.4) | get(key="hex")  }}",
                 "search.match_background": "{{ c.surface2 | sub(lightness=8) | mod(opacity=0.9) | get(key="hex") }}",
                 "panel.background": "#00000000",
                 "panel.focused_border": "{{ c.text.hex }}",
                 "panel.indent_guide": "{{ c.surface0 | mod(opacity=0.60) | get(key="hex") }}",
                 "panel.indent_guide_active": "{{ c.surface2.hex }}",
                 "panel.indent_guide_hover": "{{ c[accent].hex }}",
-                "panel.overlay_background": "{{ c.base | add(lightness=8) | get(key="hex") }}",
+                "panel.overlay_background": "{{ c.base | add(lightness=4) | get(key="hex") }}",
                 "pane.focused_border": "{{ c.text.hex }}",
                 "pane_group.border": "{{ c.surface0.hex }}",
                 "scrollbar.thumb.background": "{{ c.surface2 | mod(opacity=0.5) | get(key="hex") }}",
