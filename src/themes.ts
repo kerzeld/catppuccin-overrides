@@ -133,6 +133,18 @@ const orangeTheme: ITheme = {
 				overrides: {
 					...baseHSVOverrides,
 					peach: {},
+					base: {
+						s: 12,
+						v: 22,
+					},
+					mantle: {
+						s: 12,
+						v: 19,
+					},
+					crust: {
+						s: 12,
+						v: 16,
+					},
 				},
 			},
 		],
