@@ -10,7 +10,7 @@ IntensityAmount=-1
 IntensityEffect=0
 
 [ColorEffects:Inactive]
-ChangeSelectionColor=false
+ChangeSelectionColor=true
 Enable=false
 Color={{ colors.base.rgb }}
 ColorAmount=0.5

@@ -18,3 +18,11 @@ Current available themes are:
 # Helpers
 
 The `link.bash` script links some files to the relevant places just give the name of the theme as the argument
+
+## Future notes
+
+- kvantum theme
+- transparent firefox
+
+https://github.com/tahfizhabib/gwfox-css/tree/main?tab=readme-ov-file
+https://github.com/frostybiscuit/transparent-zen
