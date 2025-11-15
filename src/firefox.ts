@@ -2,6 +2,10 @@ import type { IThemeView, TColorNames } from "./interfaces.ts";
 import lzma from "lzma";
 import { encode } from "@msgpack/msgpack";
 import { styleText } from "node:util";
+import { PATH_OUT } from "./const.ts";
+import path from "node:path";
+import fs from "node:fs";
+import { ensureDirectoryExistence } from "./utils.ts";
 
 const colors: Record<string, TColorNames | "accent"> = {
 	toolbar: "mantle",
@@ -21,7 +25,7 @@ const colors: Record<string, TColorNames | "accent"> = {
 	ntp_text: "text",
 	popup_border: "accent",
 	popup_highlight_text: "text",
-	popup_highlight: "mantle",
+	popup_highlight: "surface2",
 	sidebar_border: "accent",
 	sidebar_highlight_text: "overlay1",
 	sidebar_highlight: "accent",
@@ -29,7 +33,7 @@ const colors: Record<string, TColorNames | "accent"> = {
 	sidebar: "mantle",
 	tab_background_separator: "accent",
 	tab_loading: "accent",
-	tab_selected: "surface1",
+	tab_selected: "crust",
 	tab_text: "text",
 	toolbar_bottom_separator: "mantle",
 	toolbar_field_border_focus: "accent",
@@ -78,6 +82,11 @@ export function generateFirefoxColorLink(view: IThemeView) {
 
 	const encoded = encode(theme);
 	const compressed = lzma.compress(encoded);
+
+	const linkFile = path.join(PATH_OUT, "firefox", "colors-link.txt");
+	ensureDirectoryExistence(linkFile);
+	fs.writeFileSync(linkFile, "https://color.firefox.com/?theme=" + Buffer.from(compressed).toString("base64url"));
+
 	console.log("Firefox Colors Link:");
 	console.log(styleText("blackBright", "#########################################"));
 	console.log(styleText("blue", "https://color.firefox.com/?theme=" + Buffer.from(compressed).toString("base64url")));

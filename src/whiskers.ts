@@ -36,9 +36,8 @@ export function generateWhiskersThemes(view: IThemeView) {
 			{
 				cwd: path.join(PATH_OUT, FOLDER_NAME),
 			},
-			(stdin, stderr) => {
-				console.log(stdin);
-				console.log(stderr);
+			(error) => {
+				if (error) console.log(error);
 			},
 		);
 	}

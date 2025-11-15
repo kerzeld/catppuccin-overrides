@@ -9,9 +9,6 @@ ln -s $SCRIPT_PATH/out/plasma/kerzeld-konsole.colorscheme /home/dom/.local/share
 rm ~/.local/share/color-schemes/kerzeld.colors || true
 ln -s $SCRIPT_PATH/out/plasma/kerzeld.colors ~/.local/share/color-schemes/kerzeld.colors
 
-rm ~/.local/share/color-schemes/kerzeld-glassy.colors || true
-ln -s $SCRIPT_PATH/out/plasma/kerzeld-glassy.colors ~/.local/share/color-schemes/kerzeld-glassy.colors
-
 # firefox
 rm ~/.mozilla/firefox/default/chrome/userChrome.css || true
 ln -s $SCRIPT_PATH/out/firefox/userChrome.css ~/.mozilla/firefox/default/chrome/userChrome.css
@@ -27,9 +24,9 @@ ln -s $SCRIPT_PATH/out/whiskers/zed/catppuccin-kerzeld.json ~/.config/zed/themes
 rm ~/.config/zed/themes/catppuccin-kerzeld-no-italics.json || true
 ln -s $SCRIPT_PATH/out/whiskers/zed/catppuccin-kerzeld-no-italics.json ~/.config/zed/themes/catppuccin-kerzeld-no-italics.json
 
-rm ~/.config/zed/themes/catppuccin-glassy-kerzeld.json || true
-ln -s $SCRIPT_PATH/out/whiskers/zed-glassy/catppuccin-kerzeld.json ~/.config/zed/themes/catppuccin-glassy-kerzeld.json
-rm ~/.config/zed/themes/catppuccin-glassy-kerzeld-no-italics.json || true
+rm ~/.config/zed/themes/catppuccin-kerzeld-glassy.json || true
+ln -s $SCRIPT_PATH/out/whiskers/zed-glassy/catppuccin-kerzeld.json ~/.config/zed/themes/catppuccin-kerzeld-glassy.json
+rm ~/.config/zed/themes/catppuccin-kerzeld-glassy-no-italics.json || true
 ln -s $SCRIPT_PATH/out/whiskers/zed-glassy/catppuccin-kerzeld-no-italics.json ~/.config/zed/themes/catppuccin-kerzeld-glassy-no-italics.json
 
 # Reload plasma colors

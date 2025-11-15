@@ -7,4 +7,4 @@ export const PATH_OUT = path.join(PATH_ROOT, "out");
 export const PATH_TEMPLATES = path.join(PATH_ROOT, "templates");
 export const PATH_CONFIG = path.join(PATH_ROOT, "config");
 
-export const DEFAULT_OPACITY = 0.8;
+export const DEFAULT_OPACITY = 0.9;

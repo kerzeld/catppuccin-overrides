@@ -224,7 +224,7 @@ whiskers:
                 "warning.background": "{{ c.yellow | mod(opacity=0.12) | get(key="hex") }}",
                 "error": "{{ c.red.hex }}",
                 "error.border": "{{ c.red.hex }}",
-                "error.background": "{{ c.red | mod(opacity=0.12) | get(key="hex") }}",
+                "error.background": "{{ c.red | mix(color=c.mantle, amount=0.1) | get(key="hex") }}",
                 "success": "{{ c.green.hex }}",
                 "success.border": "{{ c.green.hex }}",
                 "success.background": "{{ c.green | mod(opacity=0.12) | get(key="hex") }}",
