@@ -6,22 +6,3 @@ toolbar-menubar:-moz-window-inactive,
 #nav-bar {
 	border-top: none !important;
 }
-
-window,
-#main-window,
-#toolbar-menubar,
-#PersonalToolbar,
-#sidebar-box,
-#navigator-toolbox,
-#TabsToolbar,
-#nav-bar {
-	background: rgba({{colors.mantle.rgb}}, 0.44) !important;
-	-moz-appearance: none !important;
-	background-image: none !important;
-}
-
-.tab-background[selected] {
-	background: rgba({{colors.mantle.rgb}}, 0.6) !important;
-	-moz-appearance: none !important;
-	background-image: none !important;
-}
