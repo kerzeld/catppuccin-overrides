@@ -17,7 +17,7 @@ const colors: Record<string, TColorNames | "accent"> = {
 	tab_line: "accent",
 	popup: "mantle",
 	popup_text: "text",
-	button_background_active: "overlay1",
+	button_background_active: "surface0",
 	frame_inactive: "mantle",
 	icons_attention: "accent",
 	icons: "accent",

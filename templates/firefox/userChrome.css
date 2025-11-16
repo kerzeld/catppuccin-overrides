@@ -1,8 +1,48 @@
 toolbar-menubar:-moz-window-inactive,
-#TabsToolbar:-moz-window-inactive {
+#TabsToolbar:-moz-window-inactive,
+#urlbar:-moz-window-inactive,
+#nav-bar:-moz-window-inactive {
 	opacity: 1 !important;
 }
 
 #nav-bar {
 	border-top: none !important;
+}
+
+/* Sidebar button looks ugly if selected all the time */
+toolbar .toolbarbutton-1 {
+	&:not([disabled]) {
+		&:is(:hover:active, [open], [checked])
+			> :is(
+				.toolbarbutton-icon,
+				.toolbarbutton-text,
+				.toolbarbutton-badge-stack
+			) {
+			background-color: transparent !important;
+			color: inherit;
+		}
+	}
+}
+
+#main-window,
+#browser {
+	background: rgba({{colors.base.rgb}}, {{opacity.float}}) !important;
+	background-color: rgba({{colors.base.rgb}}, {{opacity.float}}) !important;
+}
+
+:root {
+	--tabpanel-background-color: #00000000 !important;
+}
+
+.browser-toolbar {
+	&:not(.titlebar-color) {
+		background-color: rgba(
+			{{colors.base.rgb}},
+			{{opacity.float}}
+		) !important;
+	}
+}
+
+toolbox#navigator-toolbox {
+	background-color: #00000000 !important;
 }

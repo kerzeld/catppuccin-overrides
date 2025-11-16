@@ -9,9 +9,15 @@ ln -s $SCRIPT_PATH/out/plasma/kerzeld-konsole.colorscheme /home/dom/.local/share
 rm ~/.local/share/color-schemes/kerzeld.colors || true
 ln -s $SCRIPT_PATH/out/plasma/kerzeld.colors ~/.local/share/color-schemes/kerzeld.colors
 
+rm ~/.local/share/color-schemes/kerzeld-glassy.colors || true
+ln -s $SCRIPT_PATH/out/plasma/kerzeld-glassy.colors ~/.local/share/color-schemes/kerzeld-glassy.colors
+
 # firefox
 rm ~/.mozilla/firefox/default/chrome/userChrome.css || true
 ln -s $SCRIPT_PATH/out/firefox/userChrome.css ~/.mozilla/firefox/default/chrome/userChrome.css
+
+rm ~/.mozilla/firefox/default/chrome/userContent.css || true
+ln -s $SCRIPT_PATH/out/firefox/userContent.css ~/.mozilla/firefox/default/chrome/userContent.css
 
 # oh my posh
 rm ~/.config/oh-my-posh/template.omp.json || true
