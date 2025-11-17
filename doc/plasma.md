@@ -1,3 +1,5 @@
+# General
+
 Its not possible currently to get a uniform transparent look with\
 QtWidget and QML (QtQuick) Apps
 
@@ -11,3 +13,9 @@ Klassy is capable of somewhat style both at the same time but it still has some 
 https://github.com/paulmcauley/klassy/discussions/252
 
 If you want to use klassy then take the `kerzeld-glassy.colors` scheme for nice transparency at least in dolphin.
+
+
+## Design svg
+
+If you want to edit the svg i can recommend this tool:
+https://boxy-svg.com/app

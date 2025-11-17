@@ -1,6 +1,8 @@
 :root {
 	--in-content-page-background: #00000000 !important;
 	--in-content-box-background: #00000000 !important;
+	--newtab-background-card: rgb({{colors.base.rgb}}) !important;
+	--newtab-background-color-secondary: rgb({{colors.base.rgb}}) !important;
 }
 
 body {

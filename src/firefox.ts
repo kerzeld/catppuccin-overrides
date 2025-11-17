@@ -8,11 +8,11 @@ import fs from "node:fs";
 import { ensureDirectoryExistence } from "./utils.ts";
 
 const colors: Record<string, TColorNames | "accent"> = {
-	toolbar: "mantle",
+	toolbar: "base",
 	toolbar_text: "text",
 	frame: "mantle",
 	tab_background_text: "text",
-	toolbar_field: "crust",
+	toolbar_field: "base",
 	toolbar_field_text: "text",
 	tab_line: "accent",
 	popup: "mantle",

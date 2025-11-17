@@ -24,10 +24,14 @@ toolbar .toolbarbutton-1 {
 	}
 }
 
-#main-window,
+#main-window {
+	background: transparent !important;
+	background-color: transparent !important;
+}
+
 #browser {
-	background: rgba({{colors.base.rgb}}, {{opacity.float}}) !important;
-	background-color: rgba({{colors.base.rgb}}, {{opacity.float}}) !important;
+	background: rgba({{colors.crust.rgb}}, {{opacity.float}}) !important;
+	background-color: rgba({{colors.crust.rgb}}, {{opacity.float}}) !important;
 }
 
 :root {
@@ -37,7 +41,7 @@ toolbar .toolbarbutton-1 {
 .browser-toolbar {
 	&:not(.titlebar-color) {
 		background-color: rgba(
-			{{colors.base.rgb}},
+			{{colors.crust.rgb}},
 			{{opacity.float}}
 		) !important;
 	}
