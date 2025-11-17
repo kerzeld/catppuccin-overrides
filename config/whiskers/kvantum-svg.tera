@@ -239,14 +239,14 @@ whiskers:
  <path id="itemview-pressed-bottomright" style="opacity:0.25;fill:#{{ accent.hex }}" d="m 319,602.59961 a 0.88073379,2.3999989 0 0 1 -0.88074,2.4 v -2.4 z"/>
  <path id="itemview-pressed-bottomleft" style="opacity:0.25;fill:#{{ accent.hex }}" d="m 271,602.59961 a 0.88073379,2.3999989 0 0 0 0.88074,2.4 v -2.4 z"/>
  <path id="itemview-pressed-topright" style="opacity:0.25;fill:#{{ accent.hex }}" d="m 318.11927,556.99973 c 0.48641,0 0.88073,1.0745 0.88073,2.4 v 1.2 h -0.88073 v -1.2 z"/>
- <g id="splitter-grip-focused" style="opacity:0" transform="translate(502.42498,-393.92675)">
+ <g id="splitter-grip-focused" style="opacity:1" transform="translate(502.42498,-393.92675)">
   <path style="fill:#{{ accent.hex }}" d="m 227.5,690 c 0,1.3807 -1.11929,2.5 -2.5,2.5 -1.38071,0 -2.5,-1.1193 -2.5,-2.5 0,-1.3807 1.11929,-2.5 2.5,-2.5 1.38071,0 2.5,1.1193 2.5,2.5 z"/>
   <g style="fill:#{{ accent.hex }}">
    <path style="fill:#{{ accent.hex }}" d="m 226.9643,683.9643 c 0,1.0848 -0.87944,1.9643 -1.96429,1.9643 -1.08484,0 -1.96428,-0.8795 -1.96428,-1.9643 0,-1.0849 0.87944,-1.9643 1.96428,-1.9643 1.08485,0 1.96429,0.8794 1.96429,1.9643 z"/>
    <path style="fill:#{{ accent.hex }}" d="m 226.9643,696.0357 c 0,1.0848 -0.87944,1.9643 -1.96429,1.9643 -1.08484,0 -1.96428,-0.8795 -1.96428,-1.9643 0,-1.0849 0.87944,-1.9643 1.96428,-1.9643 1.08485,0 1.96429,0.8794 1.96429,1.9643 z"/>
   </g>
  </g>
- <g id="splitter-grip-pressed" style="opacity:0" transform="translate(515.66069,-421.12141)">
+ <g id="splitter-grip-pressed" style="opacity:1" transform="translate(515.66069,-421.12141)">
   <path style="fill:#{{ accent.hex }}" d="m 227.5,690 c 0,1.3807 -1.11929,2.5 -2.5,2.5 -1.38071,0 -2.5,-1.1193 -2.5,-2.5 0,-1.3807 1.11929,-2.5 2.5,-2.5 1.38071,0 2.5,1.1193 2.5,2.5 z"/>
   <g style="fill:#{{ accent.hex }}">
    <path style="fill:#{{ accent.hex }}" d="m 226.9643,683.9643 c 0,1.0848 -0.87944,1.9643 -1.96429,1.9643 -1.08484,0 -1.96428,-0.8795 -1.96428,-1.9643 0,-1.0849 0.87944,-1.9643 1.96428,-1.9643 1.08485,0 1.96429,0.8794 1.96429,1.9643 z"/>
@@ -255,7 +255,7 @@ whiskers:
  </g>
  <rect id="slider-topglow-normal" style="opacity:0.6;fill:#dcdcdc;fill-opacity:0" width="10" height="30" x="311.17" y="491.77"/>
  <use id="slider-bottomglow-normal" width="450" height="1380" x="0" y="0" transform="translate(39.999997)" xlink:href="#slider-topglow-normal"/>
- <g id="splitter-grip-normal" style="opacity:0" transform="translate(518.58485,-394.77228)">
+ <g id="splitter-grip-normal" style="opacity:1" transform="translate(518.58485,-394.77228)">
   <path style="fill:#bebebe" d="m 227.5,690 c 0,1.3807 -1.11929,2.5 -2.5,2.5 -1.38071,0 -2.5,-1.1193 -2.5,-2.5 0,-1.3807 1.11929,-2.5 2.5,-2.5 1.38071,0 2.5,1.1193 2.5,2.5 z"/>
   <g style="fill:#{{ accent.hex }}">
    <path style="fill:#bebebe" d="m 226.9643,683.9643 c 0,1.0848 -0.87944,1.9643 -1.96429,1.9643 -1.08484,0 -1.96428,-0.8795 -1.96428,-1.9643 0,-1.0849 0.87944,-1.9643 1.96428,-1.9643 1.08485,0 1.96429,0.8794 1.96429,1.9643 z"/>
@@ -707,8 +707,8 @@ whiskers:
   <path style="opacity:0.3" d="m 608,533.02875 h 0.98586 v 36 H 608 Z"/>
  </g>
  <g id="toolbar-handle" transform="matrix(2.4000001,0,0,1,-869.0001,-19.028994)">
-  <rect style="fill-opacity:0" width="2" height="36" x="608" y="533.03"/>
-  <path style="opacity:0.3" d="M 607.91667,533.02875 H 607.5 v 36 h 0.41667 z"/>
+  <rect style="fill-opacity:0;fill:#{{ surface0.hex }}" width="2" height="36" x="608" y="533.03"/>
+  <path style="opacity:1;fill:#{{ surface0.hex }}" d="M 607.91667,533.02875 H 607.5 v 36 h 0.41667 z"/>
  </g>
  <g id="tab-close-normal" transform="translate(438,-745.00024)">
   <rect style="opacity:0.00100002" width="10" height="10" x="269" y="953"/>
@@ -847,37 +847,37 @@ whiskers:
   <path style="fill:#{{ mantle.hex }}" d="m 13.999999,131.02895 v 2.49998 2.49998 h 45.999999 v -2.49998 -2.49998 z"/>
  </g>
  <g id="window-normal-top" transform="matrix(0.83636363,0,0,0.5,1369.0229,-135.79001)">
-  <path style="fill:#{{ base.hex }}" transform="matrix(1.25,0,0,2,-738.56,609.52204)" d="m 15,84.029297 v 0.5 0.5 h 44 v -0.5 -0.5 z"/>
+  <path style="fill:#{{ crust.hex }}" transform="matrix(1.25,0,0,2,-738.56,609.52204)" d="m 15,84.029297 v 0.5 0.5 h 44 v -0.5 -0.5 z"/>
  </g>
- <rect id="window-normal" style="fill:#{{ base.hex }}" width="46" height="46" x="767" y="254"/>
+ <rect id="window-normal" style="fill:#{{ crust.hex }}" width="46" height="46" x="767" y="254"/>
  <g id="window-normal-bottomleft" transform="matrix(4.999997,0,0,1,697.00006,168.97102)">
-  <path style="fill:#{{ base.hex }}" d="m 12.999997,131.02899 4e-6,4.99996 0.999996,2e-5 v -2.49999 -2.49999 h -0.501109 z"/>
+  <path style="fill:#{{ crust.hex }}" d="m 12.999997,131.02899 4e-6,4.99996 0.999996,2e-5 v -2.49999 -2.49999 h -0.501109 z"/>
   <path style="fill:#{{ surface0.hex }}" d="m 12.999997,135.02899 4e-6,0.99998 0.999996,1e-5 v -0.5 -0.49999 h -0.501109 z"/>
   <path style="fill:#{{ surface0.hex }}" d="m 13.199993,131.02897 -0.199996,2e-5 -2e-6,4 h 0.1 0.1 v -1.50557 z"/>
  </g>
  <g id="window-normal-bottom" transform="translate(753.00001,168.97102)">
-  <path style="fill:#{{ base.hex }}" d="m 13.999999,131.02895 v 2.49998 2.49998 h 45.999999 v -2.49998 -2.49998 z"/>
+  <path style="fill:#{{ crust.hex }}" d="m 13.999999,131.02895 v 2.49998 2.49998 h 45.999999 v -2.49998 -2.49998 z"/>
   <path style="fill:#{{ surface0.hex }}" d="m 13.999999,135.02898 v 0.49999 0.5 h 45.999999 v -0.5 -0.49999 z"/>
  </g>
  <g id="window-normal-bottomright" transform="matrix(5.000004,0,0,1,512.99979,168.97102)">
-  <path style="fill:#{{ base.hex }}" d="m 59.999996,131.02901 v 2.49999 2.49998 c 0.26796,0 1.000004,0 1.000004,0 0,0 -4e-6,-3.57838 -4e-6,-4.99997 h -0.5 z"/>
+  <path style="fill:#{{ crust.hex }}" d="m 59.999996,131.02901 v 2.49999 2.49998 c 0.26796,0 1.000004,0 1.000004,0 0,0 -4e-6,-3.57838 -4e-6,-4.99997 h -0.5 z"/>
   <path style="fill:#{{ surface0.hex }}" d="m 59.999996,135.02899 v 0.5 0.49999 c 0.26796,0 1.000004,0 1.000004,0 0,0 -4e-6,-0.71567 -4e-6,-0.99999 h -0.5 z"/>
   <path style="fill:#{{ surface0.hex }}" d="m 60.999995,131.02899 h -0.1 -0.1 v 4.00001 l 0.199998,-2e-5 v -1.49999 z"/>
  </g>
  <g id="window-normal-topleft" transform="rotate(90,329.0145,569.01449)">
-  <path style="fill:#{{ base.hex }}" d="m 12.999997,131.02899 4e-6,4.99996 0.999996,2e-5 v -2.49999 -2.49999 h -0.501109 z"/>
+  <path style="fill:#{{ crust.hex }}" d="m 12.999997,131.02899 4e-6,4.99996 0.999996,2e-5 v -2.49999 -2.49999 h -0.501109 z"/>
   <path style="fill:#{{ surface0.hex }}" d="m 12.999997,135.02899 4e-6,0.99998 0.999996,1e-5 v -0.5 -0.49999 h -0.501109 z"/>
  </g>
  <g id="window-normal-left" transform="rotate(90,329.0145,569.01449)">
-  <path style="fill:#{{ base.hex }}" d="m 13.999999,131.02895 v 2.49998 2.49998 h 45.999999 v -2.49998 -2.49998 z"/>
+  <path style="fill:#{{ crust.hex }}" d="m 13.999999,131.02895 v 2.49998 2.49998 h 45.999999 v -2.49998 -2.49998 z"/>
   <path style="fill:#{{ surface0.hex }}" d="m 13.999999,135.02898 v 0.49999 0.5 h 45.999999 v -0.5 -0.49999 z"/>
  </g>
  <g id="window-normal-topright" transform="matrix(0,1,1,0,681.97102,240.00001)">
-  <path style="fill:#{{ base.hex }}" d="m 12.999997,131.02899 4e-6,4.99996 0.999996,2e-5 v -2.49999 -2.49999 h -0.501109 z"/>
+  <path style="fill:#{{ crust.hex }}" d="m 12.999997,131.02899 4e-6,4.99996 0.999996,2e-5 v -2.49999 -2.49999 h -0.501109 z"/>
   <path style="fill:#{{ surface0.hex }}" d="m 12.999997,135.02899 4e-6,0.99998 0.999996,1e-5 v -0.5 -0.49999 h -0.501109 z"/>
  </g>
  <g id="window-normal-right" transform="matrix(0,1,1,0,681.97102,240.00001)">
-  <path style="fill:#{{ base.hex }}" d="m 13.999999,131.02895 v 2.49998 2.49998 h 45.999999 v -2.49998 -2.49998 z"/>
+  <path style="fill:#{{ crust.hex }}" d="m 13.999999,131.02895 v 2.49998 2.49998 h 45.999999 v -2.49998 -2.49998 z"/>
   <path style="fill:#{{ surface0.hex }}" d="m 13.999999,135.02898 v 0.49999 0.5 h 45.999999 v -0.5 -0.49999 z"/>
  </g>
  <rect id="menubaritem-focused" style="opacity:0.1;fill:#{{ text.hex }}" width="30" height="10" x="722.48" y="155.14"/>
@@ -1485,27 +1485,27 @@ whiskers:
    </g>
   </g>
  </g>
- <rect id="menubar-normal" style="fill:#{{ mantle.hex }}" width="20" height="20" x="795" y="202"/>
- <rect id="menubar-normal-left" style="fill:#{{ mantle.hex }}" width="20" height="5" x="202" y="-795" transform="rotate(90)"/>
- <rect id="menubar-normal-topleft" style="fill:#{{ mantle.hex }}" width="5" height="5" x="197" y="-795" transform="rotate(90)"/>
- <rect id="menubar-normal-top" style="fill:#{{ mantle.hex }}" width="20" height="5" x="795" y="197"/>
- <rect id="menubar-normal-right" style="fill:#{{ mantle.hex }}" width="20" height="5" x="202" y="-820" transform="rotate(90)"/>
- <rect id="menubar-normal-topright" style="fill:#{{ mantle.hex }}" width="5" height="5" x="197" y="-820" transform="rotate(90)"/>
+ <rect id="menubar-normal" style="fill-opacity:0;fill:#{{ mantle.hex }}" width="20" height="20" x="795" y="202"/>
+ <rect id="menubar-normal-left" style="fill-opacity:0;fill:#{{ mantle.hex }}" width="20" height="5" x="202" y="-795" transform="rotate(90)"/>
+ <rect id="menubar-normal-topleft" style="fill-opacity:0;fill:#{{ mantle.hex }}" width="5" height="5" x="197" y="-795" transform="rotate(90)"/>
+ <rect id="menubar-normal-top" style="fill-opacity:0;fill:#{{ mantle.hex }}" width="20" height="5" x="795" y="197"/>
+ <rect id="menubar-normal-right" style="fill-opacity:0;fill:#{{ mantle.hex }}" width="20" height="5" x="202" y="-820" transform="rotate(90)"/>
+ <rect id="menubar-normal-topright" style="fill-opacity:0;fill:#{{ mantle.hex }}" width="5" height="5" x="197" y="-820" transform="rotate(90)"/>
  <g id="menubar-normal-bottomleft" transform="translate(490,-394.99999)">
-  <path style="fill:#{{ mantle.hex }}" d="m 300,617 h 5 v 2.99999 h -5 z"/>
+  <path style="fill-opacity:0;fill:#{{ surface0.hex }}" d="m 300,617 h 5 v 2.99999 h -5 z"/>
   <g id="menubar-normal-bottomleft2" transform="matrix(0.25,0,0,1,223.75,0)">
-   <path style="fill:#{{ mantle.hex }}" d="m 305,621 h 20 v -1.00001 h -20 z"/>
+   <path style="fill-opacity:1;fill:#{{ surface0.hex }}" d="m 305,621 h 20 v -1.00001 h -20 z"/>
   </g>
  </g>
  <g id="menubar-normal-bottomright" transform="translate(490,-394.99999)">
-  <path style="fill:#{{ mantle.hex }}" d="m 325,617 h 5 v 2.99999 h -5 z"/>
+  <path style="fill-opacity:0;fill:#{{ surface0.hex }}" d="m 325,617 h 5 v 2.99999 h -5 z"/>
   <g id="menubar-normal-bottomright2" style="fill:#b6b6b6" transform="matrix(0.25,0,0,1,248.75,0)">
-   <path style="fill:#{{ mantle.hex }}" d="m 305,621 h 20 v -1.00001 h -20 z"/>
+   <path style="fill-opacity:1;fill:#{{ surface0.hex }}" d="m 305,621 h 20 v -1.00001 h -20 z"/>
   </g>
  </g>
  <g id="menubar-normal-bottom" transform="translate(490,-394.99999)">
-  <path style="fill:#{{ mantle.hex }}" d="m 305,617 h 20 v 2.99999 h -20 z"/>
-  <path style="fill:#{{ mantle.hex }}" d="m 305,619.99999 h 20 V 621 h -20 z"/>
+  <path style="fill-opacity:0;fill:#{{ surface0.hex }}" d="m 305,617 h 20 v 2.99999 h -20 z"/>
+  <path style="fill-opacity:1;fill:#{{ surface0.hex }}" d="m 305,619.99999 h 20 V 621 h -20 z"/>
  </g>
  <path id="tabframe-normal" style="opacity:0.00100002;fill-rule:evenodd" d="m 563.50001,275.99988 v 32 h 32 v -32 z"/>
  <g id="tabframe-normal-left" transform="matrix(0.8,0,0,0.98461538,542.50021,227.9983)">
@@ -1544,7 +1544,7 @@ whiskers:
  </g>
  <g id="tab-toggled-top" transform="matrix(0,0.8,-0.98461538,0,534.00159,254.99988)">
   <path style="opacity:0.00100002;fill-rule:evenodd" d="M 26.25,81.2514 V 48.7516 h -5 v 32.5 z"/>
-  <path style="fill:#{{ surface0.hex }}" d="m 21.25,48.7516 v 32.5 h 1.25 v -32.5 z"/>
+  <path style="opacity:0;fill:#{{ surface0.hex }}" d="m 21.25,48.7516 v 32.5 h 1.25 v -32.5 z"/>
  </g>
  <g id="tab-toggled-right" transform="matrix(-0.8,0,0,0.98461538,507.00001,227.9983)">
   <path style="opacity:0.00100002;fill-rule:evenodd" d="M 26.25,81.2514 V 48.7516 h -5 v 32.5 z"/>
@@ -1579,7 +1579,7 @@ whiskers:
  </g>
  <g id="tab-focused-top" transform="matrix(0,0.8,-0.98461538,0,482.00139,254.99988)">
   <path style="opacity:0.06;fill:#{{ surface2.hex }};fill-rule:evenodd" d="M 26.25,81.2514 V 48.7516 h -5 v 32.5 z"/>
-  <path style="fill:#{{ surface0.hex }}" d="m 21.25,48.7516 v 32.5 h 1.2497 v -32.5 z"/>
+  <path style="opacity:0;fill:#{{ surface0.hex }}" d="m 21.25,48.7516 v 32.5 h 1.2497 v -32.5 z"/>
  </g>
  <g id="tab-focused-right" transform="matrix(-0.8,0,0,0.98461538,455.00011,227.99831)">
   <path style="opacity:0.06;fill:#{{ surface2.hex }};fill-rule:evenodd" d="M 26.25,81.2514 V 48.7516 h -5 v 32.5 z"/>
@@ -1626,7 +1626,7 @@ whiskers:
  </g>
  <g id="floating-tab-toggled-top" transform="matrix(0,0.8,-0.98461538,0,534.00168,203.99987)">
   <path style="opacity:0.00100002;fill-rule:evenodd" d="M 26.25,81.2514 V 48.7516 h -5 v 32.5 z"/>
-  <path style="fill:#{{ surface0.hex }}" d="m 21.25,48.7516 v 32.5 h 1.25 v -32.5 z"/>
+  <path style="opacity:0;fill:#{{ surface0.hex }}" d="m 21.25,48.7516 v 32.5 h 1.25 v -32.5 z"/>
  </g>
  <g id="floating-tab-toggled-right" transform="matrix(-0.8,0,0,0.98461538,507.0001,176.99829)">
   <path style="opacity:0.00100002;fill-rule:evenodd" d="M 26.25,81.2514 V 48.7516 h -5 v 32.5 z"/>
@@ -1652,7 +1652,7 @@ whiskers:
  </g>
  <g id="floating-tab-focused-top" transform="matrix(0,0.8,-0.98461538,0,482.00148,203.99987)">
   <path style="opacity:0.06;fill:#{{ surface2.hex }};fill-rule:evenodd" transform="matrix(0,-1.015625,1.25,0,-508.74984,558.59516)" d="m 470,425 v 3 h 32 v -3 z"/>
-  <path style="fill:#{{ surface0.hex }}" d="m 21.25,48.7516 v 32.5 h 1.2497 v -32.5 z"/>
+  <path style="opacity:0;fill:#{{ surface0.hex }}" d="m 21.25,48.7516 v 32.5 h 1.2497 v -32.5 z"/>
  </g>
  <g id="floating-tab-focused-right" transform="matrix(-0.8,0,0,0.98461538,455.0002,176.9983)">
   <path style="opacity:0.06;fill:#{{ surface2.hex }};fill-rule:evenodd" transform="matrix(-1.25,0,0,1.015625,653.75014,-385.93578)" d="m 502,428 v 32 h 3 v -32 z"/>
