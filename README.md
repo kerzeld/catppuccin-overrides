@@ -4,7 +4,9 @@ Catppuccin themes are among the most accessible and easiest to customize themes 
 
 # Usage
 
-Execute `src/index.ts` and supply a theme name as an argument.\
+First start the nix shell with `nix develop`.
+
+then execute `src/index.ts` and supply a theme name as an argument.\
 The output can be found in the `out` folder.
 
 `--firefoxTheme`\
@@ -14,6 +16,10 @@ Current available themes are:
 
 - pink
 - yellow
+- orange
+- green
+- lemon
+- red
 
 # Helpers
 
