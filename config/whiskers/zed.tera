@@ -4,7 +4,7 @@ whiskers:
     matrix:
     - variant: ["", "-no-italics"]
     - accent: ["%accent%"]
-    filename: "zed/%name%{{ variant }}.json"
+    filename: "zed/catppuccin-kerzeld{{ variant }}.json"
     hex_format: "#{{r}}{{g}}{{b}}{{z}}"
 ---
 {
