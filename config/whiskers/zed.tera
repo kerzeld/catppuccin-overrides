@@ -4,12 +4,12 @@ whiskers:
     matrix:
     - variant: ["", "-no-italics"]
     - accent: ["%accent%"]
-    filename: "zed/catppuccin-kerzeld{{ variant }}.json"
+    filename: "zed/%name%{{ variant }}.json"
     hex_format: "#{{r}}{{g}}{{b}}{{z}}"
 ---
 {
     "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
-    "name": "Catppuccin kerzeld",
+    "name": "%name%",
     "author": "kerzeld, Catppuccin <releases@catppuccin.com>",
     "themes": [
         {%- for _, flavor in flavors -%}
@@ -25,7 +25,7 @@ whiskers:
         ] -%}
         {%- set italics = if(cond=variant == "-no-italics", t="null", f='"italic"') %}
         {
-        	"name": "Catppuccin kerzeld {%- if variant == "-no-italics" %} - No Italics {%- endif -%}",
+        	"name": "%name% {%- if variant == "-no-italics" %} - No Italics {%- endif -%}",
             "appearance": {% if flavor.dark %}"dark"{% else %}"light"{% endif %},
             "style": {
                 "accents": [

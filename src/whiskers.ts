@@ -8,7 +8,7 @@ import { exec } from "node:child_process";
 
 const FOLDER_NAME = "whiskers";
 
-export function generateWhiskersThemes(view: IThemeView, outPath: string) {
+export async function generateWhiskersThemes(view: IThemeView, outPath: string) {
 	const overridesPath = path.join(outPath, FOLDER_NAME, "overrides.json");
 	const colors = {};
 	for (const key of ThemeKeys) {
@@ -21,17 +21,19 @@ export function generateWhiskersThemes(view: IThemeView, outPath: string) {
 	const templates = recurseDirRead(path.join(PATH_CONFIG, FOLDER_NAME));
 	// Read and write templates
 	for (const template of templates) {
-		const str = fs.readFileSync(template).toString();
-		const parts = str.split("---");
-		const configPart = parts[1].replaceAll("%accent%", view.accent);
-		const templatePart = parts[2].replaceAll("opacity.float", DEFAULT_OPACITY.toString());
+		let str = fs.readFileSync(template).toString();
+		str = str.replaceAll("%accent%", view.accent);
+		str = str.replaceAll("%name%", view.name);
+		str = str.replaceAll("opacity.float", DEFAULT_OPACITY.toString());
+
 		const templateRelativePath = template.replace(PATH_CONFIG + "/", "");
 		const outFilePath = path.join(outPath, templateRelativePath);
 
 		ensureDirectoryExistence(outFilePath);
-		fs.writeFileSync(outFilePath, "---" + configPart + "---" + templatePart);
+		fs.writeFileSync(outFilePath, str);
 
-		exec(
+		const processResolver = Promise.withResolvers();
+		const process = exec(
 			"whiskers --color-overrides ./overrides.json " + path.basename(template) + " -f mocha",
 			{
 				cwd: path.join(outPath, FOLDER_NAME),
@@ -40,5 +42,15 @@ export function generateWhiskersThemes(view: IThemeView, outPath: string) {
 				if (error) console.log(error);
 			},
 		);
+		process.on("exit", () => processResolver.resolve(null));
+		process.on("error", (err) => processResolver.reject(err));
+
+		await processResolver.promise;
+
+		//Cleanup the template after generation
+		fs.rmSync(outFilePath);
 	}
+
+	//Cleanup the overrides after generation
+	fs.rmSync(overridesPath);
 }
