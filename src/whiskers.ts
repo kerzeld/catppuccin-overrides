@@ -1,5 +1,5 @@
 import path from "node:path";
-import { DEFAULT_OPACITY, PATH_CONFIG, PATH_OUT } from "./const.ts";
+import { DEFAULT_OPACITY, PATH_CONFIG } from "./const.ts";
 import type { IThemeView } from "./interfaces.ts";
 import { ensureDirectoryExistence, recurseDirRead } from "./utils.ts";
 import fs from "node:fs";
@@ -8,8 +8,8 @@ import { exec } from "node:child_process";
 
 const FOLDER_NAME = "whiskers";
 
-export function generateWhiskersThemes(view: IThemeView) {
-	const overridesPath = path.join(PATH_OUT, FOLDER_NAME, "overrides.json");
+export function generateWhiskersThemes(view: IThemeView, outPath: string) {
+	const overridesPath = path.join(outPath, FOLDER_NAME, "overrides.json");
 	const colors = {};
 	for (const key of ThemeKeys) {
 		colors[key] = view.colors[key].hex;
@@ -26,7 +26,7 @@ export function generateWhiskersThemes(view: IThemeView) {
 		const configPart = parts[1].replaceAll("%accent%", view.accent);
 		const templatePart = parts[2].replaceAll("opacity.float", DEFAULT_OPACITY.toString());
 		const templateRelativePath = template.replace(PATH_CONFIG + "/", "");
-		const outFilePath = path.join(PATH_OUT, templateRelativePath);
+		const outFilePath = path.join(outPath, templateRelativePath);
 
 		ensureDirectoryExistence(outFilePath);
 		fs.writeFileSync(outFilePath, "---" + configPart + "---" + templatePart);
@@ -34,7 +34,7 @@ export function generateWhiskersThemes(view: IThemeView) {
 		exec(
 			"whiskers --color-overrides ./overrides.json " + path.basename(template) + " -f mocha",
 			{
-				cwd: path.join(PATH_OUT, FOLDER_NAME),
+				cwd: path.join(outPath, FOLDER_NAME),
 			},
 			(error) => {
 				if (error) console.log(error);

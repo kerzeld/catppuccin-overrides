@@ -10,7 +10,10 @@ then execute `src/index.ts` and supply a theme name as an argument.\
 The output can be found in the `out` folder.
 
 `--firefoxTheme`\
-If this flag is provided it will generate a firefox manifest for a theme under `out/firefox/manifest.json`
+If this flag is provided it will generate a firefox manifest for a theme under `out/firefox/manifest.json`.
+
+`--release`\
+Will build all styles under `release/{color}`.
 
 Current available themes are:
 

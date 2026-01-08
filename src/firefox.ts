@@ -63,7 +63,7 @@ export function generateFirefoxThemeManifest(view: IThemeView) {
 	};
 }
 
-export function generateFirefoxColorLink(view: IThemeView) {
+export function generateFirefoxColorLink(view: IThemeView, outPath: string) {
 	const finishedColors: Record<string, { r: number; g: number; b: number }> = {};
 
 	for (const key in colors) {
@@ -83,7 +83,7 @@ export function generateFirefoxColorLink(view: IThemeView) {
 	const encoded = encode(theme);
 	const compressed = lzma.compress(encoded);
 
-	const linkFile = path.join(PATH_OUT, "firefox", "colors-link.txt");
+	const linkFile = path.join(outPath, "firefox", "colors-link.txt");
 	ensureDirectoryExistence(linkFile);
 	fs.writeFileSync(linkFile, "https://color.firefox.com/?theme=" + Buffer.from(compressed).toString("base64url"));
 

@@ -18,9 +18,9 @@
 		"vtsls",
 		"color-lsp",
 		"codebook",
-		// "typescript-language-server",
 		"json-language-server",
-		"tera"
+		"tera",
+		"code-stats-ls"
 	],
 	"languages": {
 		"JavaScript": {
