@@ -4,12 +4,13 @@ import path from "node:path";
 import { PATH_OUT, PATH_ROOT, PATH_TEMPLATES } from "./const.ts";
 import type { ITheme, IThemeView } from "./interfaces.ts";
 import { themes } from "./themes.ts";
-import { buildHexFromHSV, buildThemeView, ensureDirectoryExistence, recurseDirRead } from "./utils.ts";
+import { buildHexFromHSV, buildThemeView, ensureDirectoryExistence, promiseSleep, recurseDirRead } from "./utils.ts";
 import { getUserStyles } from "./userStyles.ts";
 import minimist from "minimist";
 import { generateFirefoxColorLink, generateFirefoxThemeManifest } from "./firefox.ts";
 import { styleText } from "node:util";
 import { generateWhiskersThemes } from "./whiskers.ts";
+import { linkTheme } from "./link.ts";
 
 async function main() {
 	const args = minimist(process.argv.slice(2));
@@ -18,7 +19,7 @@ async function main() {
 		for (const key in themes) {
 			if (themes.hasOwnProperty(key)) {
 				const themeName = key as keyof typeof themes;
-				await constructTheme(themeName, args, path.join(PATH_ROOT, "release", themeName));
+				await constructTheme(themeName, args, path.join(PATH_ROOT, "out", themeName));
 			}
 		}
 	} else {
@@ -32,8 +33,16 @@ async function main() {
 			console.log("Theme does not exist");
 			process.exit(1);
 		}
+		const outPath = path.join(PATH_ROOT, "out", themeName);
 
-		await constructTheme(themeName, args);
+		await constructTheme(themeName, args, outPath);
+
+		if (args.link) {
+			console.log(styleText("green", "Starting linking files!"));
+			await promiseSleep(2000);
+			linkTheme(outPath);
+			console.log(styleText("green", "Linked all files!"));
+		}
 	}
 }
 

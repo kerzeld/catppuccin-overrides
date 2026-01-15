@@ -10,7 +10,7 @@
   "yaml": {},
   "biome": {
     "indentStyle": "tab",
-    "lineWidth": 160
+    "lineWidth": 120
   },
   "excludes": [
     "**/node_modules",

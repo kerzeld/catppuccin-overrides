@@ -20,7 +20,9 @@ export function buildHexFromHSV(overrides: IHSVOverride) {
 
 export function buildThemeView(theme: ITheme): IThemeView {
 	// Build hsv overrides
-	const hsvOverriedes = theme.overrides.hsv?.map((ov) => buildHexFromHSV(ov)).reduce((prev, curr) => ({ ...prev, ...curr }));
+	const hsvOverriedes = theme.overrides.hsv
+		?.map((ov) => buildHexFromHSV(ov))
+		.reduce((prev, curr) => ({ ...prev, ...curr }));
 
 	// Add all overrides together
 	const colors: Record<string, string> = { ...MochaColors, ...hsvOverriedes, ...theme.overrides.hex };
@@ -73,4 +75,10 @@ export function ensureDirectoryExistence(filePath: string) {
 	}
 	ensureDirectoryExistence(dirname);
 	fs.mkdirSync(dirname);
+}
+
+export function promiseSleep(ms: number) {
+	const res = Promise.withResolvers();
+	setTimeout(() => res.resolve(null), ms);
+	return res.promise;
 }

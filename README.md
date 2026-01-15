@@ -15,6 +15,10 @@ If this flag is provided it will generate a firefox manifest for a theme under `
 `--release`\
 Will build all styles under `release/{color}`.
 
+`--link`\
+Will link some of the created themes to predefined paths.\
+Only works with specifying a direct theme.
+
 Current available themes are:
 
 - pink
