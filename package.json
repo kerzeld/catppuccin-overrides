@@ -1,30 +1,30 @@
 {
-  "name": "catppuccin-overrides",
-  "version": "1.0.2",
-  "description": "",
-  "main": "src/index.js",
-  "type": "module",
-  "scripts": {
-    "test": "node src/index.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.20.0",
-  "dependencies": {
-    "@msgpack/msgpack": "^3.1.2",
-    "adm-zip": "^0.5.16",
-    "color": "5.0.2",
-    "lzma": "^2.3.2",
-    "minimist": "1.2.8",
-    "mustache": "4.2.0"
-  },
-  "devDependencies": {
-    "@types/lzma": "^2.3.0",
-    "@types/minimist": "1.2.5",
-    "@types/mustache": "4.2.6",
-    "@types/node": "24.10.0",
-    "dprint": "^0.50.2",
-    "oxlint": "^1.28.0"
-  }
+	"name": "catppuccin-overrides",
+	"version": "1.0.2",
+	"description": "",
+	"keywords": [],
+	"license": "ISC",
+	"author": "",
+	"type": "module",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "node src/index.ts"
+	},
+	"dependencies": {
+		"@msgpack/msgpack": "^3.1.2",
+		"adm-zip": "^0.5.16",
+		"color": "5.0.2",
+		"lzma": "^2.3.2",
+		"minimist": "1.2.8",
+		"mustache": "4.2.0"
+	},
+	"devDependencies": {
+		"@types/lzma": "^2.3.0",
+		"@types/minimist": "1.2.5",
+		"@types/mustache": "4.2.6",
+		"@types/node": "24.10.0",
+		"oxfmt": "0.31.0",
+		"oxlint": "1.46.0"
+	},
+	"packageManager": "pnpm@10.20.0"
 }

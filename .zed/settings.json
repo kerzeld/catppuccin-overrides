@@ -11,8 +11,8 @@
 		}
 	},
 	"language_servers": [
-		"oxc",
-		"dprint",
+		"oxfmt",
+		"oxlint",
 		"package-version-server",
 		"tailwindcss-language-server",
 		"vtsls",
@@ -26,21 +26,21 @@
 		"JavaScript": {
 			"formatter": {
 				"language_server": {
-					"name": "dprint"
+					"name": "oxfmt"
 				}
 			}
 		},
 		"TypeScript": {
 			"formatter": {
 				"language_server": {
-					"name": "dprint"
+					"name": "oxfmt"
 				}
 			}
 		},
 		"JSON": {
 			"formatter": {
 				"language_server": {
-					"name": "dprint"
+					"name": "oxfmt"
 				}
 			}
 		}

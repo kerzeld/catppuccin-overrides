@@ -14,7 +14,6 @@ https://github.com/paulmcauley/klassy/discussions/252
 
 If you want to use klassy then take the `kerzeld-glassy.colors` scheme for nice transparency at least in dolphin.
 
-
 ## Design svg
 
 If you want to edit the svg i can recommend this tool:

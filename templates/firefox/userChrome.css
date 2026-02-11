@@ -12,12 +12,7 @@ toolbar-menubar:-moz-window-inactive,
 /* Sidebar button looks ugly if selected all the time */
 toolbar .toolbarbutton-1 {
 	&:not([disabled]) {
-		&:is(:hover:active, [open], [checked])
-			> :is(
-				.toolbarbutton-icon,
-				.toolbarbutton-text,
-				.toolbarbutton-badge-stack
-			) {
+		&:is(:hover:active, [open], [checked]) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
 			background-color: transparent !important;
 			color: inherit;
 		}
@@ -40,10 +35,7 @@ toolbar .toolbarbutton-1 {
 
 .browser-toolbar {
 	&:not(.titlebar-color) {
-		background-color: rgba(
-			{{colors.crust.rgb}},
-			{{opacity.float}}
-		) !important;
+		background-color: rgba({{colors.crust.rgb}}, {{opacity.float}}) !important;
 	}
 }
 
