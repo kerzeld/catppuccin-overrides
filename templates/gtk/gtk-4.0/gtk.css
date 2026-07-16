@@ -1,0 +1,18 @@
+/* Generated from catppuccin-overrides — do not edit directly */
+@import url("noctalia.css");
+
+:root {
+  --window-bg-color: rgba({{colors.crust.rgb}}, {{opacity.float}});
+  --headerbar-bg-color: rgba({{colors.crust.rgb}}, {{opacity.float}});
+}
+
+window.background,
+window.background > contents,
+window.background > contents > content {
+  background-color: rgba({{colors.crust.rgb}}, {{opacity.float}});
+}
+
+window.background headerbar,
+window.background headerbar:backdrop {
+  background-color: rgba({{colors.crust.rgb}}, {{opacity.float}});
+}

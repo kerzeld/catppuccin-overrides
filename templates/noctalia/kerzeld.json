@@ -1,0 +1,94 @@
+{
+  "dark": {
+    "mPrimary": "#{{colors.accent.hex}}",
+    "mOnPrimary": "#{{colors.crust.hex}}",
+    "mSecondary": "#{{colors.peach.hex}}",
+    "mOnSecondary": "#{{colors.crust.hex}}",
+    "mTertiary": "#{{colors.teal.hex}}",
+    "mOnTertiary": "#{{colors.crust.hex}}",
+    "mError": "#{{colors.red.hex}}",
+    "mOnError": "#{{colors.crust.hex}}",
+    "mSurface": "#{{colors.base.hex}}",
+    "mOnSurface": "#{{colors.text.hex}}",
+    "mSurfaceVariant": "#{{colors.mantle.hex}}",
+    "mOnSurfaceVariant": "#{{colors.subtext0.hex}}",
+    "mOutline": "#{{colors.overlay0.hex}}",
+    "mShadow": "#{{colors.crust.hex}}",
+    "mHover": "#{{colors.accent.hex}}",
+    "mOnHover": "#{{colors.crust.hex}}",
+    "terminal": {
+      "normal": {
+        "black": "#{{colors.surface1.hex}}",
+        "red": "#{{colors.red.hex}}",
+        "green": "#{{colors.green.hex}}",
+        "yellow": "#{{colors.yellow.hex}}",
+        "blue": "#{{colors.blue.hex}}",
+        "magenta": "#{{colors.pink.hex}}",
+        "cyan": "#{{colors.teal.hex}}",
+        "white": "#{{colors.subtext0.hex}}"
+      },
+      "bright": {
+        "black": "#{{colors.surface2.hex}}",
+        "red": "#{{colors.maroon.hex}}",
+        "green": "#{{colors.green.hex}}",
+        "yellow": "#{{colors.yellow.hex}}",
+        "blue": "#{{colors.lavender.hex}}",
+        "magenta": "#{{colors.mauve.hex}}",
+        "cyan": "#{{colors.sky.hex}}",
+        "white": "#{{colors.subtext1.hex}}"
+      },
+      "foreground": "#{{colors.text.hex}}",
+      "background": "#{{colors.base.hex}}",
+      "selectionFg": "#{{colors.text.hex}}",
+      "selectionBg": "#{{colors.surface2.hex}}",
+      "cursorText": "#{{colors.crust.hex}}",
+      "cursor": "#{{colors.rosewater.hex}}"
+    }
+  },
+  "light": {
+    "mPrimary": "#{{colors.accent.hex}}",
+    "mOnPrimary": "#{{colors.crust.hex}}",
+    "mSecondary": "#{{colors.peach.hex}}",
+    "mOnSecondary": "#{{colors.crust.hex}}",
+    "mTertiary": "#{{colors.teal.hex}}",
+    "mOnTertiary": "#{{colors.crust.hex}}",
+    "mError": "#{{colors.red.hex}}",
+    "mOnError": "#{{colors.crust.hex}}",
+    "mSurface": "#{{colors.base.hex}}",
+    "mOnSurface": "#{{colors.text.hex}}",
+    "mSurfaceVariant": "#{{colors.mantle.hex}}",
+    "mOnSurfaceVariant": "#{{colors.subtext0.hex}}",
+    "mOutline": "#{{colors.overlay0.hex}}",
+    "mShadow": "#{{colors.crust.hex}}",
+    "mHover": "#{{colors.accent.hex}}",
+    "mOnHover": "#{{colors.crust.hex}}",
+    "terminal": {
+      "normal": {
+        "black": "#{{colors.surface1.hex}}",
+        "red": "#{{colors.red.hex}}",
+        "green": "#{{colors.green.hex}}",
+        "yellow": "#{{colors.yellow.hex}}",
+        "blue": "#{{colors.blue.hex}}",
+        "magenta": "#{{colors.pink.hex}}",
+        "cyan": "#{{colors.teal.hex}}",
+        "white": "#{{colors.subtext0.hex}}"
+      },
+      "bright": {
+        "black": "#{{colors.surface2.hex}}",
+        "red": "#{{colors.maroon.hex}}",
+        "green": "#{{colors.green.hex}}",
+        "yellow": "#{{colors.yellow.hex}}",
+        "blue": "#{{colors.lavender.hex}}",
+        "magenta": "#{{colors.mauve.hex}}",
+        "cyan": "#{{colors.sky.hex}}",
+        "white": "#{{colors.subtext1.hex}}"
+      },
+      "foreground": "#{{colors.text.hex}}",
+      "background": "#{{colors.base.hex}}",
+      "selectionFg": "#{{colors.text.hex}}",
+      "selectionBg": "#{{colors.surface2.hex}}",
+      "cursorText": "#{{colors.crust.hex}}",
+      "cursor": "#{{colors.rosewater.hex}}"
+    }
+  }
+}

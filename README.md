@@ -4,10 +4,17 @@ Catppuccin themes are among the most accessible and easiest to customize themes 
 
 # Usage
 
-First start the nix shell with `nix develop`.
+First start the nix shell with `nix-shell`.
 
 then execute `src/index.ts` and supply a theme name as an argument.\
 The output can be found in the `out` folder.
+
+### Example
+
+```sh
+nix-shell
+node src/index.ts pink
+```
 
 `--firefoxTheme`\
 If this flag is provided it will generate a firefox manifest for a theme under `out/firefox/manifest.json`.
