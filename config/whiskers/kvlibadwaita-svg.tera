@@ -122,8 +122,8 @@ whiskers:
         stop-color:#{{ text.hex }};
       }
       .ColorScheme-Highlight {
-        color:#{{ surface1.hex }};
-        stop-color:#{{ surface1.hex }};
+        color:#{{ surface0.hex }};
+        stop-color:#{{ surface0.hex }};
       }
       .ColorScheme-ViewText {
         color:#{{ surface0.hex }};
@@ -154,13 +154,13 @@ whiskers:
         stop-color:#{{ overlay0.hex }};
       }
       .ColorScheme-ButtonFocus{
-        color:#{{ surface1.hex }};
-        stop-color:#{{ surface1.hex }};
+        color:#{{ surface0.hex }};
+        stop-color:#{{ surface0.hex }};
       }</style>
     <linearGradient
        id="color-primary">
       <stop
-         stop-color="#{{ surface1.hex }}"
+         stop-color="#{{ surface0.hex }}"
          offset="1"
          id="stop22" />
     </linearGradient>
@@ -920,14 +920,14 @@ whiskers:
   <g
      id="progress-normal"
      transform="matrix(1.5 0 0 1 20 17)"
-     style="fill:#{{ surface1.hex }};fill-opacity:1">
+     style="fill:#{{ surface0.hex }};fill-opacity:1">
     <rect
        x="34"
        y="162"
        width="8"
        height="8"
        id="rect165"
-       style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+       style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   </g>
   <rect
      id="progress-pattern-normal-top"
@@ -989,42 +989,42 @@ whiskers:
      y="167"
      width="12"
      height="12"
-     style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+     style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   <rect
      id="progress-normal-bottom"
      x="71"
      y="187"
      width="12"
      height="12"
-     style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+     style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   <rect
      id="progress-normal-topleft"
      x="59"
      y="167"
      width="12"
      height="12"
-     style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+     style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   <rect
      id="progress-normal-topright"
      x="83"
      y="167"
      width="12"
      height="12"
-     style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+     style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   <rect
      id="progress-normal-bottomleft"
      x="59"
      y="187"
      width="12"
      height="12"
-     style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+     style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   <rect
      id="progress-normal-bottomright"
      x="83"
      y="187"
      width="12"
      height="12"
-     style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+     style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   <rect
      id="progress-pattern-disabled-top"
      x="110"
@@ -1115,7 +1115,7 @@ whiskers:
        width="8"
        height="8"
        id="rect195"
-       style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+       style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="progress-normal-right"
@@ -1126,7 +1126,7 @@ whiskers:
        width="8"
        height="8"
        id="rect198"
-       style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+       style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="progress-pattern-disabled-left"
@@ -1168,48 +1168,48 @@ whiskers:
      y="930"
      width="8"
      height="4"
-     style="opacity:1;fill:#{{ surface1.hex }};fill-opacity:1" />
+     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
   <rect
      id="itemview-pressed-bottom"
      x="52"
      y="942"
      width="8"
      height="4"
-     style="opacity:1;fill:#{{ surface1.hex }};fill-opacity:1" />
+     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
   <path
      id="itemview-pressed"
      d="m 52,934 h 8 v 8 h -8 z"
-     style="opacity:1;fill:#{{ surface1.hex }};fill-opacity:1;stroke-width:0.999999" />
+     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1;stroke-width:0.999999" />
   <path
      id="itemview-pressed-topright"
      d="m 60,930 c 4,0 4,4 4,4 h -4 z"
-     style="opacity:1;fill:#{{ surface1.hex }};fill-opacity:1" />
+     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
   <path
      id="itemview-pressed-bottomright"
      d="m 60,942 h 4 c 0,0 0,4 -4,4 z"
-     style="opacity:1;fill:#{{ surface1.hex }};fill-opacity:1" />
+     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
   <rect
      id="itemview-pressed-right"
      x="60"
      y="934"
      width="4"
      height="8"
-     style="opacity:1;fill:#{{ surface1.hex }};fill-opacity:1" />
+     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
   <rect
      id="itemview-pressed-left"
      x="48"
      y="934"
      width="4"
      height="8"
-     style="opacity:1;fill:#{{ surface1.hex }};fill-opacity:1" />
+     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
   <path
      id="itemview-pressed-topleft"
      d="m 52,930 v 4 h -4 c 0,0 0,-4 4,-4 z"
-     style="opacity:1;fill:#{{ surface1.hex }};fill-opacity:1" />
+     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
   <path
      id="itemview-pressed-bottomleft"
      d="m 48,942 h 4 v 4 c -4,0 -4,-4 -4,-4 z"
-     style="opacity:1;fill:#{{ surface1.hex }};fill-opacity:1" />
+     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
   <rect
      id="itemview-toggled-top"
      x="71"
@@ -1351,11 +1351,11 @@ whiskers:
      d="m 220,354 v 32 h 32 v -32 z"
      fill="#{{ base.hex }}"
      style="fill:#{{ surface0.hex }};fill-opacity:1" />
-  <path
-     id="titlebar-normal"
-     d="m 220,395 v 32 h 32 v -32 z"
-     fill="#{{ base.hex }}"
-     style="fill:#{{ crust.hex }};fill-opacity:1" />
+   <path
+      id="titlebar-normal"
+      d="m 220,395 v 32 h 32 v -32 z"
+      fill="#{{ base.hex }}"
+      style="fill:#{{ mantle.hex }};fill-opacity:1" />
   <path
      id="header-pressed"
      d="m146 104.88h-6v6h6z"
@@ -3614,60 +3614,60 @@ whiskers:
      id="header-separator"
      d="m72 104.88h-6v6h6z"
      style="fill:#ffffff;opacity:0.12" />
-  <path
-     id="window-normal"
-     d="m 380,814 h 30 v 30 h -30 z"
-     style="fill:#{{ crust.hex }};fill-opacity:1;opacity:1" />
-  <path
-     id="window-normal-inactive"
-     d="m 412,814 h 30 v 30 h -30 z"
-     style="opacity:1;fill:#{{ crust.hex }};stroke-width:1" />
+   <path
+      id="window-normal"
+      d="m 380,814 h 30 v 30 h -30 z"
+      style="fill:#{{ base.hex }};fill-opacity:1;opacity:1" />
+   <path
+      id="window-normal-inactive"
+      d="m 412,814 h 30 v 30 h -30 z"
+      style="opacity:1;fill:#{{ base.hex }};stroke-width:1" />
   <rect
      id="menubar-normal"
      x="307.00311"
      y="360"
      width="20"
-     height="20"
-     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
-  <rect
-     id="menubar-normal-left"
-     transform="rotate(90)"
-     x="360"
-     y="-307.00311"
-     width="20"
-     height="5"
-     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
-  <rect
-     id="menubar-normal-topleft"
-     transform="rotate(90)"
-     x="355"
-     y="-307.00311"
-     width="5"
-     height="5"
-     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
-  <rect
-     id="menubar-normal-top"
-     x="307.00311"
-     y="355"
-     width="20"
-     height="5"
-     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
-  <rect
-     id="menubar-normal-right"
-     transform="rotate(90)"
-     x="360"
-     y="-332.00311"
-     width="20"
-     height="5"
-     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
-  <rect
-     id="menubar-normal-topright"
-     transform="rotate(90)"
-     x="355"
-     y="-332.00311"
-     width="5"
-     height="5"
-     style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+      height="20"
+      style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
+   <rect
+      id="menubar-normal-left"
+      transform="rotate(90)"
+      x="360"
+      y="-307.00311"
+      width="20"
+      height="5"
+      style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
+   <rect
+      id="menubar-normal-topleft"
+      transform="rotate(90)"
+      x="355"
+      y="-307.00311"
+      width="5"
+      height="5"
+      style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
+   <rect
+      id="menubar-normal-top"
+      x="307.00311"
+      y="355"
+      width="20"
+      height="5"
+      style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
+   <rect
+      id="menubar-normal-right"
+      transform="rotate(90)"
+      x="360"
+      y="-332.00311"
+      width="20"
+      height="5"
+      style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
+   <rect
+      id="menubar-normal-topright"
+      transform="rotate(90)"
+      x="355"
+      y="-332.00311"
+      width="5"
+      height="5"
+      style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
   <g
      id="menubar-normal-bottomleft"
      transform="matrix(1,0,0,0.25,2,225.75)">
@@ -3817,32 +3817,32 @@ whiskers:
        id="rect1522" />
     <path
        d="m1-80c-3.324 0-6 2.676-6 6h6z"
-       id="path1524"
-       style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
-  </g>
-  <g
-     id="button-normal-top"
-     transform="translate(9,116)"
-     style="fill:#{{ surface0.hex }};fill-opacity:1">
-    <rect
-       x="1"
-       y="-80"
-       width="26"
-       height="6"
-       id="rect1527"
-       style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
-  </g>
-  <g
-     id="button-normal"
-     transform="translate(9,116)"
-     style="fill:#{{ surface0.hex }};fill-opacity:1">
-    <rect
-       x="1"
-       y="-74"
-       width="26"
-       height="26"
-       id="rect1530"
-       style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
+        id="path1524"
+        style="fill:#{{ mantle.hex }};opacity:1;fill-opacity:1" />
+   </g>
+   <g
+      id="button-normal-top"
+      transform="translate(9,116)"
+      style="fill:#{{ mantle.hex }};fill-opacity:1">
+     <rect
+        x="1"
+        y="-80"
+        width="26"
+        height="6"
+        id="rect1527"
+        style="fill:#{{ mantle.hex }};opacity:1;fill-opacity:1" />
+   </g>
+   <g
+      id="button-normal"
+      transform="translate(9,116)"
+      style="fill:#{{ mantle.hex }};fill-opacity:1">
+     <rect
+        x="1"
+        y="-74"
+        width="26"
+        height="26"
+        id="rect1530"
+        style="fill:#{{ mantle.hex }};opacity:1;fill-opacity:1" />
   </g>
   <use
      id="button-normal-topright"
@@ -3893,20 +3893,20 @@ whiskers:
        id="rect1539" />
     <path
        d="m1-80c-3.324 0-6 2.676-6 6h6z"
-       id="path1541"
-       style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
-  </g>
-  <g
-     id="button-focused-top"
-     transform="matrix(.99999 0 0 .99999 55.989 115.99)"
-     style="fill:#{{ surface0.hex }};fill-opacity:1">
-    <rect
-       x="1"
-       y="-80"
-       width="26"
-       height="6"
-       id="rect1544"
-       style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
+        id="path1541"
+        style="fill:#{{ mantle.hex }};opacity:1;fill-opacity:1" />
+   </g>
+   <g
+      id="button-focused-top"
+      transform="matrix(.99999 0 0 .99999 55.989 115.99)"
+      style="fill:#{{ mantle.hex }};fill-opacity:1">
+     <rect
+        x="1"
+        y="-80"
+        width="26"
+        height="6"
+        id="rect1544"
+        style="fill:#{{ mantle.hex }};opacity:1;fill-opacity:1" />
   </g>
   <use
      id="button-focused-topright"
@@ -3957,20 +3957,20 @@ whiskers:
        id="rect1556" />
     <path
        d="m1-80c-3.324 0-6 2.676-6 6h6z"
-       id="path1558"
-       style="fill:#{{ overlay0.hex }};opacity:1;fill-opacity:1" />
-  </g>
-  <g
-     id="button-pressed-top"
-     transform="matrix(.99999 0 0 .99999 103 116)"
-     style="fill:#{{ surface1.hex }};fill-opacity:1">
-    <rect
-       x="1"
-       y="-80"
-       width="26"
-       height="6"
-       id="rect1561"
-       style="fill:#{{ overlay0.hex }};opacity:1;fill-opacity:1" />
+        id="path1558"
+        style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
+   </g>
+   <g
+      id="button-pressed-top"
+      transform="matrix(.99999 0 0 .99999 103 116)"
+      style="fill:#{{ surface0.hex }};fill-opacity:1">
+     <rect
+        x="1"
+        y="-80"
+        width="26"
+        height="6"
+        id="rect1561"
+        style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   </g>
   <use
      id="button-pressed-topright"
@@ -4008,87 +4008,87 @@ whiskers:
      width="100%"
      height="100%"
      xlink:href="#button-pressed-top" />
-  <g
-     id="button-toggled-topleft"
-     transform="matrix(.99999 0 0 .99999 154 116)"
-     style="fill:#{{ surface1.hex }};fill-opacity:1">
-    <path
-       d="m1-80c-3.324 0-6 2.676-6 6h6z"
-       class="ColorScheme-Highlight"
-       fill="currentColor"
-       id="path1575"
-       style="fill:#{{ surface1.hex }};fill-opacity:1" />
-  </g>
-  <g
-     id="button-toggled-top"
-     transform="matrix(.99999 0 0 .99999 154 116)"
-     style="fill:#{{ surface1.hex }};fill-opacity:1">
-    <rect
-       x="1"
-       y="-80"
-       width="26"
-       height="6"
-       class="ColorScheme-Highlight"
-       fill="currentColor"
-       id="rect1578"
-       style="fill:#{{ surface1.hex }};fill-opacity:1" />
-  </g>
-  <g
-     id="button-toggled"
-     transform="matrix(.99999 0 0 .99999 154 116)"
-     style="fill:#{{ surface1.hex }};fill-opacity:1">
-    <rect
-       x="1"
-       y="-74"
-       width="26"
-       height="26"
-       class="ColorScheme-Highlight"
-       fill="currentColor"
-       id="rect1581"
-       style="fill:#{{ surface1.hex }};fill-opacity:1" />
-  </g>
-  <use
-     id="button-toggled-topright"
-     transform="matrix(-1 0 0 1 335.99 2.21e-6)"
-     width="100%"
-     height="100%"
-     xlink:href="#button-toggled-topleft"
-     style="fill:#{{ surface1.hex }};fill-opacity:1" />
-  <use
-     id="button-toggled-bottomright"
-     transform="rotate(180 168 54.998)"
-     width="100%"
-     height="100%"
-     xlink:href="#button-toggled-topleft"
-     style="fill:#{{ surface1.hex }};fill-opacity:1" />
-  <use
-     id="button-toggled-bottomleft"
-     transform="matrix(1 0 0 -1 -3e-6 110.03)"
-     width="100%"
-     height="100%"
-     xlink:href="#button-toggled-topleft"
-     style="fill:#{{ surface1.hex }};fill-opacity:1" />
-  <use
-     id="button-toggled-bottom"
-     transform="translate(-3e-6 32)"
-     width="100%"
-     height="100%"
-     xlink:href="#button-toggled-top"
-     style="fill:#{{ surface1.hex }};fill-opacity:1" />
-  <use
-     id="button-toggled-left"
-     transform="rotate(90 152 39.01)"
-     width="100%"
-     height="100%"
-     xlink:href="#button-toggled-top"
-     style="fill:#{{ surface1.hex }};fill-opacity:1" />
-  <use
-     id="button-toggled-right"
-     transform="rotate(90 168 54.998)"
-     width="100%"
-     height="100%"
-     xlink:href="#button-toggled-top"
-     style="fill:#{{ surface1.hex }};fill-opacity:1" />
+   <g
+      id="button-toggled-topleft"
+      transform="matrix(.99999 0 0 .99999 154 116)"
+      style="fill:#{{ surface0.hex }};fill-opacity:1">
+     <path
+        d="m1-80c-3.324 0-6 2.676-6 6h6z"
+        class="ColorScheme-Highlight"
+        fill="currentColor"
+        id="path1575"
+        style="fill:#{{ surface0.hex }};fill-opacity:1" />
+   </g>
+   <g
+      id="button-toggled-top"
+      transform="matrix(.99999 0 0 .99999 154 116)"
+      style="fill:#{{ surface0.hex }};fill-opacity:1">
+     <rect
+        x="1"
+        y="-80"
+        width="26"
+        height="6"
+        class="ColorScheme-Highlight"
+        fill="currentColor"
+        id="rect1578"
+        style="fill:#{{ surface0.hex }};fill-opacity:1" />
+   </g>
+   <g
+      id="button-toggled"
+      transform="matrix(.99999 0 0 .99999 154 116)"
+      style="fill:#{{ surface0.hex }};fill-opacity:1">
+     <rect
+        x="1"
+        y="-74"
+        width="26"
+        height="26"
+        class="ColorScheme-Highlight"
+        fill="currentColor"
+        id="rect1581"
+        style="fill:#{{ surface0.hex }};fill-opacity:1" />
+   </g>
+   <use
+      id="button-toggled-topright"
+      transform="matrix(-1 0 0 1 335.99 2.21e-6)"
+      width="100%"
+      height="100%"
+      xlink:href="#button-toggled-topleft"
+      style="fill:#{{ surface0.hex }};fill-opacity:1" />
+   <use
+      id="button-toggled-bottomright"
+      transform="rotate(180 168 54.998)"
+      width="100%"
+      height="100%"
+      xlink:href="#button-toggled-topleft"
+      style="fill:#{{ surface0.hex }};fill-opacity:1" />
+   <use
+      id="button-toggled-bottomleft"
+      transform="matrix(1 0 0 -1 -3e-6 110.03)"
+      width="100%"
+      height="100%"
+      xlink:href="#button-toggled-topleft"
+      style="fill:#{{ surface0.hex }};fill-opacity:1" />
+   <use
+      id="button-toggled-bottom"
+      transform="translate(-3e-6 32)"
+      width="100%"
+      height="100%"
+      xlink:href="#button-toggled-top"
+      style="fill:#{{ surface0.hex }};fill-opacity:1" />
+   <use
+      id="button-toggled-left"
+      transform="rotate(90 152 39.01)"
+      width="100%"
+      height="100%"
+      xlink:href="#button-toggled-top"
+      style="fill:#{{ surface0.hex }};fill-opacity:1" />
+   <use
+      id="button-toggled-right"
+      transform="rotate(90 168 54.998)"
+      width="100%"
+      height="100%"
+      xlink:href="#button-toggled-top"
+      style="fill:#{{ surface0.hex }};fill-opacity:1" />
   <g
      id="tbutton-normal-topleft"
      transform="matrix(5.0384183,0,0,5.0390527,-63.646221,-131.99449)"
@@ -4968,7 +4968,7 @@ whiskers:
      id="lineedit-normal"
      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
     <rect
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1"
        id="rect43255"
        width="3.175"
        height="1.5875"
@@ -4979,7 +4979,7 @@ whiskers:
      id="lineedit-normal-left"
      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
     <rect
-       style="opacity:1;fill:#{{ surface0.hex }};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
        id="rect43257"
        width="1.5875"
        height="1.5875"
@@ -4990,7 +4990,7 @@ whiskers:
      id="lineedit-normal-top"
      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
     <rect
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1"
        id="rect43253"
        width="3.175"
        height="1.5875"
@@ -5014,7 +5014,7 @@ whiskers:
      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
     <path
        id="rect43263"
-       style="opacity:1;fill:#{{ surface0.hex }};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 6 z"
        transform="scale(0.26458333)" />
   </g>
@@ -5223,7 +5223,7 @@ whiskers:
      id="combo-normal"
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <rect
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1"
        id="rect44091"
        width="3.175"
        height="1.5875"
@@ -5234,7 +5234,7 @@ whiskers:
      id="combo-normal-left"
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <rect
-       style="opacity:1;fill:#{{ surface0.hex }};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
        id="rect44095"
        width="1.5875"
        height="1.5875"
@@ -5245,7 +5245,7 @@ whiskers:
      id="combo-normal-top"
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <rect
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1"
        id="rect44101"
        width="3.175"
        height="1.5875"
@@ -5257,7 +5257,7 @@ whiskers:
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <path
        id="use44107"
-       style="opacity:1;fill:#{{ surface0.hex }};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
        d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 1.5875 z" />
   </g>
   <g
@@ -5265,7 +5265,7 @@ whiskers:
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <path
        id="path44113"
-       style="opacity:1;fill:#{{ surface0.hex }};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 6 z"
        transform="scale(0.26458333)" />
   </g>
@@ -5286,14 +5286,14 @@ whiskers:
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <path
        id="use44125"
-       style="opacity:1;fill:#{{ surface0.hex }};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
        d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -1.5875 z" />
   </g>
   <g
      id="combo-normal-right"
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <rect
-       style="opacity:1;fill:#{{ surface0.hex }};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{ crust.hex }};fill-opacity:1"
        id="use44131"
        width="1.5875"
        height="1.5875"
@@ -5305,7 +5305,7 @@ whiskers:
      id="combo-normal-bottom"
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <rect
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1"
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1"
        id="use44137"
        width="3.175"
        height="1.5875"
@@ -5544,7 +5544,7 @@ whiskers:
        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
        fill="#{{ text.hex }}"
        id="path2159"
-       style="stroke-width:0.888889;fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+       style="stroke-width:0.888889;fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="scrollbarslider-pressed-left"
@@ -5560,7 +5560,7 @@ whiskers:
        d="m 73,860 v 23 h 8 v -23 z"
        fill="#{{ text.hex }}"
        id="path2165"
-       style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+       style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="scrollbarslider-pressed-topright"
@@ -5576,7 +5576,7 @@ whiskers:
        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
        fill="#{{ text.hex }}"
        id="path2171"
-       style="stroke-width:0.888889;fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+       style="stroke-width:0.888889;fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="scrollbarslider-pressed-bottomleft"
@@ -5592,7 +5592,7 @@ whiskers:
        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
        fill="#{{ text.hex }}"
        id="path2177"
-       style="stroke-width:0.888889;fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+       style="stroke-width:0.888889;fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="scrollbarslider-pressed-bottomright"
@@ -5608,7 +5608,7 @@ whiskers:
        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
        fill="#{{ text.hex }}"
        id="path2183"
-       style="stroke-width:0.888889;fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+       style="stroke-width:0.888889;fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="scrollbarslider-pressed-right"
@@ -5624,7 +5624,7 @@ whiskers:
        d="m 73,860 v 23 h 8 v -23 z"
        fill="#{{ text.hex }}"
        id="path2189"
-       style="fill:#{{ surface1.hex }};opacity:1;fill-opacity:1" />
+       style="fill:#{{ surface0.hex }};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="tab-close-normal">
@@ -6004,14 +6004,14 @@ whiskers:
   <path
      id="menu-normal"
      d="m 131,482 h 48 v 48 h -48 z"
-     style="fill:#{{ surface0.hex }};fill-opacity:1" />
+     style="fill:#{{ mantle.hex }};fill-opacity:1" />
   <g
      id="menu-normal-left"
      transform="matrix(1.3333333,0,0,1,-33.013329,-221.75)">
     <path
        d="m 116.26,703.75 h 6 v 48 h -6 z"
        id="path2243"
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
   </g>
   <g
      id="menu-normal-topleft"
@@ -6019,7 +6019,7 @@ whiskers:
     <path
        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
        id="path2246"
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
   </g>
   <g
      id="menu-normal-top"
@@ -6027,7 +6027,7 @@ whiskers:
     <path
        d="m 116.26,703.75 h 6 v 48 h -6 z"
        id="path2249"
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
   </g>
   <g
      id="menu-normal-topright"
@@ -6035,7 +6035,7 @@ whiskers:
     <path
        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
        id="path2252"
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
   </g>
   <g
      id="menu-normal-right"
@@ -6043,7 +6043,7 @@ whiskers:
     <path
        d="m 116.26,703.75 h 6 v 48 h -6 z"
        id="path2255"
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
   </g>
   <g
      id="menu-normal-bottomright"
@@ -6051,7 +6051,7 @@ whiskers:
     <path
        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
        id="path2258"
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
   </g>
   <g
      id="menu-normal-bottom"
@@ -6059,7 +6059,7 @@ whiskers:
     <path
        d="m 116.26,703.75 h 6 v 48 h -6 z"
        id="path2261"
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
   </g>
   <g
      id="menu-normal-bottomleft"
@@ -6067,7 +6067,7 @@ whiskers:
     <path
        d="m 138.25,698.74 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
        id="path2264"
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
   </g>
   <g
      id="menu-shadow-topleft"
@@ -6080,7 +6080,7 @@ whiskers:
     <path
        d="m 24,471 c -1.108,0 -2,0.892 -2,2 h 2 z"
        id="path2276"
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
     <path
        id="path19231"
        style="opacity:0.1;fill:#ffffff"
@@ -6093,7 +6093,7 @@ whiskers:
     <path
        d="m 24,470 h 56 v 2 H 24 Z"
        id="path2279"
-       style="opacity:1;fill:#{{ surface0.hex }};fill-opacity:1" />
+       style="opacity:1;fill:#{{ mantle.hex }};fill-opacity:1" />
     <rect
        transform="scale(1,-1)"
        x="24"
