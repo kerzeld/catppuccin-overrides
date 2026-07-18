@@ -26,6 +26,9 @@ Will build all styles under `release/{color}`.
 Will link some of the created themes to predefined paths.\
 Only works with specifying a direct theme.
 
+`--whiskers`\
+Also generate the original Tera-based whiskers themes (zed with all 4 flavors, no-italics variants) alongside the default mustache output. Output goes to `out/{color}/whiskers-tera/`.
+
 Current available themes are:
 
 - pink
