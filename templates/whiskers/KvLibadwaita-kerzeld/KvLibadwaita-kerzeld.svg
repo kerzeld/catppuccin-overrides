@@ -909,14 +909,14 @@
   <g
      id="progress-normal"
      transform="matrix(1.5 0 0 1 20 17)"
-     style="fill:#{{colors.overlay1.hex}};fill-opacity:1">
+     style="fill:#{{colors.surface2.hex}};fill-opacity:1">
     <rect
        x="34"
        y="162"
        width="8"
        height="8"
        id="rect165"
-       style="fill:#{{colors.overlay1.hex}};opacity:1;fill-opacity:1" />
+       style="fill:#{{colors.surface2.hex}};opacity:1;fill-opacity:1" />
   </g>
   <rect
      id="progress-pattern-normal-top"
@@ -978,42 +978,42 @@
      y="167"
      width="12"
      height="12"
-     style="fill:#{{colors.overlay1.hex}};opacity:1;fill-opacity:1" />
+     style="fill:#{{colors.surface2.hex}};opacity:1;fill-opacity:1" />
   <rect
      id="progress-normal-bottom"
      x="71"
      y="187"
      width="12"
      height="12"
-     style="fill:#{{colors.overlay1.hex}};opacity:1;fill-opacity:1" />
+     style="fill:#{{colors.surface2.hex}};opacity:1;fill-opacity:1" />
   <rect
      id="progress-normal-topleft"
      x="59"
      y="167"
      width="12"
      height="12"
-     style="fill:#{{colors.overlay1.hex}};opacity:1;fill-opacity:1" />
+     style="fill:#{{colors.surface2.hex}};opacity:1;fill-opacity:1" />
   <rect
      id="progress-normal-topright"
      x="83"
      y="167"
      width="12"
      height="12"
-     style="fill:#{{colors.overlay1.hex}};opacity:1;fill-opacity:1" />
+     style="fill:#{{colors.surface2.hex}};opacity:1;fill-opacity:1" />
   <rect
      id="progress-normal-bottomleft"
      x="59"
      y="187"
      width="12"
      height="12"
-     style="fill:#{{colors.overlay1.hex}};opacity:1;fill-opacity:1" />
+     style="fill:#{{colors.surface2.hex}};opacity:1;fill-opacity:1" />
   <rect
      id="progress-normal-bottomright"
      x="83"
      y="187"
      width="12"
      height="12"
-     style="fill:#{{colors.overlay1.hex}};opacity:1;fill-opacity:1" />
+     style="fill:#{{colors.surface2.hex}};opacity:1;fill-opacity:1" />
   <rect
      id="progress-pattern-disabled-top"
      x="110"
@@ -1104,7 +1104,7 @@
        width="8"
        height="8"
        id="rect195"
-       style="fill:#{{colors.overlay1.hex}};opacity:1;fill-opacity:1" />
+       style="fill:#{{colors.surface2.hex}};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="progress-normal-right"
@@ -1115,7 +1115,7 @@
        width="8"
        height="8"
        id="rect198"
-       style="fill:#{{colors.overlay1.hex}};opacity:1;fill-opacity:1" />
+       style="fill:#{{colors.surface2.hex}};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="progress-pattern-disabled-left"
@@ -1157,48 +1157,48 @@
      y="930"
      width="8"
      height="4"
-     style="opacity:1;fill:#{{colors.overlay1.hex}};fill-opacity:1" />
+     style="opacity:1;fill:#{{colors.surface2.hex}};fill-opacity:1" />
   <rect
      id="itemview-pressed-bottom"
      x="52"
      y="942"
      width="8"
      height="4"
-     style="opacity:1;fill:#{{colors.overlay1.hex}};fill-opacity:1" />
+     style="opacity:1;fill:#{{colors.surface2.hex}};fill-opacity:1" />
   <path
      id="itemview-pressed"
      d="m 52,934 h 8 v 8 h -8 z"
-     style="opacity:1;fill:#{{colors.overlay1.hex}};fill-opacity:1;stroke-width:0.999999" />
+     style="opacity:1;fill:#{{colors.surface2.hex}};fill-opacity:1;stroke-width:0.999999" />
   <path
      id="itemview-pressed-topright"
      d="m 60,930 c 4,0 4,4 4,4 h -4 z"
-     style="opacity:1;fill:#{{colors.overlay1.hex}};fill-opacity:1" />
+     style="opacity:1;fill:#{{colors.surface2.hex}};fill-opacity:1" />
   <path
      id="itemview-pressed-bottomright"
      d="m 60,942 h 4 c 0,0 0,4 -4,4 z"
-     style="opacity:1;fill:#{{colors.overlay1.hex}};fill-opacity:1" />
+     style="opacity:1;fill:#{{colors.surface2.hex}};fill-opacity:1" />
   <rect
      id="itemview-pressed-right"
      x="60"
      y="934"
      width="4"
      height="8"
-     style="opacity:1;fill:#{{colors.overlay1.hex}};fill-opacity:1" />
+     style="opacity:1;fill:#{{colors.surface2.hex}};fill-opacity:1" />
   <rect
      id="itemview-pressed-left"
      x="48"
      y="934"
      width="4"
      height="8"
-     style="opacity:1;fill:#{{colors.overlay1.hex}};fill-opacity:1" />
+     style="opacity:1;fill:#{{colors.surface2.hex}};fill-opacity:1" />
   <path
      id="itemview-pressed-topleft"
      d="m 52,930 v 4 h -4 c 0,0 0,-4 4,-4 z"
-     style="opacity:1;fill:#{{colors.overlay1.hex}};fill-opacity:1" />
+     style="opacity:1;fill:#{{colors.surface2.hex}};fill-opacity:1" />
   <path
      id="itemview-pressed-bottomleft"
      d="m 48,942 h 4 v 4 c -4,0 -4,-4 -4,-4 z"
-     style="opacity:1;fill:#{{colors.overlay1.hex}};fill-opacity:1" />
+     style="opacity:1;fill:#{{colors.surface2.hex}};fill-opacity:1" />
   <rect
      id="itemview-toggled-top"
      x="71"
@@ -3952,7 +3952,7 @@
   <g
      id="button-pressed-top"
      transform="matrix(.99999 0 0 .99999 103 116)"
-     style="fill:#{{colors.overlay1.hex}};fill-opacity:1">
+     style="fill:#{{colors.surface2.hex}};fill-opacity:1">
     <rect
        x="1"
        y="-80"

@@ -110,6 +110,8 @@ export function buildWhiskersView(view: IThemeView): Record<string, string> {
   result.glassy_success_background = mix(green, mantle, 0.1).hex();
   result.glassy_unreachable_background = mix(red, mantle, 0.1).hex();
 
+
+  // KvArcDark colors
   result.kvantum_highlight_color = accent.alpha(0.3).hexa();
   result.kvantum_link_visited_color = mix(accent, text, 0.8).hex();
   result.kvantum_base_accent_mix = mix(base, accent, 0.1).hex();
