@@ -27,6 +27,12 @@ Themes are generated with:
 nix-shell --run "node src/index.ts pink"
 ```
 
+Type-check with:
+
+```sh
+./node_modules/.bin/tsc --noEmit
+```
+
 Available colors: `pink`, `yellow`, `orange`, `green`, `lemon`, `red`.
 
 The output is written to `out/<color>/`.

@@ -83,7 +83,7 @@ async function constructTheme(themeName: keyof typeof themes, args: minimist.Par
 
 	// Generate firefox color link
 	generateFirefoxColorLink(view, outPath);
-	generateWhiskersThemes(view, outPath);
+	generateWhiskersThemes(view, outPath, args.whiskers);
 
 	buildHexFromHSV(theme.overrides.hsv![0]!);
 

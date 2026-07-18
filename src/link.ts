@@ -61,15 +61,7 @@ export function linkTheme(outPath: string) {
 		path.join(homeDir, ".config/zed/themes/catppuccin-kerzeld.json"),
 	);
 	ensureLink(
-		path.join(outPath, "whiskers/zed", "catppuccin-kerzeld-no-italics.json"),
-		path.join(homeDir, ".config/zed/themes/catppuccin-kerzeld-no-italics.json"),
-	);
-	ensureLink(
 		path.join(outPath, "whiskers/zed-glassy", "catppuccin-kerzeld.json"),
 		path.join(homeDir, ".config/zed/themes/catppuccin-kerzeld-glassy.json"),
-	);
-	ensureLink(
-		path.join(outPath, "whiskers/zed-glassy", "catppuccin-kerzeld-no-italics.json"),
-		path.join(homeDir, ".config/zed/themes/catppuccin-kerzeld-no-italics-glassy.json"),
 	);
 }
