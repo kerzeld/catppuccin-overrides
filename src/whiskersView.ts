@@ -13,6 +13,7 @@ export function buildWhiskersView(view: IThemeView): Record<string, string> {
   const surface1 = c.surface1.color;
   const surface2 = c.surface2.color;
   const overlay0 = c.overlay0.color;
+  const overlay1 = c.overlay1.color;
   const overlay2 = c.overlay2.color;
   const subtext0 = c.subtext0.color;
   const mantle = c.mantle.color;
@@ -112,6 +113,36 @@ export function buildWhiskersView(view: IThemeView): Record<string, string> {
   result.kvantum_highlight_color = accent.alpha(0.3).hexa();
   result.kvantum_link_visited_color = mix(accent, text, 0.8).hex();
   result.kvantum_base_accent_mix = mix(base, accent, 0.1).hex();
+
+  // KvLibadwaita computed colors
+  result.kv_main_widget_bg = mix(base, surface0, 0.5).hex();
+  result.kv_scrollbar_slider = surface1.hex();
+  result.kv_menu_tearoff = surface2.hex();
+  result.kv_button_hover = mix(accent, surface0, 0.6).hex();
+  result.kv_button_pressed = mix(accent, surface0, 0.4).hex();
+  result.kv_button_focus = mix(accent, surface0, 0.3).hex();
+  result.kv_hover_stop = mix(accent, overlay0, 0.5).hex();
+  result.kv_progress_pattern = mix(accent, text, 0.92).hex();
+  result.kv_view_hover = mix(accent, text, 0.8).hex();
+  result.kv_titlebar_inactive = mix(overlay0, base, 0.5).hex();
+  result.kv_progress_indicator_text = mix(overlay0, surface0, 0.5).hex();
+  result.kv_menu_indicator = mix(overlay0, surface1, 0.5).hex();
+  result.kv_toolbar_indicator = mix(overlay0, surface2, 0.5).hex();
+  result.kv_dial_notches = mix(overlay0, surface0, 0.3).hex();
+  result.kv_pagecolor = mix(overlay0, surface1, 0.3).hex();
+  result.kv_border_color = mix(overlay0, surface2, 0.3).hex();
+  result.kv_tooltip_border = mix(overlay1, surface0, 0.3).hex();
+  result.kv_size_grip = mix(overlay1, overlay2, 0.5).hex();
+  result.kv_tree_expander = mix(overlay2, subtext0, 0.5).hex();
+  result.kv_background_light = mix(base, text, 0.95).hex();
+  result.kv_background_brighter = mix(base, text, 0.9).hex();
+  result.kv_view_text = mix(text, base, 0.7).hex();
+  result.kv_alt_base = mix(base, text, 0.98).hex();
+  result.kv_mid_light = mix(surface0, mantle, 0.5).hex();
+  result.kv_mid = mix(mantle, base, 0.5).hex();
+  result.kv_progress_indicator = mix(text, overlay0, 0.5).hex();
+  result.kv_menu_text = mix(text, subtext0, 0.5).hex();
+  result.kv_link_visited = mix(accent, text, 0.85).hex();
 
   return result;
 }

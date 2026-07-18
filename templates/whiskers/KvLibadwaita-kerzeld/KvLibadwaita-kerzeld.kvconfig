@@ -77,34 +77,25 @@ tooltip_blur_radius=0
 
 [GeneralColors]
 window.color=#{{colors.base.hex}}
-inactive.window.color=#{{colors.base.hex}}
-base.color=#{{colors.mantle.hex}}
-inactive.base.color=#{{colors.mantle.hex}}
-alt.base.color=#{{colors.base.hex}}
-inactive.alt.base.color=#{{colors.base.hex}}
+base.color=#{{colors.base.hex}}
+alt.base.color={{whiskers.kv_alt_base}}
 button.color=#{{colors.mantle.hex}}
 light.color=#{{colors.surface0.hex}}
-mid.light.color=#{{colors.surface0.hex}}
+mid.light.color={{whiskers.kv_mid_light}}
 dark.color=#{{colors.crust.hex}}
-mid.color=#{{colors.mantle.hex}}
+mid.color={{whiskers.kv_mid}}
 highlight.color=#{{colors.accent.hex}}
-inactive.highlight.color=#{{colors.surface0.hex}}
-tooltip.base.color=#{{colors.mantle.hex}}
-inactive.tooltip.base.color=#{{colors.mantle.hex}}
+inactive.highlight.color=#{{colors.accent.hex}}
 text.color=#{{colors.text.hex}}
-inactive.text.color=#{{colors.subtext1.hex}}
 window.text.color=#{{colors.text.hex}}
-inactive.window.text.color=#{{colors.subtext1.hex}}
 button.text.color=#{{colors.text.hex}}
 disabled.text.color=#{{colors.overlay1.hex}}
-inactive.button.text.color=#{{colors.subtext1.hex}}
 tooltip.text.color=#{{colors.text.hex}}
 highlight.text.color=#{{colors.text.hex}}
-inactive.highlight.text.color=#{{colors.text.hex}}
 link.color=#{{colors.accent.hex}}
-link.visited.color=#{{colors.accent.hex}}
+link.visited.color={{whiskers.kv_link_visited}}
 progress.indicator.text.color=#{{colors.text.hex}}
-progress.inactive.indicator.text.color=#{{colors.subtext1.hex}}
+
 [Hacks]
 transparent_ktitle_label=true
 transparent_dolphin_view=true
@@ -144,8 +135,8 @@ interior=true
 interior.element=button
 indicator.size=8
 text.normal.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
-text.press.color=#{{colors.text.hex}}
+text.focus.color=white
+text.press.color=white
 text.toggle.color=#{{colors.text.hex}}
 text.shadow=0
 text.margin=4
@@ -156,8 +147,8 @@ frame.expansion=0
 [PanelButtonTool]
 inherits=PanelButtonCommand
 text.normal.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
-text.press.color=#{{colors.text.hex}}
+text.focus.color=white
+text.press.color=white
 text.toggle.color=#{{colors.text.hex}}
 text.bold=false
 indicator.element=arrow
@@ -174,9 +165,9 @@ frame.left=16
 frame.right=16
 indicator.element=tarrow
 text.normal.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
-text.press.color=#{{colors.text.hex}}
-text.toggle.color=#{{colors.text.hex}}
+text.focus.color=white
+text.press.color=white
+text.toggle.color=white
 text.bold=false
 frame.expansion=32
 
@@ -195,7 +186,7 @@ inherits=PanelButtonCommand
 frame=false
 interior=false
 text.normal.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
+text.focus.color=white
 text.bold=false
 
 [IndicatorSpinBox]
@@ -219,7 +210,7 @@ inherits=PanelButtonCommand
 frame=false
 interior.element=radio
 text.normal.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
+text.focus.color=white
 min_width=+0.3font
 min_height=+0.3font
 
@@ -228,7 +219,7 @@ inherits=PanelButtonCommand
 frame=false
 interior.element=checkbox
 text.normal.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
+text.focus.color=white
 min_width=+0.3font
 min_height=+0.3font
 
@@ -261,25 +252,14 @@ frame.top=6
 frame.bottom=6
 frame.left=6
 frame.right=6
-focusFrame=true
 text.margin.top=2
 text.margin.bottom=2
 text.margin.left=2
 text.margin.right=2
 
-[LineEditFocusFrame]
-frame=true
-frame.top=1
-frame.bottom=1
-frame.left=1
-frame.right=1
-frame.color=#{{colors.overlay0.hex}}
-frame.patternsize=0
-
 [ToolbarLineEdit]
 frame.element=lineedit
 interior.element=lineedit
-focusFrame=true
 
 [DropDownButton]
 inherits=PanelButtonCommand
@@ -293,7 +273,7 @@ indicator.size=8
 inherits=PanelButtonCommand
 text.normal.color=#{{colors.text.hex}}
 text.press.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
+text.focus.color=white
 
 [Tab]
 inherits=PanelButtonCommand
@@ -311,8 +291,8 @@ frame.left=8
 frame.right=8
 text.normal.color=#{{colors.text.hex}}
 text.focus.color=#{{colors.text.hex}}
-text.press.color=#{{colors.text.hex}}
-text.toggle.color=#{{colors.text.hex}}
+text.press.color=white
+text.toggle.color=white
 frame.expansion=0
 text.bold=false
 
@@ -339,9 +319,9 @@ frame.bottom=1
 frame.left=1
 frame.right=1
 text.normal.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
-text.press.color=#{{colors.text.hex}}
-text.toggle.color=#{{colors.text.hex}}
+text.focus.color=white
+text.press.color=white
+text.toggle.color=white
 frame.expansion=0
 
 [SizeGrip]
@@ -355,9 +335,9 @@ text.margin=0
 interior.element=menubar
 frame.element=menubar
 text.normal.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
+text.focus.color=white
 text.press.color=#{{colors.text.hex}}
-text.toggle.color=#{{colors.text.hex}}
+text.toggle.color=white
 frame.left=6
 frame.right=6
 frame.top=0
@@ -452,7 +432,7 @@ frame.left=8
 frame.right=8
 frame.element=menu
 interior.element=menu
-text.normal.color=#{{colors.text.hex}}
+text.normal.color={{whiskers.kv_menu_text}}
 text.shadow=false
 text.bold=false
 
@@ -462,8 +442,8 @@ frame=true
 frame.element=menuitem
 interior.element=menuitem
 indicator.element=menuitem
-text.normal.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
+text.normal.color={{whiskers.kv_menu_text}}
+text.focus.color={{whiskers.kv_menu_text}}
 text.margin.top=0
 text.margin.bottom=0
 text.margin.left=6
@@ -519,7 +499,7 @@ text.margin.right=2
 interior.element=titlebar
 indicator.size=16
 indicator.element=mdi
-text.normal.color=#{{colors.overlay0.hex}}
+text.normal.color={{whiskers.kv_progress_indicator}}
 text.focus.color=#{{colors.text.hex}}
 text.bold=false
 text.italic=true
@@ -537,9 +517,9 @@ text.margin.top=2
 text.margin.bottom=2
 text.margin.left=2
 text.margin.right=2
-text.focus.color=#{{colors.text.hex}}
+text.focus.color=white
 text.press.color=#{{colors.text.hex}}
-text.toggle.color=#{{colors.text.hex}}
+text.toggle.color=white
 
 [GroupBox]
 inherits=GenericFrame
@@ -547,7 +527,7 @@ frame=false
 text.shadow=0
 text.margin=0
 text.normal.color=#{{colors.text.hex}}
-text.focus.color=#{{colors.text.hex}}
+text.focus.color=white
 text.bold=false
 frame.expansion=0
 

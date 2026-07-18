@@ -6,6 +6,10 @@ whiskers:
   filename: 'catppuccin-kerzeld-kvlibadwaita/catppuccin-kerzeld-kvlibadwaita.kvconfig'
   hex_format: "{{R}}{{G}}{{B}}{{Z}}"
 ---
+
+{%- set accent = flavor.colors[accent] -%}
+[%General]
+author=Vince Liuice, based on KvAdapta by Tsu Jan
 [%General]
 author=Vince Liuice, based on KvAdapta by Tsu Jan
 comment=An uncomplicated theme inspired by the Materia GTK theme
@@ -83,39 +87,27 @@ drag_from_buttons=false
 menu_blur_radius=0
 tooltip_blur_radius=0
 
-
-{%- set accent = flavor.colors[accent] %}
-
 [GeneralColors]
 window.color=#{{ base.hex }}
-inactive.window.color=#{{ base.hex }}
-base.color=#{{ mantle.hex }}
-inactive.base.color=#{{ mantle.hex }}
-alt.base.color=#{{ base.hex }}
-inactive.alt.base.color=#{{ base.hex }}
+base.color=#{{ base.hex }}
+alt.base.color=#{{ base | mix(color=text, amount=0.02) | get(key="hex") }}
 button.color=#{{ mantle.hex }}
 light.color=#{{ surface0.hex }}
-mid.light.color=#{{ surface0.hex }}
+mid.light.color=#{{ surface0 | mix(color=mantle, amount=0.5) | get(key="hex") }}
 dark.color=#{{ crust.hex }}
-mid.color=#{{ mantle.hex }}
+mid.color=#{{ mantle | mix(color=base, amount=0.5) | get(key="hex") }}
 highlight.color=#{{ accent.hex }}
-inactive.highlight.color=#{{ surface0.hex }}
-tooltip.base.color=#{{ mantle.hex }}
-inactive.tooltip.base.color=#{{ mantle.hex }}
+inactive.highlight.color=#{{ accent.hex }}
 text.color=#{{ text.hex }}
-inactive.text.color=#{{ subtext1.hex }}
 window.text.color=#{{ text.hex }}
-inactive.window.text.color=#{{ subtext1.hex }}
 button.text.color=#{{ text.hex }}
 disabled.text.color=#{{ overlay1.hex }}
-inactive.button.text.color=#{{ subtext1.hex }}
 tooltip.text.color=#{{ text.hex }}
 highlight.text.color=#{{ text.hex }}
-inactive.highlight.text.color=#{{ text.hex }}
 link.color=#{{ accent.hex }}
-link.visited.color=#{{ accent.hex }}
+link.visited.color=#{{ accent | mix(color=text, amount=0.15) | get(key="hex") }}
 progress.indicator.text.color=#{{ text.hex }}
-progress.inactive.indicator.text.color=#{{ subtext1.hex }}
+
 [Hacks]
 transparent_ktitle_label=true
 transparent_dolphin_view=true
@@ -155,8 +147,8 @@ interior=true
 interior.element=button
 indicator.size=8
 text.normal.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
-text.press.color=#{{ text.hex }}
+text.focus.color=white
+text.press.color=white
 text.toggle.color=#{{ text.hex }}
 text.shadow=0
 text.margin=4
@@ -167,8 +159,8 @@ frame.expansion=0
 [PanelButtonTool]
 inherits=PanelButtonCommand
 text.normal.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
-text.press.color=#{{ text.hex }}
+text.focus.color=white
+text.press.color=white
 text.toggle.color=#{{ text.hex }}
 text.bold=false
 indicator.element=arrow
@@ -185,9 +177,9 @@ frame.left=16
 frame.right=16
 indicator.element=tarrow
 text.normal.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
-text.press.color=#{{ text.hex }}
-text.toggle.color=#{{ text.hex }}
+text.focus.color=white
+text.press.color=white
+text.toggle.color=white
 text.bold=false
 frame.expansion=32
 
@@ -206,7 +198,7 @@ inherits=PanelButtonCommand
 frame=false
 interior=false
 text.normal.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
+text.focus.color=white
 text.bold=false
 
 [IndicatorSpinBox]
@@ -230,7 +222,7 @@ inherits=PanelButtonCommand
 frame=false
 interior.element=radio
 text.normal.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
+text.focus.color=white
 min_width=+0.3font
 min_height=+0.3font
 
@@ -239,7 +231,7 @@ inherits=PanelButtonCommand
 frame=false
 interior.element=checkbox
 text.normal.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
+text.focus.color=white
 min_width=+0.3font
 min_height=+0.3font
 
@@ -272,25 +264,14 @@ frame.top=6
 frame.bottom=6
 frame.left=6
 frame.right=6
-focusFrame=true
 text.margin.top=2
 text.margin.bottom=2
 text.margin.left=2
 text.margin.right=2
 
-[LineEditFocusFrame]
-frame=true
-frame.top=1
-frame.bottom=1
-frame.left=1
-frame.right=1
-frame.color=#{{ overlay0.hex }}
-frame.patternsize=0
-
 [ToolbarLineEdit]
 frame.element=lineedit
 interior.element=lineedit
-focusFrame=true
 
 [DropDownButton]
 inherits=PanelButtonCommand
@@ -304,7 +285,7 @@ indicator.size=8
 inherits=PanelButtonCommand
 text.normal.color=#{{ text.hex }}
 text.press.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
+text.focus.color=white
 
 [Tab]
 inherits=PanelButtonCommand
@@ -322,8 +303,8 @@ frame.left=8
 frame.right=8
 text.normal.color=#{{ text.hex }}
 text.focus.color=#{{ text.hex }}
-text.press.color=#{{ text.hex }}
-text.toggle.color=#{{ text.hex }}
+text.press.color=white
+text.toggle.color=white
 frame.expansion=0
 text.bold=false
 
@@ -350,9 +331,9 @@ frame.bottom=1
 frame.left=1
 frame.right=1
 text.normal.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
-text.press.color=#{{ text.hex }}
-text.toggle.color=#{{ text.hex }}
+text.focus.color=white
+text.press.color=white
+text.toggle.color=white
 frame.expansion=0
 
 [SizeGrip]
@@ -366,9 +347,9 @@ text.margin=0
 interior.element=menubar
 frame.element=menubar
 text.normal.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
+text.focus.color=white
 text.press.color=#{{ text.hex }}
-text.toggle.color=#{{ text.hex }}
+text.toggle.color=white
 frame.left=6
 frame.right=6
 frame.top=0
@@ -463,7 +444,7 @@ frame.left=8
 frame.right=8
 frame.element=menu
 interior.element=menu
-text.normal.color=#{{ text.hex }}
+text.normal.color=#{{ text | mix(color=subtext0, amount=0.5) | get(key="hex") }}
 text.shadow=false
 text.bold=false
 
@@ -473,8 +454,8 @@ frame=true
 frame.element=menuitem
 interior.element=menuitem
 indicator.element=menuitem
-text.normal.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
+text.normal.color=#{{ text | mix(color=subtext0, amount=0.5) | get(key="hex") }}
+text.focus.color=#{{ text | mix(color=subtext0, amount=0.5) | get(key="hex") }}
 text.margin.top=0
 text.margin.bottom=0
 text.margin.left=6
@@ -530,7 +511,7 @@ text.margin.right=2
 interior.element=titlebar
 indicator.size=16
 indicator.element=mdi
-text.normal.color=#{{ overlay0.hex }}
+text.normal.color=#{{ text | mix(color=overlay0, amount=0.5) | get(key="hex") }}
 text.focus.color=#{{ text.hex }}
 text.bold=false
 text.italic=true
@@ -548,9 +529,9 @@ text.margin.top=2
 text.margin.bottom=2
 text.margin.left=2
 text.margin.right=2
-text.focus.color=#{{ text.hex }}
+text.focus.color=white
 text.press.color=#{{ text.hex }}
-text.toggle.color=#{{ text.hex }}
+text.toggle.color=white
 
 [GroupBox]
 inherits=GenericFrame
@@ -558,7 +539,7 @@ frame=false
 text.shadow=0
 text.margin=0
 text.normal.color=#{{ text.hex }}
-text.focus.color=#{{ text.hex }}
+text.focus.color=white
 text.bold=false
 frame.expansion=0
 
