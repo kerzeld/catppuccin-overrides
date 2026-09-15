@@ -132,6 +132,7 @@ export function buildComputedView(view: IThemeView): Record<string, string> {
 	result.kv_main_widget_bg = mix(base, surface0, 0.5).hex();
 	result.kv_scrollbar_slider = surface1.hex();
 	result.kv_menu_tearoff = surface2.hex();
+	result.kv_button_normal = surface0.hex();
 	result.kv_button_hover = mix(accent, surface0, 0.6).hex();
 	result.kv_button_pressed = mix(accent, surface0, 0.4).hex();
 	result.kv_button_focus = mix(accent, surface0, 0.3).hex();

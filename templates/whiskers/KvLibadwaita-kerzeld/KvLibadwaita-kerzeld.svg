@@ -3807,31 +3807,31 @@
     <path
        d="m1-80c-3.324 0-6 2.676-6 6h6z"
        id="path1524"
-       style="fill:{{whiskers.kv_button_pressed}};opacity:1;fill-opacity:1" />
+       style="fill:{{whiskers.kv_button_normal}};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="button-normal-top"
      transform="translate(9,116)"
-     style="fill:{{whiskers.kv_button_focus}};fill-opacity:1">
+     style="fill:{{whiskers.kv_button_normal}};fill-opacity:1">
     <rect
        x="1"
        y="-80"
        width="26"
        height="6"
        id="rect1527"
-       style="fill:{{whiskers.kv_button_pressed}};opacity:1;fill-opacity:1" />
+       style="fill:{{whiskers.kv_button_normal}};opacity:1;fill-opacity:1" />
   </g>
   <g
      id="button-normal"
      transform="translate(9,116)"
-     style="fill:{{whiskers.kv_button_focus}};fill-opacity:1">
+     style="fill:{{whiskers.kv_button_normal}};fill-opacity:1">
     <rect
        x="1"
        y="-74"
        width="26"
        height="26"
        id="rect1530"
-       style="fill:{{whiskers.kv_button_pressed}};opacity:1;fill-opacity:1" />
+       style="fill:{{whiskers.kv_button_normal}};opacity:1;fill-opacity:1" />
   </g>
   <use
      id="button-normal-topright"

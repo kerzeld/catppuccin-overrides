@@ -61,6 +61,24 @@ New tokens (`src/whiskersView.ts`):
 | `kv_input_border` | `surface1` | unfocused border ring |
 | `kv_input_border_focus` | `accent` | focused border ring |
 
+## Gotcha: accent-tinted "normal" buttons
+
+`[PanelButtonCommand]` / `[ToolbarButton]` `button-<state>` elements define the
+default look of every push button and toolbar button (and VLC's transport bar).
+The `dd80d54` full remap accidentally filled the **normal** (default) state with
+the accent-tinted `kv_button_hover`/`kv_button_pressed`/`kv_button_focus`
+tokens, so every button looked permanently pressed/pink.
+
+Rule of thumb: the `-normal` state must be a neutral surface; only
+`-hover`/`-pressed`/`-toggled`/`-focused` should carry accent tints.
+
+- `button-normal` → `kv_button_normal` (= `surface0`)
+- `button-hover` → `kv_button_hover` (accent × surface0)
+- `button-pressed` → `kv_button_pressed`
+- `button-toggled`/`-focused` → existing accent/overlay tokens
+
+`tbutton-normal` (ToolbarButton) already used a neutral fill.
+
 ## Testing visually (the important part)
 
 Kvantum ships a preview app that renders every widget state and is the ground
