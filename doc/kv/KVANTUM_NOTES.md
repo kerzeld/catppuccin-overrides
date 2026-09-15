@@ -7,7 +7,7 @@ Everything learned while theming KvLibadwaitaDark for Kvantum.
 - Templates: `templates/whiskers/KvLibadwaita-kerzeld/` and
   `templates/whiskers/KvArcDark-kerzeld/` (mustache; no Tera/whiskers CLI
   anymore).
-- Computed palette tokens are produced in `src/whiskersView.ts` under the
+- Computed palette tokens are produced in `src/computedView.ts` under the
   `// KvLibadwaita computed colors` section and exposed as `{{whiskers.<name>}}`.
   The `whiskers` view is merged into the render context for **all** templates,
   so non-Kvantum templates can use these tokens too.
@@ -121,3 +121,31 @@ differently to separate interior from frame ring.
 - `menu-normal` (the popup background) is intentionally `kv_main_widget_bg`;
   do not let a frame-ring recolor script bleed into the `menu` group (the
   group regex must be anchored to `lineedit`/`combo`).
+
+## VLC transport-bar icons (known, not fixable from the theme)
+
+VLC 3.x **hardcodes its toolbar icon SVGs to `#747474`** (a fixed mid-grey).
+This is compiled into `lib/vlc/plugins/gui/libqt_plugin.so` (94+ `fill:#747474`
+occurrences for play/pause/stop/seek/fullscreen/...); it does not use
+`currentColor` or the Qt/Kvantum palette. Confirmed empirically: forcing every
+Kvantum text color to pure red changes only labels/time text, never the icons;
+the icons are `#747474` under stock KvArcDark, this theme, and Fusion alike.
+See also the VLC patch "qml: change default icon color" and the long-standing
+"Play Buttons too Dark/Dim on Dark Mode (Qt5)" reports.
+
+Consequence: on a dark button the icons are inherently low contrast, and no
+`.kvconfig`/SVG change can recolor them. We do the only thing the theme
+controls — keep the default button background dark so the fixed grey icon has
+the most contrast available (`button-normal` = `kv_button_normal` =
+`kv_main_widget_bg`, 1.93:1 vs 1.38:1 on the old `surface0`).
+
+If the transport bar bothers you again, options (in order):
+
+1. **Switch VLC to the skinnable interface** — Preferences → Interface →
+   "Use custom skin". VLC then draws its own controls with proper contrast.
+   (Skins live in `~/.local/share/vlc/skins2/`.)
+2. **Use a VLC 4.x / Qt6 build**, where the icon color is palette-aware.
+3. **Darken the button further** (`kv_button_normal` toward `mantle`/`crust`,
+   up to ~2.9:1) — cheap, but flattens buttons elsewhere.
+4. **Patch the embedded icons** (`fill:#747474` → lighter) in `libqt_plugin.so`
+   — fragile, breaks on every VLC update; not recommended.
