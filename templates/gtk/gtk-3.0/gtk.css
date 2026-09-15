@@ -1,0 +1,7 @@
+/* Generated from catppuccin-overrides — do not edit directly */
+@import url("noctalia.css");
+
+@define-color theme_selected_bg_color #{{colors.accent.hex}};
+@define-color theme_selected_fg_color {{whiskers.kv_accent_soft}};
+@define-color theme_unfocused_selected_bg_color #{{colors.accent.hex}};
+@define-color theme_unfocused_selected_fg_color {{whiskers.kv_accent_soft}};

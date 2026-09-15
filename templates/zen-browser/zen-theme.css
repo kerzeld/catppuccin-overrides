@@ -1,0 +1,8 @@
+/* Generated from catppuccin-overrides — do not edit directly.
+   Imported by userChrome.css / userContent.css; provides theme color vars. */
+:root {
+	--kerzeld-crust-90: #{{colors.crust.hex}}e6;
+	--kerzeld-accent-20: rgba({{colors.accent.rgb}}, 0.2);
+	--kerzeld-mantle: #{{colors.mantle.hex}};
+	--kerzeld-base: #{{colors.base.hex}};
+}

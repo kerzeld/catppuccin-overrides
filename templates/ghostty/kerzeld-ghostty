@@ -10,7 +10,7 @@ palette = 3=#{{ colors.peach.hex }}
 palette = 4=#{{ colors.sapphire.hex }}
 palette = 5=#{{ colors.mauve.hex }}
 palette = 6=#{{ colors.sky.hex }}
-palette = 7=#{{ colors.accent.hex }}
+palette = 7=#{{ colors.overlay2.hex }}
 palette = 8=#{{ colors.overlay0.hex }}
 palette = 9=#{{ colors.accent.hex }}
 palette = 10=#{{ colors.green.hex }}

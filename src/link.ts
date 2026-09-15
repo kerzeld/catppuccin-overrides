@@ -6,7 +6,7 @@ import os from "node:os";
 
 function ensureLink(source: string, target: string) {
 	if (!fs.existsSync(source)) {
-		console.log(styleText("yellow", "File " + source + " does not exists"));
+		console.log(styleText("yellow", `File ${source} does not exist`));
 		return;
 	}
 
@@ -17,8 +17,8 @@ function ensureLink(source: string, target: string) {
 		} else if (stats.isSymbolicLink()) {
 			fs.unlinkSync(target);
 		}
-	} catch (error: unknown) {
-		//console.error(error);
+	} catch {
+		// target does not exist yet
 	}
 
 	ensureDirectoryExistence(target);

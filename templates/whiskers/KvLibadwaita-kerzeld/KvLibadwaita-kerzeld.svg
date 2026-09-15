@@ -4957,7 +4957,7 @@
      id="lineedit-normal"
      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_bg}};fill-opacity:1"
        id="rect43255"
        width="3.175"
        height="1.5875"
@@ -4968,7 +4968,7 @@
      id="lineedit-normal-left"
      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        id="rect43257"
        width="1.5875"
        height="1.5875"
@@ -4979,7 +4979,7 @@
      id="lineedit-normal-top"
      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border}};fill-opacity:1"
        id="rect43253"
        width="3.175"
        height="1.5875"
@@ -5003,7 +5003,7 @@
      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
     <path
        id="rect43263"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border}};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 6 z"
        transform="scale(0.26458333)" />
   </g>
@@ -5059,7 +5059,7 @@
      id="lineedit-focused"
      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_bg}};fill-opacity:1"
        id="rect44039"
        width="3.175"
        height="1.5875"
@@ -5070,7 +5070,7 @@
      id="lineedit-focused-left"
      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        id="rect44043"
        width="1.5875"
        height="1.5875"
@@ -5084,13 +5084,13 @@
        height="1.5875"
        x="32.808334"
        y="27.78125"
-       style="fill:{{whiskers.kv_titlebar_inactive}};fill-opacity:1" />
+       style="fill:{{whiskers.kv_input_border_focus}};fill-opacity:1" />
   </g>
   <g
      id="lineedit-focused-top"
      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};fill-opacity:1"
        id="rect44049"
        width="3.175"
        height="1.5875"
@@ -5104,28 +5104,28 @@
        height="0.52916664"
        x="34.395832"
        y="26.19375"
-       style="fill:{{whiskers.kv_titlebar_inactive}};fill-opacity:1" />
+       style="fill:{{whiskers.kv_input_border_focus}};fill-opacity:1" />
   </g>
   <g
      id="lineedit-focused-topright"
      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
     <path
        id="use44055"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 1.5875 z" />
     <path
        id="use44057"
        class="ColorScheme-Highlight"
        fill="currentColor"
        d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 0.529167 c 0.586317,0 1.058334,0.472016 1.058334,1.058333 z"
-       style="fill:{{whiskers.kv_titlebar_inactive}};fill-opacity:1" />
+       style="fill:{{whiskers.kv_input_border_focus}};fill-opacity:1" />
   </g>
   <g
      id="lineedit-focused-topleft"
      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
     <path
        id="path44061"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 6 z"
        transform="scale(0.26458333)" />
     <path
@@ -5134,41 +5134,41 @@
        fill="currentColor"
        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 2 c 0,-2.216 1.784,-4 4,-4 z"
        transform="scale(0.26458333)"
-       style="fill:{{whiskers.kv_titlebar_inactive}};fill-opacity:1" />
+       style="fill:{{whiskers.kv_input_border_focus}};fill-opacity:1" />
   </g>
   <g
      id="lineedit-focused-bottomright"
      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
     <path
        id="use44067"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 37.570833,30.95625 c 0.879475,0 1.5875,-0.708025 1.5875,-1.5875 h -1.5875 z" />
     <path
        id="use44069"
        class="ColorScheme-Highlight"
        fill="currentColor"
        d="m 37.570833,30.95625 c 0.879475,0 1.5875,-0.708025 1.5875,-1.5875 h -0.529167 c 0,0.586317 -0.472016,1.058334 -1.058333,1.058334 z"
-       style="fill:{{whiskers.kv_titlebar_inactive}};fill-opacity:1" />
+       style="fill:{{whiskers.kv_input_border_focus}};fill-opacity:1" />
   </g>
   <g
      id="lineedit-focused-bottomleft"
      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
     <path
        id="use44073"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -1.5875 z" />
     <path
        id="use44075"
        class="ColorScheme-Highlight"
        fill="currentColor"
        d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -0.529167 c -0.586317,0 -1.058334,-0.472016 -1.058334,-1.058333 z"
-       style="fill:{{whiskers.kv_titlebar_inactive}};fill-opacity:1" />
+       style="fill:{{whiskers.kv_input_border_focus}};fill-opacity:1" />
   </g>
   <g
      id="lineedit-focused-right"
      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        id="use44079"
        width="1.5875"
        height="1.5875"
@@ -5184,13 +5184,13 @@
        x="-39.158333"
        y="27.78125"
        transform="scale(-1,1)"
-       style="fill:{{whiskers.kv_titlebar_inactive}};fill-opacity:1" />
+       style="fill:{{whiskers.kv_input_border_focus}};fill-opacity:1" />
   </g>
   <g
      id="lineedit-focused-bottom"
      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};fill-opacity:1"
        id="use44085"
        width="3.175"
        height="1.5875"
@@ -5206,13 +5206,13 @@
        x="34.395832"
        y="-30.956251"
        transform="scale(1,-1)"
-       style="fill:{{whiskers.kv_titlebar_inactive}};fill-opacity:1" />
+       style="fill:{{whiskers.kv_input_border_focus}};fill-opacity:1" />
   </g>
   <g
      id="combo-normal"
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_bg}};fill-opacity:1"
        id="rect44091"
        width="3.175"
        height="1.5875"
@@ -5223,7 +5223,7 @@
      id="combo-normal-left"
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        id="rect44095"
        width="1.5875"
        height="1.5875"
@@ -5234,7 +5234,7 @@
      id="combo-normal-top"
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border}};fill-opacity:1"
        id="rect44101"
        width="3.175"
        height="1.5875"
@@ -5246,7 +5246,7 @@
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <path
        id="use44107"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 1.5875 z" />
   </g>
   <g
@@ -5254,7 +5254,7 @@
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <path
        id="path44113"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border}};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 6 z"
        transform="scale(0.26458333)" />
   </g>
@@ -5275,14 +5275,14 @@
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <path
        id="use44125"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -1.5875 z" />
   </g>
   <g
      id="combo-normal-right"
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        id="use44131"
        width="1.5875"
        height="1.5875"
@@ -5294,7 +5294,7 @@
      id="combo-normal-bottom"
      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border}};fill-opacity:1"
        id="use44137"
        width="3.175"
        height="1.5875"
@@ -5306,7 +5306,7 @@
      id="combo-focused"
      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_bg}};fill-opacity:1"
        id="rect44143"
        width="3.175"
        height="1.5875"
@@ -5317,7 +5317,7 @@
      id="combo-focused-left"
      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        id="rect44147"
        width="1.5875"
        height="1.5875"
@@ -5335,7 +5335,7 @@
      id="combo-focused-top"
      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};fill-opacity:1"
        id="rect44153"
        width="3.175"
        height="1.5875"
@@ -5354,7 +5354,7 @@
      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
     <path
        id="use44159"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 1.5875 z" />
     <path
        id="use44161"
@@ -5366,7 +5366,7 @@
      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
     <path
        id="path44165"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 6 z"
        transform="scale(0.26458333)" />
     <path
@@ -5380,7 +5380,7 @@
      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
     <path
        id="use44171"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 37.570833,30.95625 c 0.879475,0 1.5875,-0.708025 1.5875,-1.5875 h -1.5875 z" />
     <path
        id="use44173"
@@ -5392,7 +5392,7 @@
      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
     <path
        id="use44177"
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -1.5875 z" />
     <path
        id="use44179"
@@ -5403,7 +5403,7 @@
      id="combo-focused-right"
      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:#{{colors.crust.hex}};fill-opacity:1"
        id="use44183"
        width="1.5875"
        height="1.5875"
@@ -5423,7 +5423,7 @@
      id="combo-focused-bottom"
      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
     <rect
-       style="opacity:1;fill:{{whiskers.kv_main_widget_bg}};fill-opacity:1"
+       style="opacity:1;fill:{{whiskers.kv_input_border_focus}};fill-opacity:1"
        id="use44189"
        width="3.175"
        height="1.5875"

@@ -2,50 +2,52 @@
 
 Catppuccin themes are among the most accessible and easiest to customize themes available. So here are some overrides for my own styles.
 
-# Usage
+Generates theme files for: Zed, Plasma, Konsole, GTK 3/4, Firefox, Ghostty, oh-my-posh, Noctalia, Kvantum (KvLibadwaita / KvArcDark), niri, rmpc and Zen Browser.
 
-First start the nix shell with `nix-shell`.
+## Usage
 
-then execute `src/index.ts` and supply a theme name as an argument.\
-The output can be found in the `out` folder.
-
-### Example
+Enter the dev shell with `nix-shell`, then run the generator with a theme name:
 
 ```sh
 nix-shell
 node src/index.ts pink
 ```
 
+Output is written to `out/<color>/`.
+
+Available themes: `pink`, `yellow`, `orange`, `green`, `lemon`, `red`.
+
+### Flags
+
 `--firefoxTheme`\
-If this flag is provided it will generate a firefox manifest for a theme under `out/firefox/manifest.json`.
+Also write a Firefox theme manifest to `out/<color>/firefox/manifest.json`.
 
 `--release`\
-Will build all styles under `release/{color}`.
+Generate every available theme (into `out/<color>/` for each).
 
 `--link`\
-Will link some of the created themes to predefined paths.\
-Only works with specifying a direct theme.
+Symlink some of the generated files to their predefined config paths. Only
+works when a single theme is specified.
 
-`--whiskers`\
-Also generate the original Tera-based whiskers themes (zed with all 4 flavors, no-italics variants) alongside the default mustache output. Output goes to `out/{color}/whiskers-tera/`.
+## Applying themes
 
-Current available themes are:
+From the nixos flake (which consumes this repo), run `./update-themes.sh pink`
+to copy the generated files into the flake's dotfiles.
 
-- pink
-- yellow
-- orange
-- green
-- lemon
-- red
+## Layout
 
-# Helpers
+```
+src/          colors, HSV overrides, generators
+templates/    mustache templates per target (all targets, incl. whiskers/)
+out/          generated output per color
+doc/          per-target notes
+```
 
-The `link.bash` script links some files to the relevant places just give the name of the theme as the argument
+## Development
 
-## Future notes
-
-- kvantum theme
-- transparent firefox
-
-https://github.com/tahfizhabib/gwfox-css/tree/main?tab=readme-ov-file
-https://github.com/frostybiscuit/transparent-zen
+```sh
+pnpm install
+pnpm typecheck
+pnpm lint
+pnpm format
+```

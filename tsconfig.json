@@ -4,7 +4,13 @@
 		"module": "NodeNext",
 		"allowImportingTsExtensions": true,
 		"emitDeclarationOnly": true,
-		"composite": true
+		"composite": true,
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"forceConsistentCasingInFileNames": true
 	},
 	"include": ["./src/**/*.ts"]
 }
+

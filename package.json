@@ -1,18 +1,27 @@
 {
 	"name": "catppuccin-overrides",
 	"version": "1.0.3",
-	"description": "",
-	"keywords": [],
-	"license": "ISC",
-	"author": "",
+	"description": "Generate Catppuccin-derived theme overrides (Zed, Plasma, GTK, Firefox, Ghostty, oh-my-posh, Noctalia, Kvantum, niri, rmpc, Zen)",
+	"keywords": [
+		"catppuccin",
+		"themes",
+		"dotfiles"
+	],
+	"license": "MIT",
+	"author": "kerzeld",
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/kerzeld/catppuccin-overrides.git"
+	},
 	"type": "module",
-	"main": "src/index.js",
 	"scripts": {
-		"test": "node src/index.ts"
+		"generate": "node src/index.ts",
+		"typecheck": "tsc --noEmit",
+		"lint": "oxlint",
+		"format": "oxfmt src"
 	},
 	"dependencies": {
 		"@msgpack/msgpack": "^3.1.2",
-		"adm-zip": "^0.5.16",
 		"color": "5.0.2",
 		"lzma": "^2.3.2",
 		"minimist": "1.2.8",
@@ -27,5 +36,5 @@
 		"oxlint": "1.46.0",
 		"typescript": "7.0.2"
 	},
-	"packageManager": "pnpm@10.20.0"
+	"packageManager": "pnpm@11.25.0"
 }

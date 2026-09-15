@@ -1,0 +1,289 @@
+#![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
+#![enable(unwrap_variant_newtypes)]
+(
+    default_album_art_path: None,
+    format_tag_separator: " | ",
+    browser_column_widths: [20, 38, 42],
+    background_color: None,
+    text_color: "#{{colors.text.hex}}",
+    header_background_color: None,
+    cava: (
+        bar_symbols: ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'],
+        bar_color: Gradient({
+            0: "rgb({{colors.peach.rgb}})",
+            50: "rgb({{colors.accent.rgb}})",
+            100: "rgb({{colors.teal.rgb}})",
+        }),
+    ),
+    modal_background_color: None,
+    modal_backdrop: true,
+    preview_label_style: (fg: "#{{colors.peach.hex}}"),
+    preview_metadata_group_style: (fg: "#{{colors.peach.hex}}", modifiers: "Bold"),
+    highlighted_item_style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold"),
+    current_item_style: (fg: "#{{colors.crust.hex}}", bg: "#{{colors.accent.hex}}", modifiers: "Bold"),
+    borders_style: (fg: "#{{colors.overlay0.hex}}"),
+    highlight_border_style: (fg: "#{{colors.accent.hex}}"),
+    symbols: (
+        song: "♪",
+        dir: "▸",
+        playlist: "▤",
+        marker: "▸",
+        ellipsis: "…",
+        song_style: None,
+        dir_style: None,
+        playlist_style: None,
+    ),
+    level_styles: (
+        info: (fg: "#{{colors.blue.hex}}"),
+        warn: (fg: "#{{colors.yellow.hex}}"),
+        error: (fg: "#{{colors.red.hex}}"),
+        debug: (fg: "#{{colors.green.hex}}"),
+        trace: (fg: "#{{colors.mauve.hex}}"),
+    ),
+    progress_bar: (
+        symbols: ["█", "█", "█", "░", "█"],
+        track_style: (fg: "#{{colors.overlay0.hex}}"),
+        elapsed_style: (fg: "#{{colors.accent.hex}}"),
+        thumb_style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold"),
+        use_track_when_empty: true,
+    ),
+    scrollbar: (
+        symbols: ["│", "█", "▲", "▼"],
+        track_style: (fg: "#{{colors.mantle.hex}}"),
+        ends_style: (fg: "#{{colors.overlay0.hex}}"),
+        thumb_style: (fg: "#{{colors.accent.hex}}"),
+    ),
+    tab_bar: (
+        active_style: (fg: "#{{colors.crust.hex}}", bg: "#{{colors.accent.hex}}", modifiers: "Bold"),
+        inactive_style: (fg: "#{{colors.subtext0.hex}}"),
+    ),
+    lyrics: (
+        timestamp: false
+    ),
+    browser_song_format: [
+        (
+            kind: Group([
+                (kind: Property(Track)),
+                (kind: Text(" ")),
+            ])
+        ),
+        (
+            kind: Group([
+                (kind: Property(Artist)),
+                (kind: Text(" - ")),
+                (kind: Property(Title)),
+            ]),
+            default: (kind: Property(Filename))
+        ),
+    ],
+    song_table_format: [
+        (
+            prop: (kind: Property(Artist),
+                default: (kind: Text("Unknown"))
+            ),
+            label_prop: (kind: Text("Artist")),
+            width: "19%",
+        ),
+        (
+            prop: (kind: Property(Title),
+                default: (kind: Text("Unknown"))
+            ),
+            label_prop: (kind: Text("Title")),
+            width: "33%",
+        ),
+        (
+            prop: (kind: Property(Album), style: (fg: "#{{colors.subtext0.hex}}"),
+                default: (kind: Text("Unknown Album"), style: (fg: "#{{colors.subtext0.hex}}"))
+            ),
+            label_prop: (kind: Text("Album")),
+            width: "26%",
+        ),
+        (
+            prop: (kind: Sticker("rating"), style: (fg: "#{{colors.accent.hex}}"),
+                default: (kind: Text(" "))
+            ),
+            label_prop: (kind: Text("★")),
+            width: "3%",
+            alignment: Right,
+        ),
+        (
+            prop: (kind: Property(Duration),
+                default: (kind: Text("-"))
+            ),
+            label_prop: (kind: Text("Duration")),
+            width: "15%",
+            alignment: Right,
+        ),
+    ],
+    layout: Split(
+        direction: Vertical,
+        panes: [
+            (
+                size: "7",
+                pane: Split(
+                    direction: Horizontal,
+                    panes: [
+                        ( size: "12", pane: Pane(AlbumArt) ),
+                        ( size: "1", pane: Pane(Empty()) ),
+                        (
+                            size: "100%",
+                            pane: Split(
+                                direction: Vertical,
+                                panes: [
+                                    (
+                                        size: "6",
+                                        pane: Split(
+                                            direction: Horizontal,
+                                            panes: [
+                                                ( size: "35", pane: Component("header_left") ),
+                                                ( size: "100%", pane: Component("header_center") ),
+                                                ( size: "35", pane: Component("header_right") ),
+                                            ]
+                                        )
+                                    ),
+                                    ( size: "1", pane: Pane(ProgressBar) ),
+                                ]
+                            )
+                        ),
+                    ]
+                )
+            ),
+            ( size: "1", pane: Pane(Empty()) ),
+            ( size: "1", pane: Pane(Tabs) ),
+            ( size: "1", pane: Pane(Empty()) ),
+            ( size: "100%", pane: Pane(TabContent) ),
+        ],
+    ),
+    components: {
+        "state": Pane(Property(
+            content: [
+                (kind: Text("["), style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold")),
+                (kind: Property(Status(StateV2( ))), style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold")),
+                (kind: Text("]"), style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold")),
+            ], align: Left,
+        )),
+        "title": Pane(Property(
+            content: [
+                (kind: Property(Song(Title)), style: (modifiers: "Bold"),
+                    default: (kind: Text("No Song"), style: (modifiers: "Bold"))),
+            ], align: Center, scroll_speed: 1
+        )),
+        "volume": Split(
+            direction: Horizontal,
+            panes: [
+                (size: "1", pane: Pane(Property(content: [(kind: Text(""))]))),
+                (size: "100%", pane: Pane(Volume(kind: Slider(symbols: (filled: "─", thumb: "●", track: "─"))))),
+                (size: "3", pane: Pane(Property(content: [(kind: Property(Status(Volume)), style: (fg: "#{{colors.blue.hex}}"))], align: Right))),
+                (size: "2", pane: Pane(Property(content: [(kind: Text("%"), style: (fg: "#{{colors.blue.hex}}"))]))),
+            ]
+        ),
+        "elapsed_and_bitrate": Pane(Property(
+            content: [
+                (kind: Property(Status(Elapsed)), style: (fg: "#{{colors.teal.hex}}")),
+                (kind: Text(" / ")),
+                (kind: Property(Status(Duration)), style: (fg: "#{{colors.teal.hex}}")),
+                (kind: Group([
+                    (kind: Text(" (")),
+                    (kind: Property(Status(Bitrate))),
+                    (kind: Text(" kbps)")),
+                ])),
+            ],
+            align: Left,
+        )),
+        "artist_and_album": Pane(Property(
+            content: [
+                (kind: Property(Song(Artist)), style: (fg: "#{{colors.peach.hex}}", modifiers: "Bold"),
+                    default: (kind: Text("Unknown"), style: (fg: "#{{colors.peach.hex}}", modifiers: "Bold"))),
+                (kind: Text(" - ")),
+                (kind: Property(Song(Album)), default: (kind: Text("Unknown Album"))),
+                (kind: Group([
+                    (kind: Text("  ★")),
+                    (kind: Sticker("rating")),
+                ])),
+            ], align: Center, scroll_speed: 1
+        )),
+        "states": Split(
+            direction: Horizontal,
+            panes: [
+                (
+                    size: "1",
+                    pane: Pane(Empty())
+                ),
+                (
+                    size: "100%",
+                    pane: Pane(Property(content: [(kind: Property(Status(InputBuffer())), style: (fg: "#{{colors.blue.hex}}"), align: Left)]))
+                ),
+                (
+                    size: "34",
+                    pane: Pane(Property(content: [
+                        (kind: Text("["), style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold")),
+                        (kind: Property(Status(RepeatV2(
+                            on_label: "z:rep",
+                            off_label: "z:rep",
+                            on_style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold"),
+                            off_style: (fg: "#{{colors.overlay0.hex}}", modifiers: "Dim"),
+                        )))),
+                        (kind: Text("/")),
+                        (kind: Property(Status(RandomV2(
+                            on_label: "x:rnd",
+                            off_label: "x:rnd",
+                            on_style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold"),
+                            off_style: (fg: "#{{colors.overlay0.hex}}", modifiers: "Dim"),
+                        )))),
+                        (kind: Text("/")),
+                        (kind: Property(Status(ConsumeV2(
+                            on_label: "c:con",
+                            off_label: "c:con",
+                            oneshot_label: "c:con1",
+                            on_style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold"),
+                            off_style: (fg: "#{{colors.overlay0.hex}}", modifiers: "Dim"),
+                            oneshot_style: (fg: "#{{colors.red.hex}}", modifiers: "Dim"),
+                        )))),
+                        (kind: Text("/")),
+                        (kind: Property(Status(SingleV2(
+                            on_label: "v:sin",
+                            off_label: "v:sin",
+                            oneshot_label: "v:sin1",
+                            on_style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold"),
+                            off_style: (fg: "#{{colors.overlay0.hex}}", modifiers: "Dim"),
+                            oneshot_style: (fg: "#{{colors.red.hex}}", modifiers: "Bold"),
+                        )))),
+                        (kind: Text("]"), style: (fg: "#{{colors.accent.hex}}", modifiers: "Bold")),
+                        ],
+                        align: Right
+                    ))
+                ),
+            ]
+        ),
+        "input_mode": Pane(Property(
+            content: [
+                (kind: Transform(Replace(content: (kind: Property(Status(InputMode()))), replacements: [
+                    (match: "Normal", replace: (kind: Text(" NORMAL "), style: (fg: "#{{colors.crust.hex}}", bg: "#{{colors.accent.hex}}", modifiers: "Bold"))),
+                    (match: "Insert", replace: (kind: Text(" INSERT "), style: (fg: "#{{colors.crust.hex}}", bg: "#{{colors.green.hex}}", modifiers: "Bold"))),
+                ])))
+            ], align: Center
+        )),
+        "header_left": Split(
+            direction: Vertical,
+            panes: [
+                (size: "1", pane: Component("state")),
+                (size: "1", pane: Component("elapsed_and_bitrate")),
+            ]
+        ),
+        "header_center": Split(
+            direction: Vertical,
+            panes: [
+                (size: "1", pane: Component("title")),
+                (size: "1", pane: Component("artist_and_album")),
+            ]
+        ),
+        "header_right": Split(
+            direction: Vertical,
+            panes: [
+                (size: "1", pane: Component("volume")),
+                (size: "1", pane: Component("states")),
+            ]
+        ),
+    },
+)

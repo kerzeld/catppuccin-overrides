@@ -1,0 +1,10 @@
+// Generated from catppuccin-overrides — do not edit directly.
+// Included by niri-config.kdl; merged into its `layout` section.
+layout {
+    focus-ring {
+        on
+        width 3
+        active-color "#{{colors.accent.hex}}"
+        inactive-color "{{whiskers.kv_focus_inactive}}"
+    }
+}

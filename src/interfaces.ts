@@ -14,12 +14,17 @@ export interface IHSVOverride {
 	overrides: Partial<Record<TColorNames, Partial<IColorHSV>>>;
 }
 
+export interface IColorValue {
+	rgb: string;
+	hex: string;
+	color: ColorInstance;
+}
+
 export interface IThemeView {
-	colors: Record<string, { rgb: string; hex: string; color: ColorInstance }>;
+	colors: Record<TColorNames | "accent", IColorValue>;
 	name: string;
 	opacity: {
 		float: string;
-		value: number;
 		num: string;
 	};
 	accent: keyof typeof MochaColors;

@@ -2,7 +2,6 @@ import type { IThemeView, TColorNames } from "./interfaces.ts";
 import lzma from "lzma";
 import { encode } from "@msgpack/msgpack";
 import { styleText } from "node:util";
-import { PATH_OUT } from "./const.ts";
 import path from "node:path";
 import fs from "node:fs";
 import { ensureDirectoryExistence } from "./utils.ts";
@@ -82,13 +81,14 @@ export function generateFirefoxColorLink(view: IThemeView, outPath: string) {
 
 	const encoded = encode(theme);
 	const compressed = lzma.compress(encoded);
+	const url = "https://color.firefox.com/?theme=" + Buffer.from(compressed).toString("base64url");
 
 	const linkFile = path.join(outPath, "firefox", "colors-link.txt");
 	ensureDirectoryExistence(linkFile);
-	fs.writeFileSync(linkFile, "https://color.firefox.com/?theme=" + Buffer.from(compressed).toString("base64url"));
+	fs.writeFileSync(linkFile, url);
 
 	console.log("Firefox Colors Link:");
 	console.log(styleText("blackBright", "#########################################"));
-	console.log(styleText("blue", "https://color.firefox.com/?theme=" + Buffer.from(compressed).toString("base64url")));
+	console.log(styleText("blue", url));
 	console.log(styleText("blackBright", "#########################################"));
 }

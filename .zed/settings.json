@@ -1,11 +1,5 @@
 {
 	"lsp": {
-		"dprint": {
-			"binary": {
-				"path": "./node_modules/.bin/dprint",
-				"arguments": ["lsp"]
-			}
-		},
 		"eslint": {
 			"enable_lsp_tasks": false
 		}
@@ -14,13 +8,9 @@
 		"oxfmt",
 		"oxlint",
 		"package-version-server",
-		"tailwindcss-language-server",
 		"vtsls",
 		"color-lsp",
-		"codebook",
-		"json-language-server",
-		"tera",
-		"code-stats-ls"
+		"json-language-server"
 	],
 	"languages": {
 		"JavaScript": {
