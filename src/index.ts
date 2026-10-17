@@ -10,6 +10,7 @@ import { generateFirefoxColorLink, generateFirefoxThemeManifest } from "./firefo
 import { styleText } from "node:util";
 import { buildComputedView } from "./computedView.ts";
 import { linkTheme } from "./link.ts";
+import { getUserStyles } from "./userStyles.ts";
 
 async function main() {
 	const args = minimist(process.argv.slice(2));
@@ -62,6 +63,18 @@ async function constructTheme(themeName: keyof typeof themes, args: minimist.Par
 		const manifestPath = path.join(outPath, "firefox", "manifest.json");
 		ensureDirectoryExistence(manifestPath);
 		fs.writeFileSync(manifestPath, JSON.stringify(generateFirefoxThemeManifest(view)));
+	}
+
+	// Stylus: catppuccin/userstyles bundle with this palette baked in.
+	// Network-dependent, so don't fail the whole generation if it's unavailable.
+	try {
+		const userStylesPath = path.join(outPath, "userStyles.json");
+		ensureDirectoryExistence(userStylesPath);
+		fs.writeFileSync(userStylesPath, JSON.stringify(await getUserStyles(view)));
+	} catch (error) {
+		console.warn(
+			styleText("yellow", `Skipped Stylus userStyles.json: ${(error as Error).message}`),
+		);
 	}
 
 	generateFirefoxColorLink(view, outPath);

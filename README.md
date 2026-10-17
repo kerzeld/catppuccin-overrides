@@ -2,7 +2,7 @@
 
 Catppuccin themes are among the most accessible and easiest to customize themes available. So here are some overrides for my own styles.
 
-Generates theme files for: Zed, Plasma, Konsole, GTK 3/4, Firefox, Ghostty, oh-my-posh, Noctalia, Kvantum (KvLibadwaita / KvArcDark), niri, rmpc and Zen Browser.
+Generates theme files for: Zed, Plasma, Konsole, GTK 3/4, Firefox, Ghostty, oh-my-posh, Noctalia, Kvantum (KvLibadwaita / KvArcDark), niri, rmpc, Zen Browser and Stylus (catppuccin/userstyles).
 
 ## Usage
 
@@ -33,6 +33,15 @@ works when a single theme is specified.
 
 From the nixos flake (which consumes this repo), run `./update-themes.sh pink`
 to copy the generated files into the flake's dotfiles.
+
+### Stylus (catppuccin/userstyles)
+
+Each run also writes `out/<color>/userStyles.json`: the
+[catppuccin/userstyles](https://github.com/catppuccin/userstyles) export with the
+shared Less library replaced by this palette (`templates/stylus.less`) and the
+accent pinned to the theme. Import it in Stylus via **Import** (or drop it into
+Stylus' backup folder). This step downloads ~2.6 MB from GitHub, so it is skipped
+with a warning when offline.
 
 ## Layout
 
