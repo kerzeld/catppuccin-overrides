@@ -163,7 +163,20 @@ export function buildComputedView(view: IThemeView): Record<string, string> {
 	result.kv_input_border_focus = accent.hex();
 	result.kv_accent_soft = accent.lightness(90).hex();
 	result.kv_accent_deep = accent.lightness(38.4).saturationl(96).hex();
+	// Warning/success "on" tones (Noctalia derives these from teal/peach).
+	result.kv_warning_bg = teal.lightness(38).hex();
+	result.kv_warning_fg = teal.lightness(12).hex();
+	result.kv_success_bg = peach.lightness(40).hex();
+	result.kv_success_fg = peach.lightness(4).hex();
 	result.kv_focus_inactive = base.alpha(0x66 / 255).hexa();
+	// Text selection colours. The active and disabled backgrounds must differ
+	// (Firefox inverts the disabled one when they are equal — see
+	// EnsureDifferentColors in layout/generic/nsTextPaintStyle.cpp). Both are
+	// darkened from the accent so the white foreground stays readable; the
+	// disabled/unfocused one is darker still.
+	result.selection_text = "#ffffff";
+	result.selection_bg = mix(accent, new Color("#000000"), 0.58).hex();
+	result.selection_bg_disabled = mix(accent, new Color("#000000"), 0.4).hex();
 
 	return result;
 }

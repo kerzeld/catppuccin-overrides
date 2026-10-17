@@ -1,9 +1,109 @@
-/* Generated from catppuccin-overrides — do not edit directly */
-@import url("noctalia.css");
+/* Generated from catppuccin-overrides — do not edit directly.
+   Self-contained GTK4 colours (layout based on Noctalia's template processor
+   output): @define-color set + libadwaita :root variables, plus window
+   transparency. Selection colours are pinned explicitly below. */
+
+@define-color accent_color #{{colors.accent.hex}};
+@define-color accent_bg_color #{{colors.accent.hex}};
+@define-color accent_fg_color #{{colors.crust.hex}};
+
+@define-color destructive_bg_color #{{colors.red.hex}};
+@define-color destructive_fg_color #{{colors.crust.hex}};
+
+@define-color error_bg_color #{{colors.red.hex}};
+@define-color error_fg_color #{{colors.crust.hex}};
+
+@define-color window_bg_color #{{colors.base.hex}};
+@define-color window_fg_color #{{colors.text.hex}};
+
+@define-color view_bg_color #{{colors.base.hex}};
+@define-color view_fg_color #{{colors.text.hex}};
+
+@define-color headerbar_bg_color #{{colors.base.hex}};
+@define-color headerbar_fg_color #{{colors.text.hex}};
+@define-color headerbar_backdrop_color @window_bg_color;
+
+@define-color popover_bg_color #{{colors.mantle.hex}};
+@define-color popover_fg_color #{{colors.text.hex}};
+
+@define-color card_bg_color #{{colors.mantle.hex}};
+@define-color card_fg_color #{{colors.text.hex}};
+
+@define-color dialog_bg_color #{{colors.base.hex}};
+@define-color dialog_fg_color #{{colors.text.hex}};
+
+@define-color overview_bg_color #{{colors.mantle.hex}};
+@define-color overview_fg_color #{{colors.text.hex}};
+
+@define-color sidebar_bg_color #{{colors.mantle.hex}};
+@define-color sidebar_fg_color #{{colors.text.hex}};
+@define-color sidebar_backdrop_color @window_bg_color;
+@define-color sidebar_border_color @window_bg_color;
+
+@define-color secondary_sidebar_bg_color #{{colors.base.hex}};
+@define-color secondary_sidebar_fg_color #{{colors.text.hex}};
+
+/* Focused selection states. Literal colours (not @accent_bg_color) so the
+   value can't be re-resolved through the active theme's own accent. */
+@define-color theme_selected_bg_color #{{colors.accent.hex}};
+@define-color theme_selected_fg_color #{{colors.crust.hex}};
+
+/* Backdrop/unfocused states */
+@define-color theme_unfocused_fg_color @window_fg_color;
+@define-color theme_unfocused_text_color @view_fg_color;
+@define-color theme_unfocused_bg_color @window_bg_color;
+@define-color theme_unfocused_base_color @window_bg_color;
+@define-color theme_unfocused_selected_bg_color #{{colors.accent.hex}};
+@define-color theme_unfocused_selected_fg_color #{{colors.crust.hex}};
 
 :root {
+  --accent-color: #{{colors.accent.hex}};
+  --accent-bg-color: #{{colors.accent.hex}};
+  --accent-fg-color: #{{colors.crust.hex}};
+
+  --destructive-bg-color: #{{colors.red.hex}};
+  --destructive-fg-color: #{{colors.crust.hex}};
+
+  --error-bg-color: #{{colors.red.hex}};
+  --error-fg-color: #{{colors.crust.hex}};
+  --error-color: #{{colors.red.hex}};
+
   --window-bg-color: rgba({{colors.crust.rgb}}, {{opacity.float}});
+  --window-fg-color: #{{colors.text.hex}};
+
+  --view-bg-color: #{{colors.base.hex}};
+  --view-fg-color: #{{colors.text.hex}};
+
   --headerbar-bg-color: rgba({{colors.crust.rgb}}, {{opacity.float}});
+  --headerbar-fg-color: #{{colors.text.hex}};
+  --headerbar-backdrop-color: rgba({{colors.crust.rgb}}, {{opacity.float}});
+
+  --popover-bg-color: #{{colors.mantle.hex}};
+  --popover-fg-color: #{{colors.text.hex}};
+
+  --card-bg-color: #{{colors.mantle.hex}};
+  --card-fg-color: #{{colors.text.hex}};
+
+  --dialog-bg-color: #{{colors.base.hex}};
+  --dialog-fg-color: #{{colors.text.hex}};
+
+  --overview-bg-color: #{{colors.mantle.hex}};
+  --overview-fg-color: #{{colors.text.hex}};
+
+  --sidebar-bg-color: #{{colors.mantle.hex}};
+  --sidebar-fg-color: #{{colors.text.hex}};
+  --sidebar-backdrop-color: rgba({{colors.crust.rgb}}, {{opacity.float}});
+  --sidebar-border-color: rgba({{colors.crust.rgb}}, {{opacity.float}});
+
+  --warning-bg-color: {{whiskers.kv_warning_bg}};
+  --warning-fg-color: {{whiskers.kv_warning_fg}};
+  --warning-color: #{{colors.teal.hex}};
+
+  --success-color: #{{colors.peach.hex}};
+  --success-bg-color: {{whiskers.kv_success_bg}};
+  --success-fg-color: {{whiskers.kv_success_fg}};
+
+  --shade-color: rgba(0, 0, 0, 0.36);
 }
 
 window.background,
@@ -15,4 +115,15 @@ window.background > contents > content {
 window.background headerbar,
 window.background headerbar:backdrop {
   background-color: rgba({{colors.crust.rgb}}, {{opacity.float}});
+}
+
+/* Text selection: solid accent instead of the theme's translucent default. */
+selection,
+textview text selection,
+.view text selection,
+entry text selection,
+entry selection,
+label selection {
+  background-color: #{{colors.accent.hex}} !important;
+  color: #{{colors.crust.hex}} !important;
 }
